@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Generic Code</string>
+  <key>settings</key>
+  <array>
+    <dict>
+      <key>settings</key>
+      <dict>
+        <key>background</key><string>#FFFFFF</string>
+        <key>foreground</key><string>#000000</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>comment</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#3D7B7B</string>
+        <key>fontStyle</key><string>italic</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>keyword, storage.type, storage.modifier, constant.language</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#008000</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>string</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#BA2121</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>constant.numeric</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#666666</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>entity.name.function, support.function, variable.function</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#0000FF</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>entity.name.type, entity.name.class, support.type, support.class</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#0000FF</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>entity.name.tag</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#008000</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>entity.other.attribute-name</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#687822</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>variable.parameter</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#19177C</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>constant.other</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#880000</string>
+      </dict>
+    </dict>
+    <!-- Pygments-compatible refinements for common language families. -->
+    <dict>
+      <key>scope</key><string>source.c storage.type, source.cpp storage.type</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#B00040</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>storage.type.rust, support.type.rust</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#B00040</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>keyword.declaration.type.c, keyword.declaration.struct.c, keyword.declaration.union.c, keyword.declaration.enum.c, keyword.declaration.variable.rust, keyword.declaration.function.rust, keyword.declaration.struct.rust</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#008000</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.c meta.preprocessor, source.cpp meta.preprocessor, source.c keyword.control.import, source.cpp keyword.control.import, source.rust meta.attribute, source.rust meta.annotation, source.rust punctuation.definition.attribute</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#9C6500</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.c meta.preprocessor string, source.cpp meta.preprocessor string</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#3D7B7B</string>
+        <key>fontStyle</key><string>italic</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.js entity.name.class, source.js entity.name.function, source.js variable.function, source.js variable.parameter, source.javascript entity.name.class, source.javascript entity.name.function, source.javascript variable.function, source.javascript variable.parameter</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.js variable.language, source.javascript variable.language, source.js entity.name.function.constructor, source.javascript entity.name.function.constructor</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#008000</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.js punctuation.section.interpolation, source.javascript punctuation.section.interpolation</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#A45A77</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>support.function.C99.c, support.function.C11.c, meta.function-call.c variable.function.c, support.function.rust</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>support.macro.rust</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#0000FF</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>keyword.declaration.function.arrow.js, storage.type.function.arrow.js, support.type.object.console.js, support.function.console.js, source.js keyword.declaration.function.arrow, source.javascript keyword.declaration.function.arrow, source.js support.type.object.console, source.js support.function.console, source.javascript support.type.object.console, source.javascript support.function.console</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.css entity.other.attribute-name.class</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#0000FF</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>entity.other.pseudo-class.css, entity.other.pseudo-element.css, entity.name.function.pseudo-class.css, entity.name.function.pseudo-element.css, source.css entity.other.attribute-name.pseudo-class, source.css entity.other.attribute-name.pseudo-element, source.css entity.other.pseudo-class, source.css entity.other.pseudo-element</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#AA22FF</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>support.type.custom-property.css, support.type.custom-property.name.css, variable.other.custom-property.css, entity.other.custom-property.css, entity.name.function.custom-property.css, source.css variable.other.custom-property, source.css entity.other.custom-property</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#19177C</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>meta.at-rule.media.css punctuation.definition.keyword.css, punctuation.definition.keyword.css</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.css support.type.property-name, source.css support.constant.property-value, source.css meta.property-name</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#008000</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.css constant.other.color</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#666666</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.css keyword.other.unit</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#B00040</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>meta.at-rule.media.css meta.group.css constant.numeric, meta.at-rule.media.css meta.group.css keyword.other.unit, meta.at-rule.media.css constant.numeric, meta.at-rule.media.css keyword.other.unit</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#008000</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>entity.name.struct.c, entity.name.union.c, entity.name.enum.c, entity.name.struct.rust, entity.name.union.rust, entity.name.enum.rust, entity.name.struct, entity.name.union, entity.name.enum</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#0000FF</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>entity.name.type.typedef.c</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>text.html punctuation.separator.key-value, text.xml punctuation.separator.key-value</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#666666</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>keyword.operator, punctuation.accessor</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#666666</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.c variable.parameter, source.rust variable.parameter</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.rust constant.other.placeholder</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#BA2121</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.css punctuation.definition.entity</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>meta.at-rule.media.css punctuation.definition.group</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#666666</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>scope</key><string>source.js punctuation.accessor, source.javascript punctuation.accessor</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+    <!-- Pygments/minted renders ordinary Python callables in the base color. -->
+    <dict>
+      <key>scope</key><string>source.python entity.name.function, source.python support.function, source.python variable.function, source.python meta.function-call variable.function</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#000000</string>
+        <key>fontStyle</key><string></string>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>
