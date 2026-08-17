@@ -5,7 +5,9 @@ TODO
 ## Wymagania
 
 - [Typst](https://typst.app/) 0.14 lub nowszy,
-- `make` (opcjonalnie).
+- `make` (opcjonalnie),
+- `hunspell` ze słownikami `pl_PL` i `en_GB` (opcjonalnie, tylko do lokalnego
+  sprawdzania pisowni).
 
 ## Kompilacja
 
@@ -25,7 +27,8 @@ Wynik zostanie zapisany jako `main.pdf` i nie jest śledzony przez Git.
 
 ## CI
 
-Po każdym pushu i w każdym pull requeście GitHub Actions sprawdza, że:
+W każdym pull requeście oraz po każdym pushu na `main` GitHub Actions sprawdza,
+że:
 
 1. praca się kompiluje, czyli job kończy się błędem, jeżeli `typst compile`
    zwróci błąd; gotowy PDF nie jest nigdzie zapisywany, buduj go u siebie przez
@@ -51,7 +54,8 @@ make spell
 - `fonts/` — czcionki wymagane przez formatkę,
 - `_bibliography.bib` — baza źródeł BibLaTeX,
 - `_iso690-numeric.csl` — styl bibliografii ISO 690,
-- `_code.tmTheme` — motyw listingów kodu.
+- `_code.tmTheme` — motyw listingów kodu,
+- `.github/` zawiera workflow CI, skrypt sprawdzania pisowni i słownik projektu.
 
 ## Pierwsze kroki
 
