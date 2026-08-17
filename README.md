@@ -23,6 +23,23 @@ make watch
 
 Wynik zostanie zapisany jako `main.pdf` i nie jest śledzony przez Git.
 
+## CI
+
+Po każdym pushu i w każdym pull requeście GitHub Actions sprawdza, że:
+
+1. praca się kompiluje, czyli job kończy się błędem, jeżeli `typst compile`
+   zwróci błąd; gotowy PDF nie jest nigdzie zapisywany, buduj go u siebie przez
+   `make build`,
+2. pisownia nie budzi zastrzeżeń (hunspell, słowniki `pl_PL` i `en_GB`), a wynik
+   trafia do podsumowania joba i **nie** blokuje merge'a.
+
+Słowa błędnie zgłaszane jako literówki (nazwy własne, skróty, terminy techniczne)
+dopisuj do `.github/dictionary.txt`. Sprawdzenie lokalnie, jeśli masz hunspella:
+
+```sh
+make spell
+```
+
 ## Struktura
 
 - `main.typ` — punkt wejścia i kolejność części dokumentu,

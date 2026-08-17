@@ -1,0 +1,43 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Kompilacja
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: typst-community/setup-typst@v5
+        with:
+          typst-version: latest
+
+      - name: Kompilacja
+        run: typst compile --font-path fonts main.typ
+
+  spellcheck:
+    name: Pisownia
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalacja hunspella i słowników
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends hunspell hunspell-pl hunspell-en-gb
+
+      # Dopisz --strict, aby literówki blokowały merge.
+      - name: Sprawdzenie pisowni
+        run: bash .github/scripts/spellcheck.sh

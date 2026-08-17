@@ -1,0 +1,7 @@
+# Słowa uznawane za poprawne. Jedno w wierszu, wiersze z # pomija spellcheck.sh.
+ArtSea
+Typst
+BibLaTeX
+MojaPG
+OECD
+GitHub
