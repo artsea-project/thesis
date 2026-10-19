@@ -82,6 +82,19 @@ Karty prac ułożone są w kolumnach, w układzie typu _masonry_, znanym m.in. z
 
 ==== Strona pracy
 
+Każda praca ma własną podstronę, na którą odwiedzający trafia po kliknięciu kafelka na stronie głównej lub karty w portfolio. Strona podzielona jest na dwie kolumny: szersza lewa przeznaczona jest na zdjęcia pracy, a prawa zawiera jej opis (@fig-praca).
+
+#figure(
+  image("../img/praca.png", width: 100%),
+  caption: [Makieta strony pojedynczej pracy],
+) <fig-praca>
+
+Zdjęcia pracy prezentowane są w formie galerii. Na górze znajduje się duże zdjęcie główne, a poniżej miniatury maksymalnie trzech kolejnych zdjęć. Jeżeli zdjęć jest więcej, na ostatniej miniaturze wyświetlany jest tekst informujący o ich liczbie. Po kliknięciu zdjęcie wyświetla się w powiększeniu na całym ekranie. W tym trybie odwiedzający może przechodzić między wszystkimi zdjęciami pracy. Podgląd zamyka się kliknięciem poza obszarem zdjęcia.
+
+Kolejność informacji w prawej kolumnie wynika z opisanej wcześniej hierarchii treści. Nad tytułem znajdują się kategoria i rok wykonania pracy, a pod nim tagi. Niżej, między liniami oddzielającymi, podane są wymiary. Opis pracy podzielony jest na dwie części. W części „Technika i materiały” artysta podaje krótkie informacje techniczne, a w części „O projekcie” może szerzej opisać kontekst powstania pracy i swoje założenia. Odwiedzający, którego interesuje jedynie technika wykonania, nie musi więc szukać jej w dłuższym tekście. Elementy, których artysta nie uzupełnił, np. wymiary czy opis techniki, nie są wyświetlane, więc na stronie nie pojawiają się puste nagłówki.
+
+Pod zdjęciami i opisem znajduje się odnośnik „Zobacz kolejny” z tytułem następnej pracy. Pozwala on przejść do kolejnej pracy bez powrotu do portfolio. Po ostatniej pracy odnośnik prowadzi z powrotem do pierwszej, a jeśli artysta ma tylko jedną widoczną pracę, nie jest on wyświetlany.
+
 ==== O mnie
 
 === Makiety panelu artysty
