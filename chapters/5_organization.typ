@@ -1,18 +1,18 @@
 = Organizacja projektu <chapter-project-organization>
 
-Przy realizacji złożonego projektu informatycznego niezbędne jest usystematyzowanie pracy oraz określenie zasad współpracy. Wytwarzanie oprogramowania wymaga dobrej organizacji, z tego względu wykorzystano rynkowe wzorce zarządzania i inżynierii oprogramowania, elastycznie dopsowujące je do wielkości zespołu i charakteru tworoznej apliakcji. W poniższych podrozdziałach przestawiono fundamenty organizacji pracy.
+Przy realizacji złożonego projektu informatycznego niezbędne jest usystematyzowanie pracy oraz określenie zasad współpracy. Wytwarzanie oprogramowania wymaga dobrej organizacji, z tego względu wykorzystano rynkowe wzorce zarządzania i inżynierii oprogramowania, elastycznie dopasowujące je do wielkości zespołu i charakteru tworzonej aplikacji. W poniższych podrozdziałach przedstawiono fundamenty organizacji pracy.
 
 == Metodyka prowadzenia projektu
 
-Wytwarzanie aplikacji oparto na podejściu hybrydowym, łączącym elementy metodyk zwinnych _Agile_ i tradycyjnym modelu kaskadowym _Waterfall_. Wybór wynikał ze specyfiki projektu, który wymagał zarówno elastyczności w podejściu do wymagań, jak i ścisłego planowania i kontroli postępów. Połączenie obydwu metodyk pozwoliło na iteracyjne dostarczanie funkcjonalności, przy jednoczesnym zachowaniu struktury i harmonogramu projektu.
+Wytwarzanie aplikacji oparto na podejściu hybrydowym, łączącym elementy metodyk zwinnych _Agile_ z tradycyjnym modelem kaskadowym _Waterfall_. Wybór wynikał ze specyfiki projektu, który wymagał zarówno elastyczności w podejściu do wymagań, jak i ścisłego planowania i kontroli postępów. Połączenie obydwu metodyk pozwoliło na iteracyjne dostarczanie funkcjonalności, przy jednoczesnym zachowaniu struktury i harmonogramu projektu.
 
-W początkowej fazie projektu zastosowano model kaskadowy, kładąc nacisk na kompleksową analizę wymagań oraz prototypowanie w środowisku _Figma_, co umożliwiło wczesne wykrycie potencjalnych problemów i lepsze zrozumienie oczekiwań użytkowników. Etap implementacji zorganizowano zgodnie z zasadami metodyki _Kanban_. Ze względu na ograniczoną liczbę członków zespołu, przyjęto podejście, w którym zrezygnowano z formalnych ról i sztywnych ram czasowych, a prace były realizowane w sposób elastyczny, z naciskiem na efektywną komunikację i współpracę. Ostatni erap zaplanowano w oparciu o podejście zorientowane na użytkownika. Faza ta zakładała weryfikację systemu poprzez testy akceptacyjne _E22_ oraz przeprowadzenie badań użyteczności z docelową grupą twórców przy użyciu standaryzowanych kwestionariuszy. Dopełnieniem tego etapu było również opracowanie dokumentacji wdrożeniowo-użytkowej w postaci dwóch dedykowanych przewodników: instrukcji obsługi systemu oraz instrukcji wdrożeniowej, opisującej proces instalacji i uruchomienia aplikacji.
+W początkowej fazie projektu zastosowano model kaskadowy, kładąc nacisk na kompleksową analizę wymagań oraz prototypowanie w środowisku _Figma_, co umożliwiło wczesne wykrycie potencjalnych problemów i lepsze zrozumienie oczekiwań użytkowników. Etap implementacji zorganizowano zgodnie z zasadami metodyki _Kanban_. Ze względu na ograniczoną liczbę członków zespołu, przyjęto podejście, w którym zrezygnowano z formalnych ról i sztywnych ram czasowych, a prace były realizowane w sposób elastyczny, z naciskiem na efektywną komunikację i współpracę. Ostatni etap zaplanowano w oparciu o podejście zorientowane na użytkownika. Faza ta zakładała weryfikację systemu poprzez testy akceptacyjne _E2E_ oraz przeprowadzenie badań użyteczności z docelową grupą twórców przy użyciu standaryzowanych kwestionariuszy. Dopełnieniem tego etapu było również opracowanie dokumentacji wdrożeniowo-użytkowej w postaci dwóch dedykowanych przewodników: instrukcji obsługi systemu oraz instrukcji wdrożeniowej, opisującej proces instalacji i uruchomienia aplikacji.
 
 == Fazy projektu i harmonogram
 
 + Faza I: Analiza wymagań i prototypowanie
 
-  Identyfikacja grupy docelowej, zdefiniowanie wymagań funkcjonalnych i niefunkcjonalnych, opracowanie scenariuszy przypadków użycia i  stworzenie prototypu interfejsu użytkownika w środowisku _Figma_.
+  Identyfikacja grupy docelowej, zdefiniowanie wymagań funkcjonalnych i niefunkcjonalnych, opracowanie scenariuszy przypadków użycia i stworzenie prototypu interfejsu użytkownika w środowisku _Figma_.
 
 + Faza II: Implementacja
 
@@ -36,24 +36,24 @@ Do zarządzania kodem źródłowym, dokumentacją oraz plikami pracy dyplomowej 
 
 === Strategia rozgałęzień i przepływ pracy
 
-Prace programistyczne oparto o strategię rozgałęzień funkcjonalnych. Główna gałąź `main` zawierała stabilną wersję aplikacji, natomiast dla każdej nowej funkcjonalności tworzono osobną gałąź. Wprowadzano bezwzględny zakaz bezpośrednich zmian w gałęzi `main` - wszystkie zmiany były implementowane w gałęziach roboczych, których nazewnictwo ściśle odzwierciedlało wprowadzane funkcjonalności, m.in.:
+Prace programistyczne oparto na strategii rozgałęzień funkcjonalnych. Główna gałąź `main` zawierała stabilną wersję aplikacji, natomiast dla każdej nowej funkcjonalności tworzono osobną gałąź. Wprowadzono bezwzględny zakaz bezpośrednich zmian w gałęzi `main` - wszystkie zmiany były implementowane w gałęziach roboczych, których nazewnictwo ściśle odzwierciedlało wprowadzane funkcjonalności, m.in.:
 - `feat/` - rozwój nowych funkcjonalności,
 - `fix/` - korekta błędów,
-- `refactor` - refaktoryzacja kodu,
-- `ci` - konfiguracja i aktualizacja procesów ciągłej integracji,
-- `build` - aktualizacja zależności i konfiguracji środowiska,
-- `chore` - czynności porządkowe i administracyjne.
+- `refactor/` - refaktoryzacja kodu,
+- `ci/` - konfiguracja i aktualizacja procesów ciągłej integracji,
+- `build/` - aktualizacja zależności i konfiguracji środowiska,
+- `chore/` - czynności porządkowe i administracyjne.
 
 === Mechanizm _Pull Request_ i przegląd kodu
 
 Integracja zmian w gałęzi `main` odbywała się wyłącznie poprzez mechanizm _Pull Request_ (PR). Procedura ta stanowiła fundamentalny element kontroli jakości kodu oraz dzielenia się wiedzą w zespole:
-- *Asynchroniczna dyskucja i analiza rozwiązań* - każdy PR był poddawany przeglądowi przez pozostałych członków zespołu, którzy mogli zgłaszać uwagi, sugestie i poprawki. Stanowił on przestrzeń do dyskusji nad proponowanym podejściem, umożliwiając wymianę doświadczeń i wiedzy.
+- *Asynchroniczna dyskusja i analiza rozwiązań* - każdy PR był poddawany przeglądowi przez pozostałych członków zespołu, którzy mogli zgłaszać uwagi, sugestie i poprawki. Stanowił on przestrzeń do dyskusji nad proponowanym podejściem, umożliwiając wymianę doświadczeń i wiedzy.
 - *Wymóg recenzji* - warunkiem zatwierdzenia PR było uzyskanie pozytywnej recenzji od innego członka zespołu. W przypadku zgłoszenia uwag, autor PR był zobowiązany do ich uwzględnienia i wprowadzenia stosownych poprawek. Eliminowało to ryzyko wprowadzenia błędów do głównej gałęzi kodu oraz zapewniało spójność i jakość implementowanych rozwiązań.
 
 === Zapewnienie jakości i ciągła integracja
 
 Równolegle z kontrolą wersji wdrożono rygorystyczny potok ciągłej integracji _(Continuous Integration, CI)_, oparty na mechanizmie *GitHub Actions*. Każde stworzenie lub aktualizacja _Pull Request_ uruchamiała zestaw zautomatyzowanych weryfikacji, których pozytywny wynik był warunkiem dopuszczenia zmian do gałęzi `main`. Proces CI obejmował:
-- *Weryfikację jakości i formatowania kodu* - automatyczna kontrola zgodności ze standardem formatowania _Prettier_ oraz analizę statyczną kodu przy użyciu narzędzi _ESLint_, umożliwiającą wykrycie potencjalnych błędów, nieefektywnych konstrukcji oraz niezgodności ze standardami projektowymi. W konfiguracji lintera przyjęto rygorystyczny parametr `--max-warnings=0`, co uniemożliwiło wprowadzenie do repozytorium jakichkolwiek ostrzeżeń czy niezalezanych konstrukcji,
+- *Weryfikację jakości i formatowania kodu* - automatyczna kontrola zgodności ze standardem formatowania _Prettier_ oraz analizę statyczną kodu przy użyciu narzędzi _ESLint_, umożliwiającą wykrycie potencjalnych błędów, nieefektywnych konstrukcji oraz niezgodności ze standardami projektowymi. W konfiguracji lintera przyjęto rygorystyczny parametr `--max-warnings=0`, co uniemożliwiło wprowadzenie do repozytorium jakichkolwiek ostrzeżeń czy niezalecanych konstrukcji,
 - *Weryfikacja spójności _commitów_ i tytułów _PR_* - skrypt weryfikujący zgodność tytułów _commitów_ i _Pull Request_ z przyjętym schematem nazewnictwa, zapewniającym jednoznaczne określenie rodzaju wprowadzanych zmian oraz ich kontekstu,
-- *Kontrola statystycznego typowania* - kompilacja sprawdzająca `TypeScript`, gwarantująca bezbłędność typów w całym projekcie jeszcze przed uruchumieniem kodu,
-- *Automatyczne testy integracyjne* - potok testowy uruchamiający kontener bazodanowy _PostgreSQL_, wykonujący migrace schematuj, seedowanie danych testowych oraz uruchamiający zestaw testów integracyjnych, weryfikujących poprawność działania kluczowych funkcjonalności systemu z użyciem frameworka _Playwright_.
+- *Kontrola statycznego typowania* - kompilacja sprawdzająca `TypeScript`, gwarantująca bezbłędność typów w całym projekcie jeszcze przed uruchomieniem kodu,
+- *Automatyczne testy integracyjne* - potok testowy uruchamiający kontener bazodanowy _PostgreSQL_, wykonujący migracje schematu, seedowanie danych testowych oraz uruchamiający zestaw testów integracyjnych, weryfikujących poprawność działania kluczowych funkcjonalności systemu z użyciem frameworka _Playwright_.
