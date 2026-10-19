@@ -27,6 +27,33 @@ W początkowej fazie projektu zastosowano model kaskadowy, kładąc nacisk na ko
   caption: [Fazy projektu ArtSea.],
 ) <fig-phases> 
 
-== System kontroli wersji
+== System kontroli wersji i ciągła integracja
 
-== Zapewnienie jakości i ciągła integracja
+Do zarządzania kodem źródłowym, dokumentacją oraz plikami pracy dyplomowej wykorzystano system kontroli wersji _Git_. Centralnym punktem wymiany zasobów stała się organizacja w serwisie _GitHub_, umożliwiająca współpracę w zespole, śledzenie zmian oraz zarządzanie historią projektu. Aby zapewnić czytelny podział odpowiedzialności i nie obciążać repozytorium aplikacyjnego plikami pomocniczymi, środowisko projektowe podzielono na trzy odrębne repozytoria:
+- `artsea-webapp` - kod źródłowy aplikacji,
+- `notes` - dokumentacja projektu, notatki ze spotkań, materiały pomocnicze,
+- `thesis` - pliki pracy dyplomowej.
+
+=== Strategia rozgałęzień i przepływ pracy
+
+Prace programistyczne oparto o strategię rozgałęzień funkcjonalnych. Główna gałąź `main` zawierała stabilną wersję aplikacji, natomiast dla każdej nowej funkcjonalności tworzono osobną gałąź. Wprowadzano bezwzględny zakaz bezpośrednich zmian w gałęzi `main` - wszystkie zmiany były implementowane w gałęziach roboczych, których nazewnictwo ściśle odzwierciedlało wprowadzane funkcjonalności, m.in.:
+- `feat/` - rozwój nowych funkcjonalności,
+- `fix/` - korekta błędów,
+- `refactor` - refaktoryzacja kodu,
+- `ci` - konfiguracja i aktualizacja procesów ciągłej integracji,
+- `build` - aktualizacja zależności i konfiguracji środowiska,
+- `chore` - czynności porządkowe i administracyjne.
+
+=== Mechanizm _Pull Request_ i przegląd kodu
+
+Integracja zmian w gałęzi `main` odbywała się wyłącznie poprzez mechanizm _Pull Request_ (PR). Procedura ta stanowiła fundamentalny element kontroli jakości kodu oraz dzielenia się wiedzą w zespole:
+- *Asynchroniczna dyskucja i analiza rozwiązań* - każdy PR był poddawany przeglądowi przez pozostałych członków zespołu, którzy mogli zgłaszać uwagi, sugestie i poprawki. Stanowił on przestrzeń do dyskusji nad proponowanym podejściem, umożliwiając wymianę doświadczeń i wiedzy.
+- *Wymóg recenzji* - warunkiem zatwierdzenia PR było uzyskanie pozytywnej recenzji od innego członka zespołu. W przypadku zgłoszenia uwag, autor PR był zobowiązany do ich uwzględnienia i wprowadzenia stosownych poprawek. Eliminowało to ryzyko wprowadzenia błędów do głównej gałęzi kodu oraz zapewniało spójność i jakość implementowanych rozwiązań.
+
+=== Zapewnienie jakości i ciągła integracja
+
+Równolegle z kontrolą wersji wdrożono rygorystyczny potok ciągłej integracji _(Continuous Integration, CI)_, oparty na mechanizmie *GitHub Actions*. Każde stworzenie lub aktualizacja _Pull Request_ uruchamiała zestaw zautomatyzowanych weryfikacji, których pozytywny wynik był warunkiem dopuszczenia zmian do gałęzi `main`. Proces CI obejmował:
+- *Weryfikację jakości i formatowania kodu* - automatyczna kontrola zgodności ze standardem formatowania _Prettier_ oraz analizę statyczną kodu przy użyciu narzędzi _ESLint_, umożliwiającą wykrycie potencjalnych błędów, nieefektywnych konstrukcji oraz niezgodności ze standardami projektowymi. W konfiguracji lintera przyjęto rygorystyczny parametr `--max-warnings=0`, co uniemożliwiło wprowadzenie do repozytorium jakichkolwiek ostrzeżeń czy niezalezanych konstrukcji,
+- *Weryfikacja spójności _commitów_ i tytułów _PR_* - skrypt weryfikujący zgodność tytułów _commitów_ i _Pull Request_ z przyjętym schematem nazewnictwa, zapewniającym jednoznaczne określenie rodzaju wprowadzanych zmian oraz ich kontekstu,
+- *Kontrola statystycznego typowania* - kompilacja sprawdzająca `TypeScript`, gwarantująca bezbłędność typów w całym projekcie jeszcze przed uruchumieniem kodu,
+- *Automatyczne testy integracyjne* - potok testowy uruchamiający kontener bazodanowy _PostgreSQL_, wykonujący migrace schematuj, seedowanie danych testowych oraz uruchamiający zestaw testów integracyjnych, weryfikujących poprawność działania kluczowych funkcjonalności systemu z użyciem frameworka _Playwright_.
