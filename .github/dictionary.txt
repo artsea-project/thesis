@@ -5,3 +5,16 @@ BibLaTeX
 MojaPG
 OECD
 GitHub
+Git
+Figma
+Kanban
+E2E
+commitów
+lintera
+ESLint
+Prettier
+PostgreSQL
+Playwright
+seedowanie
+PR
+PR-ów
