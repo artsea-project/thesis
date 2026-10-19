@@ -24,7 +24,9 @@
 
 == Projekt interfejsu i makiety
 
-// TODO: Przedstaw projekt interfejsu użytkownika i makiety.
+Podstawowym założeniem projektu jest możliwość dostosowania wyglądu strony publicznej przez artystę. W związku z tym przedmiotem projektowania nie była tylko jedna, konkretna szata graficzna, tylko system zasad, który przy dowolnych ustawieniach wybranych przez użytkownika pozwala uzyskać spójną i czytelną stronę. W systemie wyróżnione są dwie warstwy: stała, obejmująca strukturę stron, hierarchię treści oraz budowę komponentów, a także zmienna, obejmująca kroje pisma, kolorystykę i wybrane cechy wyglądu. Przedstawione w niniejszym podrozdziale makiety prezentują zatem jedną z możliwych konfiguracji, a nie docelowy wygląd każdej strony utworzonej w systemie.
+
+Personalizacji nie podlega panel artysty. Otrzymał on stały wygląd, niezależny od ustawień strony publicznej, dzięki czemu zmiany wprowadzane przez artystę nie wpływają na czytelność i sposób obsługi narzędzia, za pomocą którego zostały wprowadzone.
 
 == Specyfikacja routingu
 
