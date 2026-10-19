@@ -34,7 +34,7 @@ Niezmienna pozostaje struktura wszystkich podstron części publicznej, złożon
 
 Nagłówek i stopka pełnią różne funkcje: pierwszy służy do poruszania się po stronie, druga zachęca do nawiązania kontaktu z artystą. W nagłówku znajduje się logo, którym jest imię i nazwisko artysty zapisane zwykłym tekstem. Logo jest jednocześnie linkiem do strony głównej. Ponadto nagłówek zawiera menu nawigacyjne, umożliwiające przejście do poszczególnych części strony („O mnie”, „Portfolio”, „Kontakt”), a także przełącznik wersji językowej (PL/EN). Stopka zawiera dane kontaktowe artysty, w tym linki do jego profili w mediach społecznościowych oraz hasło zachęcające do kontaktu.
 
-Ponieważ dane kontaktowe są dostępne w stopce każdej podstrony, w projekcie zrezygnowano z osobnej podstrony kontaktowej, a pozycja „Kontakt” w menu prowadzi do sekcji „Skontaktuj się ze mną” na stronie „O mnie”. Dane te ograniczają się do adresu e-mail i linków do mediów społecznościowych, dlatego osobna podstrona zawierałaby niewiele treści. Umieszczenie ich na tej samej stronie co opis artysty sprawia natomiast, że odwiedzający, który zapoznał się z sylwetką artysty, od razu otrzymuje możliwość nawiązania z nim kontaktu.
+Ponieważ dane kontaktowe są dostępne w stopce każdej podstrony, w projekcie zrezygnowano z osobnej podstrony kontaktowej, a pozycja „Kontakt” w menu prowadzi do sekcji „Skontaktuj się ze mną.” na stronie „O mnie”. Dane te ograniczają się do adresu e-mail i linków do mediów społecznościowych, dlatego osobna podstrona zawierałaby niewiele treści. Umieszczenie ich na tej samej stronie co opis artysty sprawia natomiast, że odwiedzający, który zapoznał się z sylwetką artysty, od razu otrzymuje możliwość nawiązania z nim kontaktu.
 
 Swoboda w doborze krojów pisma i kolorów niesie ze sobą ryzyko, że odwiedzający nie będzie w stanie odróżnić elementów najistotniejszych od tych mniej ważnych. Dlatego, o ile artysta ma wpływ na wygląd tekstu i kolorystykę strony, o tyle kolejność i ranga poszczególnych elementów treści pozostają niezmienne. Każda sekcja rozpoczyna się dużym nagłówkiem zakończonym kropką, np. „Wybrane prace.” na stronie głównej czy „Moje prace.” na stronie portfolio, który jednoznacznie wskazuje, czego dotyczy dana część strony. Stały porządek obowiązuje również na stronie pojedynczej pracy: kategoria i data poprzedzają tytuł pracy, po którym następują tagi, a następnie opis podzielony na części „Technika i materiały” oraz „O projekcie”. Artysta może zmienić krój pisma tytułu, ale nie jego wielkość względem pozostałych elementów, dzięki czemu tytuł zawsze będzie wyróżniał się na tle pozostałej treści.
 
@@ -42,7 +42,7 @@ Opisane zasady obejmują również powtarzalne elementy strony, takie jak kafelk
 
 === Warstwa zmienna
 
-Zakres zmian dostępnych dla artysty został celowo ograniczony do kilku parametrów, które w największym stopniu wpływają na charakter strony, ale nie naruszają jej układu. Obejmują one typografię, kolorystykę, gotowe motywy oraz dodatkowe opcje dotyczące wyglądu elementów strony. Wszystkie te zmiany artysta wprowadza w jednym miejscu - na stronie „Układ i Personalizacja” w panelu artysty, którego projekt został przedstawiony w dalszej części rozdziału. Zapisane ustawienia od razu pojawiają się na stronie publicznej, więc artysta może łatwo sprawdzić efekt wprowadzonych zmian. Na tym samym ekranie jest również układ kafelków strony głównej, jednak ze względu na jego złożoność został on omówiony osobno, w podrozdziale poświęconym edytorowi układu Bento Box.
+Zakres zmian dostępnych dla artysty został celowo ograniczony do kilku parametrów, które w największym stopniu wpływają na charakter strony, ale nie naruszają jej układu. Obejmują one typografię, kolorystykę, gotowe motywy oraz dodatkowe opcje dotyczące wyglądu elementów strony. Wszystkie te zmiany artysta wprowadza w jednym miejscu - na stronie „Układ i personalizacja” w panelu artysty, którego projekt został przedstawiony w dalszej części rozdziału. Zapisane ustawienia od razu pojawiają się na stronie publicznej, więc artysta może łatwo sprawdzić efekt wprowadzonych zmian. Na tym samym ekranie jest również układ kafelków strony głównej, jednak ze względu na jego złożoność został on omówiony osobno, w podrozdziale poświęconym edytorowi układu Bento Box.
 
 Kroje pisma artysta wybiera z zamkniętej listy, a nie spośród wszystkich fontów dostępnych w internecie. Pozwala to wcześniej sprawdzić, czy każdy z nich poprawnie wyświetla polskie znaki diakrytyczne, a także przygotować pliki fontów po stronie serwera aplikacji. Pliki te ograniczone są do znaków alfabetu łacińskiego wraz z rozszerzeniem obejmującym polskie litery oraz do kilku wybranych grubości, dzięki czemu ich rozmiar pozostaje niewielki niezależnie od wyboru artysty. Wybór obejmuje trzy role: krój podstawowy, stosowany w nagłówkach i logo, krój pomocniczy, przeznaczony dla elementów nawigacji, tekstu pomocniczego i wyróżnień, oraz krój dodatkowy, używany w tekście głównym.
 
@@ -97,7 +97,7 @@ Pod zdjęciami i opisem znajduje się odnośnik „Zobacz kolejny” z tytułem 
 
 ==== O mnie
 
-Strona „O mnie” jest miejscem, w którym artysta przedstawia samego siebie. Na jej górze znajduje się duży nagłówek złożony z imienia i nazwiska artysty oraz napisu „O mnie”. Poniżej znajduje się krótkie wprowadzenie, w którym artysta opisuje, czym się zajmuje. Obok niego umieszczono zdjęcie artysty. Portret nie jest wymagany i jeżeli artysta go nie doda, strona wyświetli się bez niego.
+Strona „O mnie” jest miejscem, w którym artysta przedstawia samego siebie. Na jej górze znajduje się duży nagłówek złożony z imienia i nazwiska artysty oraz napisu „O mnie” (@fig-o-mnie). Poniżej znajduje się krótkie wprowadzenie, w którym artysta opisuje, czym się zajmuje. Obok niego umieszczono zdjęcie artysty. Portret nie jest wymagany i jeżeli artysta go nie doda, strona wyświetli się bez niego.
 
 #figure(
   image("../img/o_mnie.png", width: 100%),
@@ -120,9 +120,11 @@ Stronę zamyka sekcja „Skontaktuj się ze mną.”, do której prowadzi pozycj
 
 ==== Układ i personalizacja
 
+// TODO: Opisz ekran „Układ i personalizacja” (odwołanie z podrozdziału „Warstwa zmienna”): wybór krojów pisma, kolorów, gotowych motywów i opcji wyglądu, zapisywanie ustawień.
+
 ==== Profil
 
-=== Powiązanie z wymaganiami
+// TODO: Opisz ekran profilu (odwołanie z sekcji „O mnie”): jedno pole opisu w wersji polskiej i angielskiej, akapity oddzielane pustą linią bez formatowania, zdjęcie, linki do mediów społecznościowych.
 
 == Specyfikacja routingu
 
@@ -130,4 +132,4 @@ Stronę zamyka sekcja „Skontaktuj się ze mną.”, do której prowadzi pozycj
 
 == Koncepcja edytora układu Bento Box
 
-// TODO: Przedstaw koncepcję edytora układu Bento Box.
+// TODO: Przedstaw koncepcję edytora układu Bento Box (odwołania z podrozdziału „Warstwa zmienna” i sekcji „Strona główna”): tworzenie układu kafelków, osobne układy dla komputerów i telefonów.
