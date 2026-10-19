@@ -28,5 +28,6 @@
 
 #include "chapters/1_introduction.typ"
 #include "chapters/2_methodology.typ"
-#include "chapters/3_results.typ"
-#include "chapters/4_summary.typ"
+#include "chapters/3_concept_and_solution_design.typ"
+#include "chapters/4_results.typ"
+#include "chapters/5_summary.typ"
