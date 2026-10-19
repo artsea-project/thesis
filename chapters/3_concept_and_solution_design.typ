@@ -67,6 +67,19 @@ Prace ułożone są w siatce typu Bento, złożonej z kafelków o różnych rozm
 
 ==== Portfolio
 
+Strona portfolio zawiera pełną listę prac artysty. Nie pojawiają się na niej prace, które artysta oznaczył w panelu jako ukryte. Pod nagłówkiem „Moje prace.” znajdują się filtry kategorii i tagów, a poniżej karty prac oraz przycisk „Załaduj więcej” (@fig-portfolio).
+
+#figure(
+  image("../img/portfolio.png", width: 100%),
+  caption: [Makieta strony portfolio],
+) <fig-portfolio>
+
+Prace można filtrować według jednej kategorii oraz dowolnej liczby tagów. Wybranie więcej niż jednego tagu powoduje, że wyświetlane są prace oznaczone wszystkimi wybranymi tagami. Lista tagów zależy od wybranej kategorii i obejmuje tylko te, które występują w należących do niej pracach. Wybrane filtry zapisywane są w adresie strony, więc odwiedzający może przesłać komuś link do przefiltrowanej listy, a po odświeżeniu strony wybór nie zostaje utracony.
+
+Każda praca prezentowana jest w formie karty zawierającej okładkę, tytuł, rok wykonania oraz tagi. Okładką zostaje pierwsze zdjęcie ustawione przez artystę podczas dodawania pracy. Prace uporządkowane są od najnowszych według roku wykonania. Na początku widocznych jest dwanaście prac, a każde kliknięcie przycisku „Załaduj więcej” dodaje kolejne dwanaście. Odwiedzający nie musi więc przechodzić między numerowanymi stronami, tylko może wczytywać kolejne prace w tym samym widoku. Kategorie, które nie zawierają żadnej pracy, nie są wyświetlane w filtrach, a jeśli w danej kategorii nie ma żadnej pracy spełniającej wybrane filtry tagów, wyświetlany jest komunikat „Brak prac spełniających kryteria wyszukiwania”.
+
+Karty prac ułożone są w kolumnach, w układzie typu _masonry_, znanym m.in. z serwisu Pinterest. Zdjęcia nie są przycinane do jednego formatu. Każde z nich zostaje zmniejszone tak, aby jego szerokość odpowiadała szerokości kolumny, a wysokość wynika z proporcji zdjęcia. Karty mają więc różną wysokość i w obrębie kolumny układają się bezpośrednio jedna pod drugą. W siatce Bento na stronie głównej zdjęcie dopasowywane jest do kształtu kafelka, więc jego brzegi mogą zostać obcięte. Na stronie portfolio odwiedzający widzi całą pracę, co ma znaczenie szczególnie przy pracach o nietypowych proporcjach, np. wąskich pionowych obrazach czy panoramicznych fotografiach. W odróżnieniu od strony głównej artysta nie musi niczego tu ustawiać, a nowo dodane prace same pojawiają się w kolumnach.
+
 ==== Strona pracy
 
 ==== O mnie
