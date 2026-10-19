@@ -97,6 +97,17 @@ Pod zdjęciami i opisem znajduje się odnośnik „Zobacz kolejny” z tytułem 
 
 ==== O mnie
 
+Strona „O mnie” jest miejscem, w którym artysta przedstawia samego siebie. Na jej górze znajduje się duży nagłówek złożony z imienia i nazwiska artysty oraz napisu „O mnie”. Poniżej znajduje się krótkie wprowadzenie, w którym artysta opisuje, czym się zajmuje. Obok niego umieszczono zdjęcie artysty. Portret nie jest wymagany i jeżeli artysta go nie doda, strona wyświetli się bez niego.
+
+#figure(
+  image("../img/o_mnie.png", width: 100%),
+  caption: [Makieta strony „O mnie”],
+) <fig-o-mnie>
+
+Opis artysty składa się z kilku akapitów, a ich miejsce na stronie wynika z kolejności. Sposób wprowadzania opisu omówiono przy makiecie profilu w panelu artysty. Krótkim wprowadzeniem jest pierwszy akapit opisu, a pozostałe tworzą dłuższy opis umieszczony niżej. Jeśli opis składa się z jednego akapitu, dłuższa sekcja nie jest wyświetlana.
+
+Stronę zamyka sekcja „Skontaktuj się ze mną.”, do której prowadzi pozycja „Kontakt” w menu. Zawiera ona krótki tekst zachęcający do kontaktu, adres e-mail artysty oraz odnośniki do jego profili w mediach społecznościowych. Kliknięcie adresu e-mail otwiera program pocztowy, a profile otwierają się w nowej karcie przeglądarki, więc strona artysty pozostaje otwarta i odwiedzający może łatwo do niej wrócić. Jeśli artysta nie dodał żadnych linków do mediów społecznościowych, ta część sekcji nie jest wyświetlana.
+
 === Makiety panelu artysty
 
 ==== Przegląd
