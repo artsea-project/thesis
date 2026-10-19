@@ -55,14 +55,15 @@ W panelu dostępne są również trzy gotowe motywy: „Domyślny”, „Ciemny�
 Część publiczna składa się z czterech rodzajów podstron: strony głównej, portfolio, strony pojedynczej pracy oraz strony „O mnie”. Ich makiety przygotowano w programie Figma dla szerokości ekranu 1440 px, czyli w wersji na komputery.
 
 ==== Strona główna
-Strona główna jest wizytówką artysty i jest pierwszą stroną, którą widzi odwiedzający. Zaczyna się od razu od prac. Pod nagłówkiem strony nie umieszczono banera ani tekstu powitalnego, ponieważ w portfolio najważniejsza jest twórczość, a informacje o artyście znajdują się na stronie „O mnie”. Jedyną sekcją jest „Wybrane prace.”, w której prezentowane są prace wskazane przez artystę (@fig-home).
+
+Strona główna jest wizytówką artysty i pierwszą stroną, którą widzi odwiedzający. Zaczyna się od razu od prac. Pod nagłówkiem strony nie umieszczono banera ani tekstu powitalnego, ponieważ w portfolio najważniejsza jest twórczość, a informacje o artyście znajdują się na stronie „O mnie”. Jedyną sekcją jest „Wybrane prace.”, w której prezentowane są prace wskazane przez artystę (@fig-home).
 
 #figure(
   image("../img/home.png", width: 100%),
   caption: [Makieta strony głównej],
 ) <fig-home>
 
-Prace ułożone są w siatce typu Bento, złożonej z kafelków o różnych rozmiarach. W odróżnieniu od siatki równych kafelków pozwala ona wyeksponować najważniejsze prace oraz dopasować kształt do proporcji dzieła, np. umieścić pionowy obraz w wysokim kafelku. Każdy kafelek wypełniony jest zdjęciem pracy, na którym znajdują się jej tytuł, rok wykonania i tagi, a kliknięcie dowolnego miejsca kafelka prowadzi do strony pracy. Aby praca była dobrze widoczna, wyświetlane są na nim najwyżej trzy tagi. Tekst na zdjęciu jest zawsze biały i umieszczony na ciemnym gradiencie u dołu kafelka, więc pozostaje czytelny niezależnie od zdjęcia i od kolorów wybranych przez artystę. Układ kafelków artysta ustala osobno dla komputerów i telefonów, a sposób jego tworzenia opisano w podrozdziale poświęconym edytorowi układu Bento Box.
+Prace ułożone są w siatce typu Bento, złożonej z kafelków o różnych rozmiarach. W odróżnieniu od siatki równych kafelków pozwala ona wyeksponować najważniejsze prace oraz dopasować kształt do proporcji dzieła, np. umieścić pionowy obraz w wysokim kafelku. Każdy kafelek wypełniony jest zdjęciem pracy, na którym znajdują się jej tytuł, rok wykonania i tagi, a kliknięcie dowolnego miejsca kafelka prowadzi do strony pracy. Aby praca była dobrze widoczna, wyświetlane są na kafelku najwyżej trzy tagi. Tekst na zdjęciu jest zawsze biały i umieszczony na ciemnym gradiencie u dołu kafelka, więc pozostaje czytelny niezależnie od zdjęcia i od kolorów wybranych przez artystę. Układ kafelków artysta ustala osobno dla komputerów i telefonów, a sposób jego tworzenia opisano w podrozdziale poświęconym edytorowi układu Bento Box.
 
 ==== Portfolio
 
