@@ -18,3 +18,9 @@ Playwright
 seedowanie
 PR
 PR-ów
+frameworka
+TypeScript
+JavaScript
+hostowania
+CI
+CD
