@@ -29,7 +29,7 @@ W początkowej fazie projektu zastosowano model kaskadowy, kładąc nacisk na ko
 
 == System kontroli wersji i ciągła integracja
 
-Do zarządzania kodem źródłowym, dokumentacją oraz plikami pracy dyplomowej wykorzystano system kontroli wersji Git. Centralnym punktem wymiany zasobów stała się organizacja w serwisie GitHub, umożliwiająca współpracę w zespole, śledzenie zmian oraz zarządzanie historią projektu. Aby zapewnić czytelny podział odpowiedzialności i nie obciążać repozytorium aplikacyjnego plikami pomocniczymi, środowisko projektowe podzielono na trzy odrębne repozytoria:
+Do zarządzania kodem źródłowym, dokumentacją oraz plikami pracy dyplomowej wykorzystano system kontroli wersji Git. Centralnym punktem wymiany zasobów stała się organizacja w serwisie GitHub @artsea-github, umożliwiająca współpracę w zespole, śledzenie zmian oraz zarządzanie historią projektu. Aby zapewnić czytelny podział odpowiedzialności i nie obciążać repozytorium aplikacyjnego plikami pomocniczymi, środowisko projektowe podzielono na trzy odrębne repozytoria:
 - `artsea-webapp` - kod źródłowy aplikacji,
 - `notes` - dokumentacja projektu, notatki ze spotkań, materiały pomocnicze,
 - `thesis` - pliki pracy dyplomowej.
