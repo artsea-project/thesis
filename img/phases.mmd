@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph Faza1["Faza I: Inżynieria wymagań i UI/UX"]
+        direction TB
+        A1["Analiza domeny i rynku"] --> A2["Specyfikacja wymagań i User Stories"]
+        A2 --> A3["Makieta Figma"]
+    end
+
+    subgraph Faza2["Faza II: Implementacja"]
+        direction TB
+        B1["Architektura i model danych"] --> B2["Ciągły przepływ realizowanych zadań"]
+        B2 --> B3["Rygorystyczne CI/CD i Code Review"]
+    end
+
+    subgraph Faza3["Faza III: Wdrożenie i ewaluacja"]
+        direction TB
+        C1["Wdrożenie i testy integracyjne"] --> C2["Testy akceptacyjne"]
+        C2 --> C3["Instrukcje obsługi"]
+        C3 --> C4["Badania użyteczności i ewaluacja z użytkownikami"]
+    end
+
+    Faza1 --> Faza2
+    Faza2 --> Faza3
