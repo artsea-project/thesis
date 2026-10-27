@@ -48,6 +48,8 @@ Prace programistyczne oparto na strategii rozgałęzień funkcjonalnych. Główn
 - `build/` - aktualizacja zależności i konfiguracji środowiska,
 - `chore/` - czynności porządkowe i administracyjne.
 
+Spójny schemat nazewnictwa rozszerzono również na wiadomości poszczególnych _commitów_ oraz tytuły PR, przyjmując w projekcie standard _Conventional Commits_ @conventional-commits. Zgodnie z tą konwencją każdy komunikat musiał posiadać ściśle określoną strukturę `<typ>(opcjonalny-zakres): <krótki opis>` formułowaną w trybie rozkazującym (np. `fix(theme): derive component palette from three colors`), a lista dopuszczalnych prefiksów obejmowała: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore` oraz `revert`. Zastosowanie tej konwencji zagwarantowało czytelny, samodokumentujący się dziennik historii zmian, ułatwiający śledzenie postępów prac trzech autorów oraz szybką identyfikację źródła ewentualnych regresji.
+
 === Mechanizm _Pull Request_ i przegląd kodu
 
 Integracja zmian w gałęzi `main` odbywała się wyłącznie poprzez mechanizm _Pull Request_ (PR) @chacon2014. Procedura ta stanowiła fundamentalny element kontroli jakości kodu oraz dzielenia się wiedzą w zespole:
