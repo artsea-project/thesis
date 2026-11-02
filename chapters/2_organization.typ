@@ -54,7 +54,7 @@ Spójny schemat nazewnictwa rozszerzono również na wiadomości poszczególnych
 
 Integracja zmian w gałęzi `main` odbywała się wyłącznie poprzez mechanizm _Pull Request_ (PR) @chacon2014. Procedura ta stanowiła fundamentalny element kontroli jakości kodu oraz dzielenia się wiedzą w zespole:
 - *Asynchroniczna dyskusja i analiza rozwiązań* - każdy PR był poddawany przeglądowi przez pozostałych członków zespołu, którzy mogli zgłaszać uwagi, sugestie i poprawki. Stanowił on przestrzeń do dyskusji nad proponowanym podejściem, umożliwiając wymianę doświadczeń i wiedzy.
-- *Wymóg recenzji* - warunkiem zatwierdzenia PR było uzyskanie pozytywnej recenzji od innego członka zespołu. W przypadku zgłoszenia uwag, autor PR był zobowiązany do ich uwzględnienia i wprowadzenia stosownych poprawek. Eliminowało to ryzyko wprowadzenia błędów do głównej gałęzi kodu oraz zapewniało spójność i jakość implementowanych rozwiązań.
+- *Wymóg recenzji* - warunkiem zatwierdzenia PR było uzyskanie pozytywnej recenzji od innego członka zespołu. W przypadku zgłoszenia uwag, autor PR był zobowiązany do ich uwzględnienia i wprowadzenia stosownych poprawek. Minimalizowło to ryzyko wprowadzenia błędów do głównej gałęzi kodu oraz zapewniało spójność i jakość implementowanych rozwiązań.
 
 === Zapewnienie jakości i ciągła integracja
 
