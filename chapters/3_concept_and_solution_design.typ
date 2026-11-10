@@ -110,6 +110,12 @@ Stronę zamyka sekcja „Skontaktuj się ze mną.”, do której prowadzi pozycj
 
 === Makiety panelu artysty
 
+Panel jest częścią aplikacji dostępną po zalogowaniu, w której artysta zarządza treścią swojej strony: pracami, kategoriami, tagami, profilem i ustawieniami wyglądu. W odróżnieniu od części publicznej, która służy prezentacji prac odwiedzającym, panel jest narzędziem pracy. Artysta korzysta z niego za każdym razem, gdy chce dodać nową pracę, poprawić jej opis lub zmienić wygląd strony, dlatego najważniejsze było to, żeby bez szukania trafiał do potrzebnej funkcji. Z tego powodu ekrany zbudowano według podobnego schematu, np. na górze ekranów prac i kategorii znajduje się tytuł z krótkim objaśnieniem, a obok niego przycisk dodawania nowego elementu. Po wprowadzeniu zmian artysta może od razu sprawdzić ich efekt, otwierając stronę publiczną za pomocą odnośnika „Podgląd portfolio” w menu.
+
+Podział panelu na sekcje odpowiada temu, co artysta robi najczęściej. W sekcji „Prace” dodaje nowe prace, edytuje je i decyduje, które z nich mają być widoczne w portfolio. Kategorie i tagi znajdują się na wspólnym ekranie „Kategorie”, ponieważ oba służą do porządkowania prac, a na stronie publicznej pojawiają się obok siebie w filtrach portfolio. Wygląd strony artysta ustawia w sekcji „Układ i personalizacja”, a opis, zdjęcie i linki do mediów społecznościowych uzupełnia w „Profilu”. Pierwszą pozycją menu jest „Przegląd”, na którym artysta widzi liczbę dodanych prac, kategorii i tagów, miniaturę strony głównej oraz swoje profile w mediach społecznościowych.
+
+Panel utrzymano w bieli i odcieniach szarości. Jedynym wyrazistym kolorem jest niebieski, którym oznaczono aktywną pozycję menu oraz zaznaczone elementy, np. pole formularza, w którym artysta właśnie wpisuje tekst. Cały panel korzysta z jednego bezszeryfowego kroju pisma, a ikony pochodzą z tego samego zestawu, przez co wszystkie ekrany zachowują spójny wygląd. Przy tak oszczędnej kolorystyce najbardziej rzucają się w oczy zdjęcia prac, czyli to, czym artysta w panelu zarządza. Panel wygląda tak samo niezależnie od ustawień strony publicznej, więc nawet jeśli artysta wybierze dla niej ciemny motyw, panel pozostaje jasny i czytelny.
+
 ==== Przegląd
 
 ==== Lista prac
