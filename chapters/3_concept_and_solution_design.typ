@@ -133,7 +133,18 @@ Prawa kolumna, „Linki społecznościowe.”, pokazuje, ile linków artysta dod
 
 ==== Lista prac
 
+Ekran „Prace” zawiera wszystkie prace dodane przez artystę, również te, które ukrył przed odwiedzającymi. Na górze znajduje się tytuł „Zarządzaj pracami” z krótkim objaśnieniem oraz przycisk „Dodaj pracę”, który prowadzi do formularza opisanego w kolejnej sekcji. Niżej umieszczono wyszukiwarkę, a pod nią karty prac ułożone w trzech kolumnach (@fig-lista-prac).
 
+#figure(
+  image("../img/lista_prac.png", width: 100%),
+  caption: [Makieta ekranu listy prac w panelu artysty],
+) <fig-lista-prac>
+
+Karta pracy w panelu różni się od karty w portfolio. Zawiera okładkę, czyli pierwsze zdjęcie pracy, a także tytuł, kategorię i datę dodania. Nie ma na niej tagów ani roku wykonania, ponieważ na tym ekranie artysta przede wszystkim szuka pracy, którą chce zmienić, a do jej rozpoznania wystarczą zdjęcie i tytuł. W dolnej części karty znajdują się przełącznik widoczności oraz ikony edycji i usuwania. Ikona ołówka otwiera formularz edycji pracy, a ikona kosza okno z prośbą o potwierdzenie. Komunikat w tym oknie uprzedza, że praca zostanie trwale usunięta razem ze wszystkimi zdjęciami.
+
+Przełącznik widoczności pozwala ukryć pracę bez jej usuwania, np. gdy artysta chce na jakiś czas zdjąć ją ze strony. Ukryta praca znika ze strony głównej i z portfolio, a jej podstrona przestaje być dostępna, ale w panelu nadal jest na liście i w każdej chwili można ją ponownie pokazać. Zmiana zapisuje się od razu po kliknięciu i nie trzeba jej dodatkowo zatwierdzać. Pod tytułem ekranu pojawia się wtedy krótki komunikat, np. „Praca została ukryta.” Przełącznik ukrytej pracy jest szary, a napis „Ukryta” jaśniejszy, więc na liście od razu widać, których prac odwiedzający nie zobaczą.
+
+Wyszukiwanie obejmuje tytuły prac oraz nazwy kategorii w wersji polskiej i angielskiej. Jeśli żadna praca nie pasuje do wpisanej frazy, zamiast kart pojawia się komunikat „Nie znaleziono prac pasujących do wyszukiwanej frazy.” Podobny komunikat wyświetlany jest wtedy, gdy artysta nie dodał jeszcze żadnej pracy. Prace ułożone są od ostatnio dodanej, więc nowa praca od razu trafia na początek listy. Na jednej stronie mieści się sześć kart, a pod nimi znajdują się numery stron i strzałki. W portfolio odwiedzający przegląda prace po kolei i doczytuje kolejne przyciskiem „Załaduj więcej”, natomiast w panelu artysta zwykle szuka jednej konkretnej pracy, dlatego łatwiej mu od razu przejść na wybraną stronę. Wpisana fraza i numer strony zapisywane są w adresie, więc po odświeżeniu wynik wyszukiwania nie znika.
 
 ==== Dodawanie i edycja pracy
 
