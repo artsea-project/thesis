@@ -90,3 +90,46 @@ Dodatkowo, większość serwisów (Canva, Squarespace, Behance) nie oferuje moż
 == Luka w analizowanych rozwiązaniach
 
 Na podstawie porównania lukę określono jako brak połączenia w opisanych wariantach trzech cech: gotowej obsługi portfolio pojedynczego artysty, obejmującej system zarządzania pracami z filtrowaniem po kategoriach i tagach, personalizacji ograniczonej do tego zastosowania oraz bezpłatnego oprogramowania o otwartym kodzie źródłowym, możliwego do uruchomienia na wybranej infrastrukturze.
+
+Zdefiniowany zestaw cech każde z rozwiązań pokrywa tylko częściowo. Canva, Squarespace i Behance wiążą publikację z infrastrukturą własnej platformy i nie posiadają gotowej filtracji prac po kategoriach i tagach, a WordPress zapewnia niezależność infrastruktury i otwarty kod, lecz dopiero konfiguracja pozwala osiągnąć w nim podobną obsługę portfolio.
+Zidentyfikowana luka dotyczy artysty bez doświadczenia w programowaniu, który chce samodzielnie zarządzać swoimi pracami i nadać stronie indywidualny charakter, nie potrzebując przy tym uniwersalnego środowiska do projektowania witryn. Zależy mu również na rozwiązaniu, które pozwala ograniczać koszty w długim okresie, między innymi dzięki łatwemu przeniesieniu portfolio do innego dostawcy hostingu.
+
+== ArtSea jako odpowiedź na zidentyfikowaną lukę
+
+ArtSea łączy zarządzanie portfolio pojedynczego artysty z ograniczoną personalizacją i możliwością uruchomienia aplikacji niezależnie od dostawcy hostingu.
+Aplikacja jest rozpowszechniana wraz z otwartym kodem źródłowym, dzięki czemu korzystanie z niej jest bezpłatne, a jedyne koszty, jakie ponosi artysta, to hosting i domena.
+
+=== Obsługa i personalizacja portfolio
+
+Osoba przeglądająca portfolio widzi gotową stronę, na której może filtrować prace po kategoriach i tagach.
+Pracami zarządza artysta, który w graficznym panelu administracyjnym dodaje materiały, opisy, wymiary, rok wykonania, kategorie i tagi oraz określa widoczność prac.
+Panel obejmuje także informacje o artyście i dane kontaktowe, a treści portfolio można przygotować w języku polskim i angielskim.
+Codzienna obsługa portfolio nie wymaga edytowania kodu ani korzystania z terminala.
+Dane te tworzą spójną strukturę portfolio, zamiast pozostawać wyłącznie niezależnymi elementami ułożonymi w edytorze strony.
+W efekcie ArtSea pełni rolę systemu zarządzania treścią (ang. CMS), o zakresie ograniczonym do potrzeb pojedynczego artysty.
+
+Personalizacja obejmuje kolory, kroje pisma, rozmieszczenie oraz rozmiary prac w bentoboxie, a także treści wpisywane w przygotowanych polach.
+Kolory wybiera się samodzielnie lub przez gotowy motyw.
+ArtSea nie udostępnia pełnego środowiska komponowania stron z dowolnych komponentów, lecz zestaw ustawień związanych z prezentacją twórczości artysty.
+Użytkownik dostosowuje więc wygląd portfolio, zamiast konfigurować dowolny rodzaj witryny.
+Zawężony zakres zmniejsza jednak liczbę decyzji, gdyż artysta, który chce szybko opublikować portfolio, wybiera gotowy motyw i od razu przechodzi do treści.
+
+=== Niezależność infrastruktury i koszty
+
+ArtSea można uruchomić u dowolnego dostawcy, który pozwala na uruchomienie kontenerów Dockera, na przykład na serwerze VPS, bez konieczności korzystania z centralnej usługi prowadzonej przez twórców projektu.
+Dzięki temu użytkownik porównuje oferty infrastruktury i wybiera najtańszą, zamiast przyjmować cennik narzucony przez operatora platformy.
+Przykładowymi dostawcami, których oferty można rozważyć, są Hetzner i Mikrus, przy czym wybór konkretnego pakietu pozostaje odrębny od wyboru aplikacji @hetzner-prices @mikrus-offer.
+
+Dla zobrazowania samego kosztu infrastruktury cennik Hetznera podaje dla serwera CX23 w Niemczech lub Finlandii miesięczną cenę 5,99 euro bez podatku VAT @hetzner-prices.
+W kosztorysie konkretnego wdrożenia należy osobno uwzględnić domenę oraz ewentualne kopie zapasowe.
+
+Alternatywą jest uruchomienie ArtSea na własnym serwerze lub posiadanym komputerze, bez opłacania zewnętrznej usługi hostingowej.
+Taki wariant nie oznacza jednak całkowitego braku kosztów, jeśli komputera jeszcze nie ma, konieczny jest jego jednorazowy zakup. Niezależnie od tego dochodzą też bieżące opłaty za energię elektryczną zużywaną przez serwer i za publiczny adres IP lub usługę tunelowania, która udostępnia witrynę w internecie.
+Jeszcze przed poniesieniem kosztów hostingu ArtSea można bezpłatnie wypróbować lokalnie, uruchamiając aplikację na własnym komputerze.
+Artysta może wykonać pierwsze kroki wdrożenia samodzielnie lub skorzystać z pomocy osoby technicznej, a następnie zarządzać treścią i wyglądem portfolio przez panel graficzny.
+Niezależność hostingu nie usuwa obowiązków związanych z utrzymaniem serwera, dlatego w ArtSea oddzielono uruchomienie infrastruktury od codziennej obsługi portfolio.
+
+=== Podsumowanie
+
+ArtSea wypełnia zidentyfikowaną lukę poprzez połączenie gotowej obsługi portfolio, w tym zarządzania pracami z ich filtrowaniem po kategoriach i tagach, personalizacji ograniczonej do potrzeb artysty, bezpłatnego otwartego oprogramowania i swobody wyboru miejsca wdrożenia.
+Nie zastępuje wszystkich zastosowań analizowanych platform, lecz zapewnia odrębne rozwiązanie dla artysty potrzebującego własnego portfolio bez uniwersalnego kreatora i bez obowiązkowego abonamentu za aplikację.
