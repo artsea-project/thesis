@@ -108,6 +108,16 @@
   set footnote.entry(separator: line(length: 40%, stroke: 0.5pt))
 
   set heading(numbering: main-numbering, supplement: none)
+  // Odsyłacz do nagłówka pokazuje numer bez końcowej kropki (np. 3.6.2),
+  // żeby nie dublować kropki w środku lub na końcu zdania.
+  show ref: it => {
+    let el = it.element
+    if el != none and el.func() == heading and el.numbering == main-numbering {
+      link(el.location(), numbering("1.1", ..counter(heading).at(el.location())))
+    } else {
+      it
+    }
+  }
   set math.equation(
     numbering: number => text(
       size: 9.96264pt,
