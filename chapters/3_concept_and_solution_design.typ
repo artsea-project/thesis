@@ -148,6 +148,19 @@ Wyszukiwanie obejmuje tytuły prac oraz nazwy kategorii w wersji polskiej i angi
 
 ==== Dodawanie i edycja pracy
 
+Dodawanie nowej pracy i edycja istniejącej odbywają się w tym samym formularzu. Różnią się jedynie tytułem ekranu, „Dodaj pracę” lub „Edytuj pracę”, oraz tym, że przy edycji pola są już wypełnione zapisanymi danymi. Pola ułożone są od najważniejszych: najpierw tytuł, rok wykonania i wymiary, potem opis, kategoria i tagi, a na końcu zdjęcia (@fig-dodawanie-pracy).
+
+#figure(
+  image("../img/dodawanie_pracy.png", width: 100%),
+  caption: [Makieta formularza dodawania i edycji pracy],
+) <fig-dodawanie-pracy>
+
+Tytuł, technikę oraz opis „O projekcie” artysta wpisuje w dwóch wersjach językowych, ponieważ strona publiczna jest dostępna po polsku i po angielsku. Zamiast dwóch osobnych pól nad każdym z nich znajdują się zakładki „Polski” i „English”, które przełączają wersję tekstu w tym samym polu. Formularz jest dzięki temu krótszy i artysta może najpierw uzupełnić wszystko po polsku, a tłumaczenie dodać później. Wymagane są jedynie tytuł w przynajmniej jednym języku oraz kategoria. Pozostałe pola można zostawić puste, a odpowiadające im elementy nie pojawią się wtedy na stronie pracy. Wymiary artysta podaje w dowolnym formacie, ponieważ inaczej opisuje się obraz, a inaczej rzeźbę czy instalację.
+
+Kategorię i tagi artysta wybiera z dwóch list umieszczonych obok siebie. Do pracy można przypisać tylko jedną kategorię, ale dowolną liczbę tagów. Każda z list ma własną wyszukiwarkę, co przydaje się, gdy tagów jest dużo. Jeśli potrzebnej kategorii lub tagu jeszcze nie ma, artysta nie musi opuszczać formularza i przechodzić do sekcji „Kategorie”. Nad każdą listą znajduje się przycisk dodawania, który otwiera niewielkie okno, a nowo utworzona pozycja jest od razu zaznaczona w formularzu.
+
+Zdjęcia dodaje się, przeciągając pliki na wyznaczone pole albo wybierając je z dysku. Obsługiwane są formaty PNG, JPG i GIF oraz krótkie filmy MP4, a każdy plik może mieć najwyżej 2 MB. Pliki dodawane przy jednym zapisie mogą mieć łącznie najwyżej 20 MB. Pod polem wyświetla się lista dodanych plików, której kolejność odpowiada kolejności zdjęć w galerii na stronie pracy. Artysta zmienia ją, przeciągając plik za uchwyt lub używając strzałek. Pierwszy plik na liście staje się okładką pracy i jest oznaczony etykietą „Okładka”. Okładką nie może być film, dlatego formularz nie pozwala przesunąć pliku MP4 na początek listy i wyświetla wtedy komunikat. Jeśli natomiast film znalazłby się na pierwszym miejscu po dodaniu nowych plików lub usunięciu okładki, jego miejsce automatycznie zajmuje pierwsze zdjęcie z listy.
+
 ==== Kategorie i tagi
 
 ==== Układ i personalizacja
