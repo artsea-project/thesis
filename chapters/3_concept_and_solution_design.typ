@@ -163,6 +163,19 @@ Zdjęcia dodaje się, przeciągając pliki na wyznaczone pole albo wybierając j
 
 ==== Kategorie i tagi
 
+Na ekranie „Kategorie” artysta zarządza zarówno kategoriami, jak i tagami, ponieważ jedne i drugie służą do porządkowania prac, a na stronie publicznej pojawiają się razem w filtrach portfolio. Ekran składa się z dwóch części, najpierw kategorii, a pod nimi tagów, zbudowanych według tego samego schematu: po lewej stronie znajduje się formularz, a po prawej lista istniejących pozycji (@fig-kategorie-tagi).
+
+#figure(
+  image("../img/kategorie_tagi.png", width: 100%),
+  caption: [Makieta ekranu kategorii i tagów w panelu artysty],
+) <fig-kategorie-tagi>
+
+Ten sam formularz służy do dodawania i do edycji. Zawiera dwa pola, na nazwę polską i angielską, i oba są wymagane, ponieważ nazwy kategorii i tagów wyświetlane są w filtrach obu wersji językowych strony. Po kliknięciu ikony ołówka przy kategorii albo samego tagu nazwy wybranej pozycji trafiają do formularza, którego tytuł zmienia się na „Edytuj kategorię” lub „Edytuj tag”, a edytowana pozycja zostaje obramowana na liście. Artysta widzi więc, co zmienia, i nie musi otwierać osobnego okna. Nie można też dodać dwóch kategorii ani dwóch tagów o tej samej nazwie.
+
+Kategorie wyświetlane są w tabeli w kolejności alfabetycznej. Przy każdej z nich widać nazwę polską, a pod nią mniejszą czcionką angielską, oraz liczbę przypisanych prac, np. „1 praca”, „4 prace” czy „12 prac”. Ta liczba podpowiada, czy kategorię można usunąć. Kategorii, do której należy choć jedna praca, nie da się skasować, ponieważ każda praca musi mieć kategorię. Artysta musi więc najpierw przypisać te prace do innej kategorii, a próba usunięcia kończy się komunikatem z wyjaśnieniem.
+
+Tagi przedstawione są jako etykiety zaczynające się od znaku `#`. Jeśli angielska nazwa różni się od polskiej, wyświetlana jest pod nią mniejszą czcionką. Znak `#` dodawany jest automatycznie, o czym przypomina krótka wskazówka pod formularzem, więc artysta wpisuje samą nazwę. Lista tagów ma własną wyszukiwarkę, a w jej nagłówku widać łączną liczbę tagów. W przeciwieństwie do kategorii tag można usunąć zawsze, ale okno potwierdzenia uprzedza, że zostanie on odpięty od wszystkich prac, do których był przypisany.
+
 ==== Układ i personalizacja
 
 // TODO: Opisz ekran „Układ i personalizacja” (odwołanie z podrozdziału „Warstwa zmienna”): wybór krojów pisma, kolorów, gotowych motywów i opcji wyglądu, zapisywanie ustawień.
