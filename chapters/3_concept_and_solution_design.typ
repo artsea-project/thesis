@@ -193,7 +193,22 @@ Przyciski zapisu i cofania są aktywne tylko wtedy, gdy w danej części coś si
 
 ==== Profil
 
-// TODO: Opisz ekran profilu (odwołanie z sekcji „O mnie”): jedno pole opisu w wersji polskiej i angielskiej, akapity oddzielane pustą linią bez formatowania, zdjęcie, linki do mediów społecznościowych.
+Na ekranie „Profil” artysta uzupełnia informacje o sobie, które pojawiają się na stronie publicznej. Ekran ma trzy części: dane podstawowe, czyli zdjęcie, imię i adres e-mail, następnie teksty strony „O mnie” w dwóch wersjach językowych, a na końcu linki do mediów społecznościowych (@fig-profil).
+
+#figure(
+  image("../img/profil.png", width: 100%),
+  caption: [Makieta ekranu „Profil” w panelu artysty],
+) <fig-profil>
+
+Na górze ekranu znajduje się zdjęcie artysty z przyciskiem „Zmień zdjęcie”. Można dodać plik JPG lub PNG o rozmiarze do 2 MB, a nowe zdjęcie od razu widać w podglądzie, jeszcze przed zapisaniem. Jedynym wymaganym polem w formularzu profilu jest „Imię lub pseudonim artystyczny”, ponieważ na stronie publicznej pełni ono funkcję logo. Adres e-mail nie jest obowiązkowy. Jeśli artysta go poda, pojawi się na stronie „O mnie” jako link do kontaktu, a jeśli zostawi puste pole, adres nie będzie wyświetlany.
+
+Teksty strony „O mnie” podzielono na osobne pola: nagłówek, wprowadzenie, wyróżniony fragment i dalszą część opisu. Każde z nich odpowiada innemu miejscu na stronie, a pod każdym polem znajduje się krótka informacja, gdzie tekst się pojawi. Nagłówek można pominąć, wtedy strona wyświetli domyślny napis „O mnie”. W ten sam sposób artysta wpisuje tekst sekcji „Skontaktuj się ze mną.”, który pojawia się na końcu strony obok adresu e-mail i linków. Wersję polską i angielską wpisuje się w tym samym polu, przełączając się między zakładkami „Polski” i „English”, dzięki czemu formularz nie jest dwa razy dłuższy. Poza nagłówkiem każde pole trzeba wypełnić w obu językach albo zostawić puste.
+
+W polach nie ma żadnego formatowania. Artysta wpisuje zwykły tekst, a kolejne akapity oddziela pustą linią. Wygląd tekstu na stronie zależy więc tylko od ustawień krojów pisma i kolorów, a nie od tego, jak artysta sformatował go w panelu.
+
+Pod tekstami znajdują się przyciski „Zapisz zmiany” i „Cofnij zmiany”, które działają tak samo jak na ekranie „Układ i personalizacja”. Jeśli zapis się nie uda, strona przewija się do pierwszego pola z błędem, a gdy w polu brakuje jednej z wersji językowych, przełącza się ono na zakładkę z brakującym tekstem.
+
+Linki do mediów społecznościowych nie są zapisywane razem z resztą formularza, tylko każdy osobno. Na liście widoczne są nazwa linku i adres bez `https://`, a obok ikony edycji i usuwania. Przycisk pod listą otwiera panel z dwoma polami: „Wyświetlany tekst”, czyli podpisem linku na stronie, oraz „Link”. Przedrostek `https://` można pominąć, ponieważ aplikacja dopisze go sama, a jeśli artysta wklei pełny adres skopiowany z przeglądarki, zostanie on zapisany bez zmian. Przyjmowane są wyłącznie adresy stron internetowych, więc np. adres e-mail wpisany w to pole zostanie odrzucony z prośbą o podanie adresu strony. Edycja otwiera ten sam panel z wypełnionymi polami, a przed usunięciem linku pojawia się prośba o potwierdzenie.
 
 == Specyfikacja routingu
 
