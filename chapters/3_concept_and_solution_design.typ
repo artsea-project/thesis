@@ -40,7 +40,7 @@ Swoboda w doborze krojów pisma i kolorów niesie ze sobą ryzyko, że odwiedzaj
 
 Opisane zasady obejmują również powtarzalne elementy strony, takie jak kafelki na stronie głównej, karty prac w portfolio czy etykiety tagów, które na każdej podstronie mają tę samą budowę. Ustawienie wprowadzone przez artystę w panelu zmienia zatem wygląd wszystkich wystąpień danego elementu jednocześnie, bez konieczności edytowania poszczególnych podstron. W efekcie, niezależnie od wybranej konfiguracji, strona zachowuje spójny układ, a artysta może skupić się na doborze stylistyki zamiast na projektowaniu każdej podstrony od podstaw.
 
-=== Warstwa zmienna
+=== Warstwa zmienna <sec-warstwa-zmienna>
 
 Zakres zmian dostępnych dla artysty został celowo ograniczony do kilku parametrów, które w największym stopniu wpływają na charakter strony, ale nie naruszają jej układu. Obejmują one typografię, kolorystykę, gotowe motywy oraz dodatkowe opcje dotyczące wyglądu elementów strony. Wszystkie te zmiany artysta wprowadza w jednym miejscu - na stronie „Układ i personalizacja” w panelu artysty, którego projekt został przedstawiony w dalszej części rozdziału. Zapisane ustawienia od razu pojawiają się na stronie publicznej, więc artysta może łatwo sprawdzić efekt wprowadzonych zmian. Na tym samym ekranie jest również układ kafelków strony głównej, jednak ze względu na jego złożoność został on omówiony osobno, w podrozdziale poświęconym edytorowi układu Bento Box.
 
@@ -178,7 +178,18 @@ Tagi przedstawione są jako etykiety zaczynające się od znaku `#`. Jeśli angi
 
 ==== Układ i personalizacja
 
-// TODO: Opisz ekran „Układ i personalizacja” (odwołanie z podrozdziału „Warstwa zmienna”): wybór krojów pisma, kolorów, gotowych motywów i opcji wyglądu, zapisywanie ustawień.
+Ekran „Układ i personalizacja” zbiera w jednym miejscu wszystko, co zmienia wygląd strony publicznej. Składa się z dwóch części: edytora kafelków strony głównej oraz ustawień czcionek i kolorów (@fig-uklad-personalizacja). Każda z nich ma własne przyciski „Zapisz zmiany” i „Cofnij zmiany”, dzięki czemu artysta może np. zapisać nowe kolory, nie zapisując przy tym niedokończonego układu kafelków. Działanie edytora kafelków opisano osobno w podrozdziale @sec-bento, dlatego poniżej omówiono tylko ustawienia krojów pisma i kolorów.
+
+#figure(
+  image("../img/uklad_personalizacja.png", width: 100%),
+  caption: [Makieta ekranu „Układ i personalizacja” w panelu artysty],
+) <fig-uklad-personalizacja>
+
+W dolnej części ekranu artysta zmienia ustawienia opisane w podrozdziale @sec-warstwa-zmienna. Kroje pisma wybiera z trzech rozwijanych list, po jednej dla każdej roli. Na listach kroje podzielone są na szeryfowe i bezszeryfowe, a nazwa każdego z nich zapisana jest tym właśnie krojem, więc nie trzeba go znać, żeby ocenić, jak wygląda. Pod listami umieszczono podgląd z przykładowym nagłówkiem „Wybrane prace.”, pozycjami menu, fragmentem tekstu i elementem w kolorze akcentu, który zmienia się od razu po wybraniu kroju lub koloru, jeszcze przed zapisaniem.
+
+Kolory tekstu, tła i akcentu można wpisać jako kod szesnastkowy albo wybrać w próbniku, który otwiera się po kliknięciu kwadratu obok pola. Jeśli kolor zostanie wpisany w złym formacie, pojawia się wskazówka, żeby podać go jako `#RRGGBB` albo `#RGB`. Niżej wyświetlane są gotowe motywy, „Domyślny”, „Ciemny” i „Jasny-zielony”, każdy pokazany we własnej kolorystyce. Wybranie motywu tylko wypełnia formularz, a na stronie pojawi się on dopiero po zapisaniu, o czym przypomina krótki podpis.
+
+Przyciski zapisu i cofania są aktywne tylko wtedy, gdy w danej części coś się zmieniło. „Cofnij zmiany” przywraca ostatnio zapisane ustawienia, a próba opuszczenia ekranu z niezapisanymi zmianami kończy się ostrzeżeniem, tak samo jak w formularzu pracy.
 
 ==== Profil
 
@@ -188,6 +199,6 @@ Tagi przedstawione są jako etykiety zaczynające się od znaku `#`. Jeśli angi
 
 // TODO: Opisz specyfikację routingu.
 
-== Koncepcja edytora układu Bento Box
+== Koncepcja edytora układu Bento Box <sec-bento>
 
 // TODO: Przedstaw koncepcję edytora układu Bento Box (odwołania z podrozdziału „Warstwa zmienna” i sekcji „Strona główna”): tworzenie układu kafelków, osobne układy dla komputerów i telefonów.
