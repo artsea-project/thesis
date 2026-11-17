@@ -228,10 +228,6 @@ Układ zapisywany jest w ustawieniach strony jako dwie listy kafelków, osobno d
 
 Kafelek z pracą, którą artysta później ukryje, nie jest usuwany z układu. Na stronie publicznej nie jest wyświetlany i w jego miejscu zostaje puste pole, a w edytorze kafelek ma oznaczenie „Ukryta”. Gdy artysta ponownie pokaże pracę, kafelek wróci na swoje miejsce i nie trzeba będzie układać strony od nowa.
 
-== Specyfikacja routingu
-
-// TODO: Opisz specyfikację routingu.
-
 == Wielojęzyczność <sec-wielojezycznosc>
 
 Strona publiczna dostępna jest w dwóch wersjach językowych, polskiej oraz angielskiej. Wersja angielska kierowana jest do odwiedzających spoza Polski nieznających języka polskiego. Panel artysty za to dostępny jest tylko w języku polskim, ponieważ korzysta z niego wyłącznie artysta, a nie odwiedzający stronę.
@@ -243,3 +239,51 @@ Domyślnym językiem strony jest polski. Przy pierwszej wizycie strona sprawdza 
 Język strony zapisany jest w jej adresie. W wersji polskiej nie ma w nim żadnego oznaczenia, natomiast w wersji angielskiej zaczynają się od `/en`. Dzięki temu każda wersja ma własny adres, więc artysta może udostępnić link do konkretnej wersji językowej, a wyszukiwarki indeksują obie osobno. Każda strona wskazuje też wyszukiwarkom swój odpowiednik w drugim języku.
 
 Nie wszystkie treści muszą być przetłumaczone, dlatego ustalono, że w przypadku gdy tekstu w danym języku brakuje, wyświetlany będzie komunikat zastępczy informujący o braku tłumaczenia. Celem jest utrzymanie spójności językowej strony. Praca bez tytułu wyświetlana jest jako „Bez tytułu” lub „Untitled”, zarówno na swojej stronie, jak i na kafelku w siatce Bento. Jeśli brakuje techniki albo opisu „O projekcie”, odpowiadająca im część strony pracy nie jest wyświetlana. Gdy artysta nie poda nagłówka strony „O mnie”, pojawia się domyślny napis „O mnie” lub „About me”. Nazwy kategorii i tagów zawsze są dostępne w obu językach, ponieważ formularz wymaga podania obu, a pozostałe teksty profilu, poza nagłówkiem, artysta musi wpisać w obu językach albo zostawić puste.
+
+== Specyfikacja routingu <sec-routing>
+
+Sposób, w jaki Next.js tworzy adresy stron na podstawie struktury katalogów, opisano w rozdziale poświęconym stosowi technologicznemu. // TODO: po scaleniu gałęzi tech-stack zamienić na @chapter-tech-stack
+W tym podrozdziale przedstawiono poszczególne adresy, pod którymi dostępne są konkretne części aplikacji, oraz decyzje, które wpłynęły na to, jak je zbudowano. Adresy podzielono na trzy grupy: adresy strony publicznej, adresy panelu artysty oraz adresy techniczne, z których korzysta aplikacja, np. do wyświetlania zdjęć. Adresy strony publicznej zestawiono w tabeli @tab-adresy-publiczne.
+
+#figure(
+  table(
+    columns: (auto, 1fr),
+    align: left,
+    table.header[*Adres*][*Podstrona*],
+    [`/`], [Strona główna z siatką Bento (@fig-home)],
+    [`/portfolio`], [Lista wszystkich widocznych prac z filtrami (@fig-portfolio)],
+    [`/work/<id>`], [Strona pojedynczej pracy (@fig-praca)],
+    [`/about`], [Strona „O mnie” (@fig-o-mnie)],
+  ),
+  caption: [Adresy strony publicznej],
+) <tab-adresy-publiczne>
+
+Pozycja „Kontakt” w menu nie ma własnej podstrony. Prowadzi do adresu `/about#contact`, czyli do sekcji „Skontaktuj się ze mną.” na stronie „O mnie”, a przeglądarka od razu przewija stronę do tej sekcji. Strona pracy wskazywana jest w adresie nie przez tytuł pracy, a przez jej identyfikator. Tytuł może być pusty, ma dwie wersje językowe i artysta może go w każdej chwili zmienić, natomiast identyfikator jest stały i taki sam w obu wersjach językowych. Dzięki temu link do pracy działa również po edycji jej opisu.
+
+Część ustawień widoku zapisywana jest w parametrach adresu. Na stronie portfolio są to wybrana kategoria (`category`), wybrane tagi (`tag`, powtarzany dla każdego tagu) oraz numer strony (`page`). Przycisk „Załaduj więcej” zwiększa numer strony o jeden, a każda kolejna strona dodaje do widoku dwanaście prac. Przykładowo adres `/portfolio?category=…&tag=…&tag=…&page=2` pokazuje dwadzieścia cztery prace z wybranej kategorii, oznaczone obydwoma tagami. Ponieważ cały stan listy znajduje się w adresie, odwiedzający może przesłać komuś link do przefiltrowanej listy, a odświeżenie strony nie usuwa wybranych filtrów. W ten sam sposób zapisywane są wpisana fraza (`q`), kategoria i numer strony na liście prac w panelu artysty. Nieprawidłowy numer strony, np. litera zamiast liczby, nie powoduje błędu, tylko wyświetlenie pierwszej strony.
+
+Wersja polska strony publicznej nie ma w adresie oznaczenia języka, a adresy wersji angielskiej zaczynają się od `/en`, np. `/en/portfolio` czy `/en/work/<id>`. Pozostała część adresu jest w obu wersjach taka sama, więc przełącznik języka zmienia jedynie początek adresu. Zasady wyboru języka opisano w podrozdziale @sec-wielojezycznosc. Oznaczenia języka nie mają adresy panelu artysty ani adresy techniczne.
+
+Panel artysty znajduje się pod adresem `/admin`, a jego ekrany, opisane wcześniej przy makietach, mają adresy zestawione w tabeli @tab-adresy-panelu.
+
+#figure(
+  table(
+    columns: (auto, 1fr),
+    align: left,
+    table.header[*Adres*][*Ekran*],
+    [`/admin`], [Przegląd (@fig-przeglad)],
+    [`/admin/works`], [Lista prac (@fig-lista-prac)],
+    [`/admin/works/new`], [Dodawanie pracy (@fig-dodawanie-pracy)],
+    [`/admin/works/<id>/edit`], [Edycja pracy (@fig-dodawanie-pracy)],
+    [`/admin/categories`], [Kategorie i tagi (@fig-kategorie-tagi)],
+    [`/admin/appearance`], [Układ i personalizacja (@fig-uklad-personalizacja)],
+    [`/admin/profile`], [Profil (@fig-profil)],
+  ),
+  caption: [Adresy panelu artysty],
+) <tab-adresy-panelu>
+
+Dodawanie i edycja pracy korzystają z tego samego formularza, ale mają osobne adresy. Adres edycji zawiera identyfikator pracy, więc po odświeżeniu strony formularz ponownie wczytuje dane tej samej pracy. Panel ma własny układ strony, niezależny od strony publicznej. Jest on wyłączony z indeksowania przez wyszukiwarki, ponieważ jego ekrany nie powinny pojawiać się w wynikach wyszukiwania.
+
+Zdjęcia i filmy prac nie są przechowywane jako pliki na serwerze, tylko w bazie danych, dlatego aplikacja udostępnia je pod osobnymi adresami. Adres `/media/<id>` zwraca plik tylko wtedy, gdy należy on do pracy oznaczonej jako widoczna. Dzięki temu zdjęcia ukrytej pracy nie są dostępne nawet dla osoby, która zna ich bezpośredni adres. Panel korzysta z adresu `/admin/media/<id>`, który zwraca również pliki ukrytych prac, żeby artysta mógł je zobaczyć na liście prac i w formularzu edycji. Zdjęcie artysty dostępne jest pod adresem `/profile-image/<hash>`, który zawiera skrót zawartości zdjęcia, w związku z czym każda nowa wersja zdjęcia otrzymuje nowy adres. Ostatnim adresem technicznym jest `/api/health/db`, pozwalający sprawdzić, czy aplikacja ma połączenie z bazą danych.
+
+Jeśli odwiedzający wpisze adres, który nie istnieje, zobaczy stronę błędu w bieżącej wersji językowej z odnośnikiem do strony głównej. Taką samą stronę zobaczy po wejściu na adres ukrytej pracy, dzięki czemu nie dowie się, że praca o tym identyfikatorze w ogóle istnieje. Panel artysty ma własną stronę błędu, wyświetlaną w jego stałym wyglądzie i w języku polskim.
