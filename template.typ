@@ -96,7 +96,7 @@
     // wyrazami, a polskie dzielenie pozostaje awaryjnym mechanizmem składu.
     leading: 0.84em,
     spacing: 0.8em,
-    first-line-indent: (amount: 1.25cm, all: false),
+    first-line-indent: (amount: 1.25cm, all: true),
   )
   set enum(
     numbering: "1.",
