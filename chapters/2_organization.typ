@@ -1,4 +1,4 @@
-= Organizacja projektu <chapter-project-organization>
+= Organizacja projektu (Marta Kociszewska) <chapter-project-organization>
 
 Przy realizacji złożonego projektu informatycznego niezbędne jest usystematyzowanie pracy oraz określenie zasad współpracy. Wytwarzanie oprogramowania wymaga dobrej organizacji, z tego względu wykorzystano rynkowe wzorce zarządzania i inżynierii oprogramowania, elastycznie dopasowujące je do wielkości zespołu i charakteru tworzonej aplikacji. W poniższych podrozdziałach przedstawiono fundamenty organizacji pracy.
 
