@@ -409,16 +409,10 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Personalizacja strony]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Personalizacja”.  \
-    2. System wyświetla edytor strony głównej Bento Box.  \
-    3. Artysta zmienia rozmiar i pozycję kafelków metodami resize i drag-and-drop.  \
-    4. System dopasowuje pozostałe kafelki.  \
-    5. Artysta wybiera kolorystykę i typ czcionki, obserwuje podgląd na żywo i klika „Zapisz układ”.  \
-    6. System zapisuje układ i wyświetla komunikat potwierdzający.],
-    [*Wyjątki i scenariusze alternatywne*], [*Anulowanie:* System pyta o potwierdzenie i przywraca poprzedni układ.  \
-    *Przywrócenie domyślnego układu:* Artysta może wybrać „Resetuj do domyślnego”.],
-    [*Warunki końcowe*], [Nowe ustawienia są zapisane i widoczne dla odbiorców po odświeżeniu strony.],
-    [*Komentarze*], [Układ powinien być responsywny.],
+    [*Podstawowy scenariusz interakcji*], [],
+    [*Wyjątki i scenariusze alternatywne*], [],
+    [*Warunki końcowe*], [],
+    [*Komentarze*], [],
   ),
 ) <tab:pu14>
 
