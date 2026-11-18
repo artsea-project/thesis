@@ -1,13 +1,9 @@
 = Metodologia <chapter-methodology>
 
-// TODO: Opisz przyjęte metody, narzędzia i założenia projektowe.
-
 Proces tworzenia autorskiego systemu CMS wymagał przyjęcia ustrukturyzowanego podejścia projektowego. Niniejszy rozdział szczegółowo opisuje wybraną metodykę zwinnego zarządzania projektem, uzasadnia dobór stosu technologicznego oraz prezentuje architekturę rozwiązania przy użyciu standardowych pomocy wizualnych, takich jak diagramy UML czy schematy bazy danych.
 
 
 == Analiza wymagań
-
-// TODO: Przedstaw wymagania i ograniczenia rozwiązania.
 
 Fundamentem zaprojektowanej aplikacji była precyzyjna identyfikacja potrzeb jej użytkowników docelowych: twórców oraz ich odbiorców. Poniżej przedstawiono kompleksowy zbiór zdefiniowanych wymagań funkcjonalnych, jakościowych (niefunkcjonalnych) oraz opracowane scenariusze interakcji z systemem.
 
@@ -253,10 +249,3 @@ Artysta pełni w systemie rolę zalogowanego administratora własnego portfolio.
   [*Komentarze*], [Układ powinien być responsywny.],
 )
 
-== Projekt rozwiązania
-
-// TODO: Opisz architekturę oraz najważniejsze decyzje projektowe.
-
-== Implementacja
-
-// TODO: Opisz przebieg implementacji i zastosowane technologie.
