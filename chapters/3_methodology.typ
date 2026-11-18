@@ -1,7 +1,109 @@
-= Metodologia <chapter-methodology>
+= Wymagania i specyfikacja systemu  <chapter-methodology>
 
-Proces tworzenia autorskiego systemu CMS wymagał przyjęcia ustrukturyzowanego podejścia projektowego. Niniejszy rozdział szczegółowo opisuje wybraną metodykę zwinnego zarządzania projektem, uzasadnia dobór stosu technologicznego oraz prezentuje architekturę rozwiązania przy użyciu standardowych pomocy wizualnych, takich jak diagramy UML czy schematy bazy danych.
+== Grupa docelowa
 
+== Identyfikacja użytkowników 
+
+Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy użytkowników. Zrozumienie ich cech, potrzeb, problemów oraz kontekstu użycia stanowiło fundament do zaprojektowania interfejsu i zdefiniowania kluczowych funkcji aplikacji. Stworzono profile reprezentatywnych użytkoników (tzw. persony), którzy reprezentują dwóch głównych aktorów systemu: artystę (twórcę portfolio) oraz odbiorcę (użytkownika końcowego).
+
+- *Artysta (Twórca)* - główny użytkownik systemu, reprezentujący niezależnych twórców, studentów uczelni artystycznych oraz małe galerie sztuki. Grupa ta charakteryzuje się wysoką wrażliwością estetyczną, lecz na ogół nie posiada specjalistycznych umiejętności technicznych i programistycznych. Głównym celem tego aktora jest szybkie stworzenie scentralizowanego, uporządkowanego portfolio, co rozwiązuje problem rozproszenia dorobku w mediach społecznościowych i omija barierę wysokich kosztów zatrudnienia programistów. Artysta oczekuje wysoce intuicyjnego interfejsu. Aktor ten korzysta z panelu zarządzania głównie na komputerze stacjonarnym w celu wgrywania plików, jednak wymaga również możliwości zarządzania treścią z poziomu urządzeń mobilnych.
+
+- *Odbiorca (Użytkownik końcowy)* - osoba odwiedzająca wygenerowane portfolio, reprezentująca potencjalnych klientów lub miłośników sztuki. Jej główną potrzebą jest płynne i wygodne przeglądanie galerii, ułatwione dzięki mechanizmom filtrowania prac oraz zoptymalizowanemu czasowi ładowania grafik. Ze względu na fakt, iż użytkownik ten konsumuje treści niemal wyłącznie za pomocą urządzeń mobilnych (smartfony, tablety), absolutnym priorytetem jest przejrzystość interfejsu oraz jego pełne dostosowanie do małych ekranów. Ponadto, Odbiorca oczekuje szybkiego i bezpośredniego sposobu na nawiązanie kontaktu z artystą (np. poprzez czytelne sekcje z informacjami o twórcy i linkami społecznościowymi).
+
+=== Artysta
+
+#figure(
+  caption: [Profil persony - Artysta],
+  kind: table,
+  table(
+    columns: (auto, auto, 1fr),
+    align: left,
+    stroke: .5pt,
+    inset: 6pt,
+    table.header([], [Cecha], [Opis]),
+    table.cell(rowspan: 4)[*Profil*],
+    [Imię],
+    [Otylia],
+    [Wiek],
+    [22],
+    [Rola],
+    [Studentka, początkująca artystka],
+    [Osobowość],
+    [Osoba o wysokiej wrażliwości na estetykę, mało techniczna],
+  ),
+) <tab:persona-artist>
+
+#figure(
+  caption: [Szczegółowy opis profilu użytkownika: Artysta],
+  kind: table,
+  table(
+    columns: (auto, 1fr),
+    align: left,
+    stroke: .5pt,
+    inset: 6pt,
+    table.header([Cecha], [Opis]),
+    table.cell(rowspan: 3)[*Potrzeby i cele*],
+    [Chce rozpocząć swoją karierę, stworzyć wizytówkę dla swoich prac],
+    [Dąży do posiadania uporządkowanego portfolio w jednym miejscu, zamiast rozproszonego w różnych mediach],
+    [Potrzebuje narzędzia, które nie wymaga technicznych umiejętności],
+    table.hline(stroke: 1pt),
+    table.cell(rowspan: 2)[*Problemy*],
+    [Nie posiada umiejętności potrzebnych do samodzielnego postawienia strony],
+    [Koszty zatrudnienia web developera są zbyt wysokie],
+    table.hline(stroke: 1pt),
+    table.cell(rowspan: 3)[*Kontekst użycia systemu*],
+    [Używa systemu głównie na komputerze stacjonarnym (desktop) do zarządzania plikami i wgrywania zdjęć, ale czasami również na urządzeniu mobilnym do przeglądania i edycji treści],
+    [Oczekuje prostego interfejsu opartego na mechanizmie „przeciągnij i upuść” (Drag-and-drop)],
+    [Wykonanie podstawowej czynności, jak dodanie pracy do galerii, nie może jej zająć więcej niż 3 minuty],
+  ),
+) <tab:persona-artist-details>
+
+=== Odbiorca
+
+#figure(
+  caption: [Profil persony - Odbiorca],
+  kind: table,
+  table(
+    columns: (auto, auto, 1fr),
+    align: left,
+    stroke: .5pt,
+    inset: 6pt,
+    table.header([], [Cecha], [Opis]),
+    table.cell(rowspan: 4)[*Profil*],
+    [Imię],
+    [Maria],
+    [Wiek],
+    [30],
+    [Rola],
+    [Odbiorca sztuki, potencjalny klient],
+    [Osobowość],
+    [Osoba o wysokiej wrażliwości na estetykę, szukająca konkretnych informacji],
+  ),
+) <tab:persona-viewer>
+
+#figure(
+  caption: [Szczegółowy opis profilu użytkownika: Odbiorca],
+  kind: table,
+  table(
+    columns: (auto, 1fr),
+    align: left,
+    stroke: .5pt,
+    inset: 6pt,
+    table.header([Cecha], [Opis]),
+    table.cell(rowspan: 3)[*Potrzeby i cele*],
+    [Chce płynnie i wygodnie przeglądać galerie prac na telefonie],
+    [Szuka szybkiego sposobu na nawiązanie kontaktu z artystą],
+    [Potrzebuje możliwości filtrowania prac, aby szybko znaleźć to, co ją interesuje],
+    table.hline(stroke: 1pt),
+    table.cell(rowspan: 2)[*Problemy*],
+    [Nieczytelny interfejs niedostosowany do małych ekranów],
+    [Trudność w odnalezieniu danych kontaktowych do twórcy na rozproszonych portalach],
+    table.hline(stroke: 1pt),
+    table.cell(rowspan: 2)[*Kontekst użycia systemu*],
+    [Korzysta z systemu głównie na urządzeniach mobilnych (smartfon, tablet)],
+    [Kluczowa jest dla niej czytelność i szybkość ładowania interfejsu],
+  ),
+) <tab:persona-viewer-details>
 
 == Analiza wymagań
 
