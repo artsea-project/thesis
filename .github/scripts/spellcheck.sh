@@ -57,7 +57,8 @@ for f in "${FILES[@]}"; do
   echo "$f:" >>"$REPORT"
   while IFS= read -r word; do
     TOTAL=$((TOTAL + 1))
-    LINES="$(grep -n -w -F "$word" "$f" | cut -d: -f1 | paste -sd, -)"
+    # Hunspell może zgłosić fragment słowa (np. CX z CX23), bez dopasowania -w.
+    LINES="$(grep -n -w -F "$word" "$f" | cut -d: -f1 | paste -sd, -)" || true
     echo "  wiersz ${LINES:-?}: $word" >>"$REPORT"
   done <<<"$BAD"
   echo >>"$REPORT"
