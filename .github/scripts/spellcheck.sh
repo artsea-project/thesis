@@ -11,7 +11,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/../.."
 
-DICTS="pl_PL,en_GB"
+DICTS="$PWD/.github/dictionaries/pl_PL,$PWD/.github/dictionaries/en_GB"
 PERSONAL=".github/dictionary.txt"
 STRICT=0
 [ "${1:-}" = "--strict" ] && STRICT=1
