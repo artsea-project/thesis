@@ -42,3 +42,7 @@ WordPressa
 bentoboxie
 powerpoint
 CX
+UBS
+iteracyjno
+refaktoryzacja
+samodokumentujący
