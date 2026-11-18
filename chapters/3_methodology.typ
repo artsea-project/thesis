@@ -1,12 +1,10 @@
 = Wymagania i specyfikacja systemu (Marta Kociszewska)  <chapter-methodology>
 
-== Grupa docelowa
-
 == Identyfikacja użytkowników 
 
 Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy użytkowników. Zrozumienie ich cech, potrzeb, problemów oraz kontekstu użycia stanowiło fundament do zaprojektowania interfejsu i zdefiniowania kluczowych funkcji aplikacji. Stworzono profile reprezentatywnych użytkoników (tzw. persony), którzy reprezentują dwóch głównych aktorów systemu: artystę (twórcę portfolio) oraz odbiorcę (użytkownika końcowego).
 
-- *Artysta (Twórca)* - główny użytkownik systemu, reprezentujący niezależnych twórców, studentów uczelni artystycznych oraz małe galerie sztuki. Grupa ta charakteryzuje się wysoką wrażliwością estetyczną, lecz na ogół nie posiada specjalistycznych umiejętności technicznych i programistycznych. Głównym celem tego aktora jest szybkie stworzenie scentralizowanego, uporządkowanego portfolio, co rozwiązuje problem rozproszenia dorobku w mediach społecznościowych i omija barierę wysokich kosztów zatrudnienia programistów. Artysta oczekuje wysoce intuicyjnego interfejsu. Aktor ten korzysta z panelu zarządzania głównie na komputerze stacjonarnym w celu wgrywania plików, jednak wymaga również możliwości zarządzania treścią z poziomu urządzeń mobilnych.
+- *Artysta (Twórca)* - główny użytkownik systemu. Grupa ta charakteryzuje się wysoką wrażliwością estetyczną, lecz na ogół nie posiada specjalistycznych umiejętności technicznych i programistycznych. Głównym celem tego aktora jest szybkie stworzenie scentralizowanego, uporządkowanego portfolio. Artysta oczekuje wysoce intuicyjnego interfejsu. Aktor ten korzysta z panelu zarządzania głównie na komputerze stacjonarnym w celu wgrywania plików, jednak wymaga również możliwości zarządzania treścią z poziomu urządzeń mobilnych.
 
 - *Odbiorca (Użytkownik końcowy)* - osoba odwiedzająca wygenerowane portfolio, reprezentująca potencjalnych klientów lub miłośników sztuki. Jej główną potrzebą jest płynne i wygodne przeglądanie galerii, ułatwione dzięki mechanizmom filtrowania prac oraz zoptymalizowanemu czasowi ładowania grafik. Ze względu na fakt, iż użytkownik ten konsumuje treści niemal wyłącznie za pomocą urządzeń mobilnych (smartfony, tablety), absolutnym priorytetem jest przejrzystość interfejsu oraz jego pełne dostosowanie do małych ekranów. Ponadto, Odbiorca oczekuje szybkiego i bezpośredniego sposobu na nawiązanie kontaktu z artystą (np. poprzez czytelne sekcje z informacjami o twórcy i linkami społecznościowymi).
 
@@ -53,7 +51,7 @@ Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy
     table.hline(stroke: 1pt),
     table.cell(rowspan: 3)[*Kontekst użycia systemu*],
     [Używa systemu głównie na komputerze stacjonarnym (desktop) do zarządzania plikami i wgrywania zdjęć, ale czasami również na urządzeniu mobilnym do przeglądania i edycji treści],
-    [Oczekuje prostego interfejsu opartego na mechanizmie „przeciągnij i upuść” (Drag-and-drop)],
+    [Oczekuje prostego interfejsu opartego na mechanizmie „przeciągnij i upuść” (ang. _drag-and-drop_)],
     [Wykonanie podstawowej czynności, jak dodanie pracy do galerii, nie może jej zająć więcej niż 3 minuty],
   ),
 ) <tab:persona-artist-details>
@@ -112,7 +110,7 @@ Fundamentem zaprojektowanej aplikacji była precyzyjna identyfikacja potrzeb jej
 === Wymagania funcjonalne
 Wymagania funkcjonalne zdefiniowano z perspektywy dwóch kluczowych aktorów: artysty (twórcy portfolio) oraz odbiorcy. 
 
-Artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu "drag-and-drop". 
+Artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu _drag-and-drop_. 
 
 Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą za pośrednictwem zintegrowanego formularza.
 
@@ -124,14 +122,14 @@ Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące 
 W celu precyzyjnego określenia funkcjonalności systemu oraz sposobu, w jaki użytkownicy będą z niego korzystać, opracowano model przypadków użycia (ang. _Use Case Model_). Model ten stanowi fundament specyfikacji wymagań i pozwala na graficzne oraz opisowe przedstawienie interakcji pomiędzy aktorami a systemem. Poniższe diagramy prezentują ogólny zarys tych interakcji, uwzględniając również relacje zawierania (`<<include>>`) oraz rozszerzania (`<<extend>>`) dla bardziej złożonych operacji związanych z zarządzaniem pracami.
 
 #figure(
+  image("../img/use-case-viewer.png", width: 80%),
+  caption: [Scenariusz interakcji z systemem z perspektywy odbiorcy.],
+)
+#figure(
   image("../img/use-case-artist.png", width: 80%),
   caption: [Scenariusz interakcji z systemem z perspektywy artysty (twórcy portfolio).],
 )
 
-#figure(
-  image("../img/use-case-viewer.png", width: 80%),
-  caption: [Scenariusz interakcji z systemem z perspektywy odbiorcy.],
-)
 
 ==== Przypadki użycia z perspektywy odbiorcy
 
@@ -155,35 +153,40 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
     5. Odbiorca zamyka podgląd powiększonego zdjęcia. \
     6. System powraca do widoku galerii, zachowując pozycję przewijania.],
     [*Wyjątki i scenariusze alternatywne*], [*Filtrowanie po kategorii:* Odbiorca wybiera kategorię prac, a system odświeża siatkę, pokazując wyłącznie miniatury z wybranej kategorii. \
-    *Brak prac:* Jeśli portfolio jest puste, system wyświetla komunikat: „Artysta nie dodał jeszcze żadnych prac. Zajrzyj tu wkrótce!”.],
+    *Brak prac:* Jeśli portfolio jest puste, system wyświetla odpowiedni komunikat.],
     [*Warunki końcowe*], [Odbiorca pomyślnie obejrzał wybrane prace w portfolio.],
     [*Komentarze*], [---],
   ),
 ) <tab:pu1>
 
-==== PU2 - Kontakt z artystą / formularz
+==== PU2 - Kontakt z artystą
 
-#figure(
-  caption: [Przypadek użycia PU2 - Kontakt z artystą / formularz],
-  kind: table,
-  table(
-    columns: (1fr, 3fr),
-    stroke: .5pt,
-    inset: 6pt,
-    table.header([*Nazwa*], [Kontakt z artystą / formularz]),
-    [*Warunki wstępne*], [Odbiorca znajduje się w portfolio artysty, a artysta włączył formularz kontaktowy.],
-    [*Podstawowy scenariusz interakcji*], [1. Odbiorca przechodzi do sekcji kontaktowej. \
-    2. System wyświetla pola: imię i nazwisko, adres e-mail, temat oraz treść wiadomości. \
-    3. Odbiorca wypełnia wymagane pola i klika „Wyślij wiadomość”. \
-    4. System waliduje dane i przekazuje wiadomość do zewnętrznego serwera e-mail. \
-    5. System wyświetla komunikat o sukcesie i czyści formularz.],
-    [*Wyjątki i scenariusze alternatywne*], [*Utrata połączenia:* System zachowuje wpisaną treść w pamięci lokalnej przeglądarki. \
-    *Błąd walidacji:* System podświetla błędne pola i wyświetla komunikat „Popraw błędy w formularzu przed wysłaniem”. \
-    *Błąd serwera:* System wyświetla komunikat o problemie technicznym, a tekst nie jest usuwany.],
-    [*Warunki końcowe*], [Wiadomość odbiorcy zostaje pomyślnie przekazana do wysyłki na adres e-mail artysty.],
-    [*Komentarze*], [---],
-  ),
-) <tab:pu2>
+ #figure(
+      caption: [Przypadek użycia PU2 - Kontakt z artystą],
+      kind: table,
+      table(
+        columns: (1fr, 3fr),
+        stroke: .5pt,
+        inset: 6pt,
+        table.header([*Nazwa*], [Kontakt z artystą]),
+        [*Warunki wstępne*], [Odbiorca znajduje się w portfolio artysty, a
+        artysta uzupełnił w profilu adres e-mail do kontaktu lub linki
+        społecznościowe.],
+        [*Podstawowy scenariusz interakcji*], [
+        1. Odbiorca wybiera w nawigacji opcję „KONTAKT”. \
+        2. System wyświetla treść zachęcającą do kontaktu, adres e-mail wformie odnośnika `mailto:` oraz listę zewnętrznych linków społecznościowych artysty. \
+        3. Odbiorca klika adres e-mail lub wybrany odnośnik społecznościowy. \
+        4. Przeglądarka otwiera domyślnego klienta poczty e-mail z wypełnionym adresem odbiorcy (dla linku `mailto:`) albo otwiera profil artysty w nowej karcie przeglądarki.],
+        [*Wyjątki i scenariusze alternatywne*], [*Brak adresu e-mail w
+        profilu:* Jeśli artysta pozostawił pole e-mail puste, system ukrywa odnośnik `mailto:` i prezentuje wyłącznie pozostałe treści oraz ewentualne linki społecznościowe. \
+        *Brak linków społecznościowych:* Sekcja z odnośnikami społecznościowymi nie jest wyświetlana. \
+        *Brak skonfigurowanego klienta poczty:* Jeśli urządzenie odbiorcy nie ma przypisanej aplikacji do obsługi `mailto:`, odbiorca może skopiować widoczny adres e-mail bezpośrednio ze strony.],
+        [*Warunki końcowe*], [Odbiorca rozpoczyna przygotowanie wiadomości e-mail w swoim kliencie pocztowym lub przechodzi na wybrany kanał społecznościowy artysty.],
+        [*Komentarze*], [Zrezygnowano z wbudowanego formularza kontaktowego
+        na rzecz bezpośredniego odnośnika `mailto:` oraz linków do
+        zewnętrznych profili.],
+      ),
+    ) <tab:pu2>
 
 ==== PU3 - Wybór języka
 
@@ -200,7 +203,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
     2. System wyświetla listę dostępnych języków. \
     3. Odbiorca wybiera język. \
     4. System przeładowuje stronę w wybranym języku.],
-    [*Wyjątki i scenariusze alternatywne*], [Jeśli treści autorskie nie mają tłumaczenia, interfejs zmienia się na wybrany język, ale opisy zdjęć i biogram pozostają w języku oryginalnym.],
+    [*Wyjątki i scenariusze alternatywne*], [Jeśli treści autorskie nie mają tłumaczenia, interfejs zmienia się na wybrany język, zamiast opisu zdjęć i biogramu, wyświetlony zostaje komunikat o braku tłumaczenia.],
     [*Warunki końcowe*], [Interfejs prezentowany jest w wybranym języku.],
     [*Komentarze*], [---],
   ),
@@ -208,7 +211,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
 
 ==== Przypadki użycia z perspektywy artysty
 
-Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu.
+Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć process zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu.
 
 ==== PU4 - Rejestracja konta
 
@@ -218,16 +221,11 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   table(
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Rejestracja konta]),
-    [*Warunki wstępne*], [Artysta nie posiada jeszcze konta w systemie ArtSea.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta klika „Rejestracja”.  \
-    2. System wyświetla formularz z adresem e-mail, hasłem i potwierdzeniem hasła.  \
-    3. Artysta wypełnia formularz i klika „Utwórz konto”.  \
-    4. System waliduje dane i wysyła wiadomość potwierdzającą.  \
-    5. Artysta klika link potwierdzający, a system aktywuje konto i kieruje go do panelu edycji portfolio.],
-    [*Wyjątki i scenariusze alternatywne*], [*Błąd walidacji:* System informuje o zajętym adresie e-mail, zbyt słabym haśle lub nieprawidłowych danych.  \
-    *Brak potwierdzenia:* Link wygasa po 60 minutach, po czym można wysłać nowy link.],
-    [*Warunki końcowe*], [Konto artysty zostaje utworzone i aktywowane.],
-    [*Komentarze*], [Hasło: minimum 8 znaków, co najmniej jedna wielka litera, cyfra i znak specjalny.],
+    [*Warunki wstępne*], [],
+    [*Podstawowy scenariusz interakcji*], [],
+    [*Wyjątki i scenariusze alternatywne*], [],
+    [*Warunki końcowe*], [],
+    [*Komentarze*], [],
   ),
 ) <tab:pu4>
 
@@ -240,7 +238,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Dodawanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Moje prace”.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace”.  \
     2. System wyświetla listę prac z przyciskiem „Dodaj pracę”.  \
     3. Artysta klika przycisk.  \
     4. System otwiera formularz wypełniania detali pracy (PU7).],
@@ -259,7 +257,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Edytowanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany i posiada co najmniej jedną pracę w portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Moje prace”.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace”.  \
     2. System wyświetla listę prac.  \
     3. Artysta wybiera pracę i klika „Edytuj”.  \
     4. System otwiera formularz edycji detali pracy (PU7).],
@@ -278,14 +276,14 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Wypełnianie detali pracy]),
     [*Warunki wstępne*], [Artysta przechodzi z PU5 lub PU6. System wyświetla formularz dodawania albo edycji pracy.],
-    [*Podstawowy scenariusz interakcji*], [1. System wyświetla wymagane pola: zdjęcie, tytuł i kategorię, oraz opcjonalne: opis, wymiary, rok wykonania i widoczność.  \
+    [*Podstawowy scenariusz interakcji*], [1. System wyświetla wymagane pola: tytuł i kategorię, oraz opcjonalne: media, opis, wymiary, rok wykonania, technika.  \
     2. Artysta wypełnia pola i klika „Zapisz”.  \
-    3. System waliduje dane, przesyła obraz, zapisuje dane w bazie i wyświetla komunikat o sukcesie.],
-    [*Wyjątki i scenariusze alternatywne*], [*Nowa kategoria:* Artysta przechodzi do PU9, po czym wraca do formularza.  \
-    *Brak połączenia:* System przechowuje dane lokalnie i synchronizuje je po odzyskaniu połączenia.  \
+    3. System waliduje dane, przesyła obraz, zapisuje dane w bazie i wraca do listy prac.],
+    [*Wyjątki i scenariusze alternatywne*], [
     *Anulowanie:* System wraca do listy prac i ostrzega o utracie niezapisanych zmian.  \
-    *Błąd walidacji:* System informuje o zbyt dużym lub nieobsługiwanym pliku albo pustym polu.],
-    [*Warunki końcowe*], [Nowa praca zostaje dodana albo zmieniona i jest widoczna dla odbiorców.],
+    *Błąd walidacji:* System informuje o zbyt dużym lub nieobsługiwanym pliku albo pustym polu. \
+    *Opuszczenie formularza:* System ostrzega o utracie niezapisanych zmian.],
+    [*Warunki końcowe*], [Praca zostaje dodana lub zaktualizowana.],
     [*Komentarze*], [Formularz jest używany zarówno do dodawania, jak i edytowania pracy.],
   ),
 ) <tab:pu7>
@@ -299,9 +297,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Usuwanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany, a praca istnieje w galerii.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Moje prace” i wybiera pracę.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace” i wybiera pracę.  \
     2. Artysta klika „Usuń” i potwierdza decyzję.  \
-    3. System usuwa pracę, zdjęcia i metadane z bazy danych oraz serwera.  \
+    3. System usuwa pracę, zdjęcia i metadane z bazy danych.  \
     4. System wyświetla komunikat i wraca do listy prac.],
     [*Wyjątki i scenariusze alternatywne*], [Artysta anuluje usunięcie lub zamyka okno. Praca pozostaje bez zmian.],
     [*Warunki końcowe*], [Praca jest trwale usunięta, a zajmowane miejsce na serwerze zostaje zwolnione.],
@@ -319,9 +317,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie”.  \
-    2. Otwiera formularz „Dodaj kategorię” i podaje nazwę oraz opcjonalny opis.  \
-    3. System waliduje unikalność nazwy, dodaje kategorię i wyświetla ją na liście.],
-    [*Wyjątki i scenariusze alternatywne*], [Jeśli kategoria o tej nazwie już istnieje, system wyświetla komunikat i sugeruje edycję istniejącej kategorii.],
+    1. Wypełnia formularz „Dodaj nową kategorię” podając nazwy w obydwóch językach.  \
+    2. System waliduje unikalność nazwy, dodaje kategorię i wyświetla ją na liście.],
+    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowa kategoria jest dostępna przy dodawaniu i edytowaniu prac oraz widoczna dla odbiorców.],
     [*Komentarze*], [Każda kategoria powinna mieć unikalną nazwę.],
   ),
@@ -337,40 +335,75 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Edytowanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jedna kategoria.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera kategorię.  \
-    2. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz zmiany”.  \
-    3. System waliduje dane, aktualizuje kategorię i wraca do listy.],
-    [*Wyjątki i scenariusze alternatywne*], [*Duplikat nazwy:* System wyświetla błąd i umożliwia zmianę nazwy.  \
-    *Usuwanie kategorii:* Jeśli kategoria zawiera prace, artysta przenosi je do innej kategorii przed usunięciem.],
+    1. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz kategorię".  \
+    2. System waliduje dane, aktualizuje kategorię i wraca do listy.],
+    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.  \
+    *Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie.],
     [*Warunki końcowe*], [Zmiany kategorii są zapisane, a prace mają zaktualizowane informacje.],
     [*Komentarze*], [Nie można usunąć kategorii zawierającej prace bez ich uprzedniego przeniesienia.],
   ),
 ) <tab:pu10>
 
-==== PU11 - Dodawanie i edytowanie informacji o sobie
+==== PU11 - Dodawanie tagów
 
 #figure(
-  caption: [Przypadek użycia PU11 - Dodawanie i edytowanie informacji o sobie],
+  caption: [Przypadek użycia PU11 - Dodawanie tagów],
+  kind: table,
+  table(
+    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    table.header([*Nazwa*], [Dodawanie tagów]),
+    [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
+    1. Wypełnia formularz „Dodaj nowy tag” podając nazwy w obydwóch językach.  \
+    2. System waliduje unikalność nazwy, dodaje tag i wyświetla ją na liście.],
+    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    [*Warunki końcowe*], [Nowy tag jest dostępny przy dodawaniu i edytowaniu prac oraz widoczny dla odbiorców.],
+    [*Komentarze*], [Każdy tag powinien mieć unikalną nazwę.],
+  ),
+) <tab:pu11>
+
+==== PU12 - Edytowanie tagów
+
+#figure(
+  caption: [Przypadek użycia PU12 - Edytowanie tagów],
+  kind: table,
+  table(
+    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    table.header([*Nazwa*], [Edytowanie tagów]),
+    [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jeden tag.],
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera tag.  \
+    1. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz Tag ".  \
+    2. System waliduje dane, aktualizuje tag i wraca do listy.],
+    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    [*Warunki końcowe*], [Zmiany tagu są zapisane, a prace mają zaktualizowane informacje.],
+    [*Komentarze*], [---],
+  ),
+) <tab:pu12>
+
+==== PU13 - Dodawanie i edytowanie informacji o sobie
+
+#figure(
+  caption: [Przypadek użycia PU13 - Dodawanie i edytowanie informacji o sobie],
   kind: table,
   table(
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Dodawanie i edytowanie informacji o sobie]),
-    [*Warunki wstępne*], [Artysta jest zalogowany, a jego profil istnieje w systemie.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Mój profil”.  \
-    2. System wyświetla pola: zdjęcie profilowe, imię i nazwisko, biografia oraz linki do mediów społecznościowych.  \
-    3. Artysta aktualizuje dane i klika „Zapisz profil”.  \
-    4. System waliduje dane, aktualizuje profil i wyświetla komunikat potwierdzający.],
+    [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Profil”.  \
+    1. System wyświetla pola: zdjęcie profilowe, imię i nazwisko, biografia, e-mail, linki do mediów społecznościowych oraz tekst sekcji kontaktowej.  \
+    2. Artysta aktualizuje dane i klika „Zapisz zmiany”.  \
+    3. System waliduje dane, aktualizuje profil i wyświetla komunikat potwierdzający.],
     [*Wyjątki i scenariusze alternatywne*], [*Błąd zdjęcia:* System informuje o zbyt dużym lub niedozwolonym pliku.  \
-    *Brak połączenia:* System zachowuje dane lokalnie i synchronizuje je po odzyskaniu połączenia.  \
-    *Anulowanie:* System ostrzega o utracie niezapisanych zmian i wraca do strony głównej.],
+    *Anulowanie:* System ostrzega o utracie niezapisanych zmian.],
     [*Warunki końcowe*], [Informacje artysty są zaktualizowane i widoczne dla odbiorców.],
     [*Komentarze*], [---],
   ),
-) <tab:pu11>
+) <tab:pu13>
 
-==== PU12 - Personalizacja strony
+==== PU14 - Personalizacja strony
 
 #figure(
-  caption: [Przypadek użycia PU12 - Personalizacja strony],
+  caption: [Przypadek użycia PU14 - Personalizacja strony],
   kind: table,
   table(
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
@@ -387,5 +420,5 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     [*Warunki końcowe*], [Nowe ustawienia są zapisane i widoczne dla odbiorców po odświeżeniu strony.],
     [*Komentarze*], [Układ powinien być responsywny.],
   ),
-) <tab:pu12>
+) <tab:pu14>
 
