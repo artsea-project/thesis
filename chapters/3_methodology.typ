@@ -117,21 +117,11 @@ Artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe za
 Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą za pośrednictwem zintegrowanego formularza.
 
 === Wymagania jakościowe
-Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. 
-
-W obszarze bezpieczeństwa bezwzględnie wymagane jest szyfrowanie ruchu sieciowego za pomocą certyfikatu SSL (wymuszenie protokołu HTTPS). 
-
-Ponadto, dane autoryzacyjne użytkowników muszą być zahasowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. 
-
-Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji.
-
-Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność (RWD) w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. 
-
-Z perspektywy User Experience (UX), zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
+Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahasowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
 
 === Scenariusze interakcji z systemem
 
-W celu precyzyjnego określenia funkcjonalności systemu "ArtSea" oraz sposobu, w jaki użytkownicy będą z niego korzystać, opracowano model przypadków użycia (ang. *Use Case Model*). Model ten stanowi fundament specyfikacji wymagań i pozwala na graficzne oraz opisowe przedstawienie interakcji pomiędzy aktorami a systemem. W projektowanym rozwiązaniu zidentyfikowano dwóch głównych aktorów: Odbiorcę (użytkownika przeglądającego portfolio) oraz Artystę (administratora zarządzającego treścią). Poniższe diagramy prezentują ogólny zarys tych interakcji, uwzględniając również relacje zawierania (`<<include>>`) oraz rozszerzania (`<<extend>>`) dla bardziej złożonych operacji związanych z zarządzaniem pracami.
+W celu precyzyjnego określenia funkcjonalności systemu oraz sposobu, w jaki użytkownicy będą z niego korzystać, opracowano model przypadków użycia (ang. _Use Case Model_). Model ten stanowi fundament specyfikacji wymagań i pozwala na graficzne oraz opisowe przedstawienie interakcji pomiędzy aktorami a systemem. Poniższe diagramy prezentują ogólny zarys tych interakcji, uwzględniając również relacje zawierania (`<<include>>`) oraz rozszerzania (`<<extend>>`) dla bardziej złożonych operacji związanych z zarządzaniem pracami.
 
 #figure(
   image("../img/use-case-artist.png", width: 80%),
@@ -145,7 +135,7 @@ W celu precyzyjnego określenia funkcjonalności systemu "ArtSea" oraz sposobu, 
 
 ==== Przypadki użycia z perspektywy odbiorcy
 
-Odbiorca reprezentuje użytkownika końcowego, zazwyczaj potencjalnego klienta lub miłośnika sztuki, który odwiedza stworzone portfolio. Z perspektywy systemu, Odbiorca jest użytkownikiem niezalogowanym (gościem), co ogranicza jego uprawnienia wyłącznie do odczytu danych oraz korzystania z publicznych modułów komunikacyjnych.
+Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfolio. Z perspektywy systemu, Odbiorca jest użytkownikiem niezalogowanym (gościem), co ogranicza jego uprawnienia wyłącznie do odczytu danych oraz korzystania z publicznych modułów komunikacyjnych.
 
 ==== PU1 - Przeglądanie galerii zdjęć
 
@@ -218,7 +208,7 @@ Odbiorca reprezentuje użytkownika końcowego, zazwyczaj potencjalnego klienta l
 
 ==== Przypadki użycia z perspektywy artysty
 
-Artysta pełni w systemie rolę zalogowanego administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią (CMS). Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu.
+Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu.
 
 ==== PU4 - Rejestracja konta
 
