@@ -1,4 +1,4 @@
-= Wymagania i specyfikacja systemu  <chapter-methodology>
+= Wymagania i specyfikacja systemu (Marta Kociszewska)  <chapter-methodology>
 
 == Grupa docelowa
 
