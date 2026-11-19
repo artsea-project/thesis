@@ -58,5 +58,6 @@ Przed przystąpieniem do analizy wyników badania, dokonano normalizacji założ
     [przejrzysty - zagmatwany], [1.3], [+2.55],
     [zorganizowany - zagracony], [2.0], [+1.5],
     [przyjazny - nieprzyjazny], [1.0], [+3.0],
-  )
-)
+  ),
+  caption: [Zestawienie znormalizowanych założeń projektowych zespołu (docelowy profil UX)],
+) <tab-profil-ux>
