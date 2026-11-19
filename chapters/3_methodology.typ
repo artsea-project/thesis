@@ -221,11 +221,23 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   table(
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Rejestracja konta]),
-    [*Warunki wstępne*], [],
-    [*Podstawowy scenariusz interakcji*], [],
-    [*Wyjątki i scenariusze alternatywne*], [],
-    [*Warunki końcowe*], [],
-    [*Komentarze*], [],
+    [*Warunki wstępne*],
+    [Konto artysty nie istnieje w systemie. W trakcie konfiguracji został wygenerowany jednorazowy link rejestracyjny.],
+    [*Podstawowy scenariusz interakcji*],
+    [
+      1. Artysta otwiera otrzymany link rejestracyjny. \
+      2. System sprawdza poprawność linku rejestracyjnego. \
+      3. System wyświetla formularz z polami: imię i nazwisko lub pseudonim, hasło oraz potwierdzenie hasła. \
+      4. Artysta wypełnia pola i klika "Utwórz konto". \
+      5. System waliduje dane. \
+      6. System tworzy konto użytkownika. \
+      7. System loguje artystę i przekierowuje do panelu administracyjnego.
+    ],
+    [*Wyjątki i scenariusze alternatywne*], [*Nieprawidłowy link:* System wyświetla komunikat o nieznalezieniu strony. \
+     *Wykorzystany link:* System przekierowuje użytkownika do panelu administracyjnego, jeżeli jest on zalogowany. W przeciwnym razie przekierowuje użytkownika do ekranu logowania. \
+    *Błąd walidacji:* System wyświetla odpowiedni komunikat.],
+    [*Warunki końcowe*], [Konto artysty zostało utworzone, ponowna rejestracja jest niemożliwa. Artysta jest zalogowany w panelu administracyjnym.],
+    [*Komentarze*], [Zapomniane hasło można zresetować osobnym skryptem.],
   ),
 ) <tab:pu4>
 
