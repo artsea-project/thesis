@@ -335,7 +335,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
-    2. Artysta wypełnia formularz "Dodaj nową kategorię" podając nazwy w obydwóch językach.  \
+    2. Artysta wypełnia formularz "Dodaj nową kategorię" podając nazwy w obu językach.  \
     3. System waliduje unikalność nazwy, dodaje kategorię i wyświetla ją na liście.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowa kategoria jest dostępna przy dodawaniu i edytowaniu prac oraz widoczna dla odbiorców.],
@@ -356,7 +356,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     2. Artysta klika "Edytuj", zmienia dane i wybiera "Zapisz kategorię".  \
     3. System waliduje dane, aktualizuje kategorię i wraca do listy.],
     [*Wyjątki i scenariusze alternatywne*], [
-    *2b. Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie. \ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    *2a. Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie. \ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Zmiany kategorii są zapisane, a prace mają zaktualizowane informacje.],
     [*Komentarze*], [Nie można usunąć kategorii zawierającej prace bez ich uprzedniego przeniesienia.],
   ),
@@ -372,7 +372,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
-    2. Artysta wypełnia formularz "Dodaj nowy tag" podając nazwy w obydwóch językach.  \
+    2. Artysta wypełnia formularz "Dodaj nowy tag" podając nazwy w obu językach.  \
     3. System waliduje unikalność nazwy, dodaje tag i wyświetla ją na liście.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowy tag jest dostępny przy dodawaniu i edytowaniu prac oraz widoczny dla odbiorców.],
