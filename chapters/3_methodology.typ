@@ -122,11 +122,11 @@ Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące 
 W celu precyzyjnego określenia funkcjonalności systemu oraz sposobu, w jaki użytkownicy będą z niego korzystać, opracowano model przypadków użycia (ang. _Use Case Model_). Model ten stanowi fundament specyfikacji wymagań i pozwala na graficzne oraz opisowe przedstawienie interakcji pomiędzy aktorami a systemem. Poniższe diagramy prezentują ogólny zarys tych interakcji, uwzględniając również relacje zawierania (`<<include>>`) oraz rozszerzania (`<<extend>>`) dla bardziej złożonych operacji związanych z zarządzaniem pracami.
 
 #figure(
-  image("../img/use-case-viewer.png", width: 80%),
+  image("../img/use-case-viewer.png", width: 50%),
   caption: [Scenariusz interakcji z systemem z perspektywy odbiorcy.],
 )
 #figure(
-  image("../img/use-case-artist.png", width: 80%),
+  image("../img/use-case-artist.png", width: 60%),
   caption: [Scenariusz interakcji z systemem z perspektywy artysty (twórcy portfolio).],
 )
 
