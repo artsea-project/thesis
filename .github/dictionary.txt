@@ -40,7 +40,7 @@ Hetznera
 Squarespace
 WordPressa
 bentoboxie
-powerpoint
+PowerPoint
 CX
 UBS
 iteracyjno
