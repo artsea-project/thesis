@@ -10,6 +10,8 @@ Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy
 
 === Artysta
 
+Podstawową charakterystkę persony artysty przedstawiono w @tab:persona-artist, natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w @tab:persona-artist-details.
+
 #figure(
   caption: [Profil persony - Artysta],
   kind: table,
@@ -57,6 +59,8 @@ Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy
 ) <tab:persona-artist-details>
 
 === Odbiorca
+
+Podstawową charakterystykę perosny odbiorcy przedstawiono w @tab:persona-viewer, natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w @tab:persona-viewer-details.
 
 #figure(
   caption: [Profil persony - Odbiorca],
@@ -119,21 +123,22 @@ Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące 
 
 === Scenariusze interakcji z systemem
 
-W celu precyzyjnego określenia funkcjonalności systemu oraz sposobu, w jaki użytkownicy będą z niego korzystać, opracowano model przypadków użycia (ang. _Use Case Model_). Model ten stanowi fundament specyfikacji wymagań i pozwala na graficzne oraz opisowe przedstawienie interakcji pomiędzy aktorami a systemem. Poniższe diagramy prezentują ogólny zarys tych interakcji, uwzględniając również relacje zawierania (`<<include>>`) oraz rozszerzania (`<<extend>>`) dla bardziej złożonych operacji związanych z zarządzaniem pracami.
+W celu precyzyjnego określenia funkcjonalności systemu oraz sposobu, w jaki użytkownicy będą z niego korzystać, opracowano model przypadków użycia (ang. _Use Case Model_). Model ten stanowi fundament specyfikacji wymagań i pozwala na graficzne oraz opisowe przedstawienie interakcji pomiędzy aktorami a systemem. Poniższe diagramy prezentują ogólny zarys tych interakcji z perspektywy odbiorcy (@fig:use-case-viewer) oraz artysty (@fig:use-case-artist), uwzględniając również relacje zawierania (`<<include>>`) oraz rozszerzania (`<<extend>>`) dla bardziej złożonych operacji związanych z zarządzaniem pracami.
 
 #figure(
   image("../img/use-case-viewer.png", width: 50%),
   caption: [Scenariusz interakcji z systemem z perspektywy odbiorcy.],
-)
+)<fig:use-case-viewer>
+
 #figure(
   image("../img/use-case-artist.png", width: 60%),
   caption: [Scenariusz interakcji z systemem z perspektywy artysty (twórcy portfolio).],
-)
+)<fig:use-case-artist>
 
 
 ==== Przypadki użycia z perspektywy odbiorcy
 
-Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfolio. Z perspektywy systemu, Odbiorca jest użytkownikiem niezalogowanym (gościem), co ogranicza jego uprawnienia wyłącznie do odczytu danych oraz korzystania z publicznych modułów komunikacyjnych.
+Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfolio. Z perspektywy systemu, Odbiorca jest użytkownikiem niezalogowanym (gościem), co ogranicza jego uprawnienia wyłącznie do odczytu danych oraz korzystania z publicznych modułów komunikacyjnych. Szczegółowe przypadki użycia obejmujące przeglądanie galerii zdjęć, kontakt z artystą oraz zmianę preferowanego języka interfejsu zestawiono w tabelach: @tab:pu1, @tab:pu2 oraz @tab:pu3.
 
 ==== PU1 - Przeglądanie galerii zdjęć
 
@@ -211,7 +216,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
 
 ==== Przypadki użycia z perspektywy artysty
 
-Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu.
+Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu. Szczegółowe przypadki użycia obejmujące rejestrację konta, dodawanie, edytowanie i usuwanie prac, a także zarządzanie kategoriami i tagami zestawiono w tabelach: @tab:pu4 - @tab:pu14.
 
 ==== PU4 - Rejestracja konta
 
@@ -253,9 +258,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace”.  \
     2. System wyświetla listę prac z przyciskiem „Dodaj pracę”.  \
     3. Artysta klika przycisk.  \
-    4. System otwiera formularz wypełniania detali pracy (PU7).],
+    4. System otwiera formularz wypełniania detali pracy (PU7, @tab:pu7).],
     [*Wyjątki i scenariusze alternatywne*], [---],
-    [*Warunki końcowe*], [Artysta przechodzi do formularza PU7.],
+    [*Warunki końcowe*], [Artysta przechodzi do formularza PU7 (@tab:pu7).],
     [*Komentarze*], [---],
   ),
 ) <tab:pu5>
@@ -272,9 +277,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace”.  \
     2. System wyświetla listę prac.  \
     3. Artysta wybiera pracę i klika „Edytuj”.  \
-    4. System otwiera formularz edycji detali pracy (PU7).],
+    4. System otwiera formularz edycji detali pracy (PU7, @tab:pu7).],
     [*Wyjątki i scenariusze alternatywne*], [---],
-    [*Warunki końcowe*], [Artysta przechodzi do formularza PU7.],
+    [*Warunki końcowe*], [Artysta przechodzi do formularza PU7 (@tab:pu7).],
     [*Komentarze*], [---],
   ),
 ) <tab:pu6>
@@ -287,7 +292,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   table(
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Wypełnianie detali pracy]),
-    [*Warunki wstępne*], [Artysta przechodzi z PU5 lub PU6. System wyświetla formularz dodawania albo edycji pracy.],
+    [*Warunki wstępne*], [Artysta przechodzi z PU5 (@tab:pu5) lub PU6 (@tab:pu6). System wyświetla formularz dodawania albo edycji pracy.],
     [*Podstawowy scenariusz interakcji*], [1. System wyświetla wymagane pola: tytuł i kategorię, oraz opcjonalne: media, opis, wymiary, rok wykonania, technika.  \
     2. Artysta wypełnia pola i klika „Zapisz”.  \
     3. System waliduje dane, przesyła obraz, zapisuje dane w bazie i wraca do listy prac.],
