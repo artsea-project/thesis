@@ -152,8 +152,8 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
     4. System wyświetla powiększone zdjęcie w wysokiej rozdzielczości wraz z tytułem, opisem i użytymi technikami. \
     5. Odbiorca zamyka podgląd powiększonego zdjęcia. \
     6. System powraca do widoku galerii, zachowując pozycję przewijania.],
-    [*Wyjątki i scenariusze alternatywne*], [*Filtrowanie po kategorii:* Odbiorca wybiera kategorię prac, a system odświeża siatkę, pokazując wyłącznie miniatury z wybranej kategorii. \
-    *Brak prac:* Jeśli portfolio jest puste, system wyświetla odpowiedni komunikat.],
+    [*Wyjątki i scenariusze alternatywne*], [*2a. Filtrowanie po kategorii:* Odbiorca wybiera kategorię prac, a system odświeża siatkę, pokazując wyłącznie miniatury z wybranej kategorii. \
+    *2b. Brak prac:* Jeśli portfolio jest puste, system wyświetla odpowiedni komunikat.],
     [*Warunki końcowe*], [Odbiorca pomyślnie obejrzał wybrane prace w portfolio.],
     [*Komentarze*], [---],
   ),
@@ -177,10 +177,10 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
         2. System wyświetla treść zachęcającą do kontaktu, adres e-mail wformie odnośnika `mailto:` oraz listę zewnętrznych linków społecznościowych artysty. \
         3. Odbiorca klika adres e-mail lub wybrany odnośnik społecznościowy. \
         4. Przeglądarka otwiera domyślnego klienta poczty e-mail z wypełnionym adresem odbiorcy (dla linku `mailto:`) albo otwiera profil artysty w nowej karcie przeglądarki.],
-        [*Wyjątki i scenariusze alternatywne*], [*Brak adresu e-mail w
+        [*Wyjątki i scenariusze alternatywne*], [*2a. Brak adresu e-mail w
         profilu:* Jeśli artysta pozostawił pole e-mail puste, system ukrywa odnośnik `mailto:` i prezentuje wyłącznie pozostałe treści oraz ewentualne linki społecznościowe. \
-        *Brak linków społecznościowych:* Sekcja z odnośnikami społecznościowymi nie jest wyświetlana. \
-        *Brak skonfigurowanego klienta poczty:* Jeśli urządzenie odbiorcy nie ma przypisanej aplikacji do obsługi `mailto:`, odbiorca może skopiować widoczny adres e-mail bezpośrednio ze strony.],
+        *2b. Brak linków społecznościowych:* Sekcja z odnośnikami społecznościowymi nie jest wyświetlana. \
+        *3a. Brak skonfigurowanego klienta poczty:* Jeśli urządzenie odbiorcy nie ma przypisanej aplikacji do obsługi `mailto:`, odbiorca może skopiować widoczny adres e-mail bezpośrednio ze strony.],
         [*Warunki końcowe*], [Odbiorca rozpoczyna przygotowanie wiadomości e-mail w swoim kliencie pocztowym lub przechodzi na wybrany kanał społecznościowy artysty.],
         [*Komentarze*], [Zrezygnowano z wbudowanego formularza kontaktowego
         na rzecz bezpośredniego odnośnika `mailto:` oraz linków do
@@ -203,7 +203,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
     2. System wyświetla listę dostępnych języków. \
     3. Odbiorca wybiera język. \
     4. System przeładowuje stronę w wybranym języku.],
-    [*Wyjątki i scenariusze alternatywne*], [Jeśli treści autorskie nie mają tłumaczenia, interfejs zmienia się na wybrany język, zamiast opisu zdjęć i biogramu, wyświetlony zostaje komunikat o braku tłumaczenia.],
+    [*Wyjątki i scenariusze alternatywne*], [*4a. Brak tłumaczenia treści autorskich:* Interfejs zmienia się na wybrany język, ale zamiast opisu zdjęć i biogramu zostaje wyświetlony komunikat o braku tłumaczenia.],
     [*Warunki końcowe*], [Interfejs prezentowany jest w wybranym języku.],
     [*Komentarze*], [---],
   ),
@@ -233,9 +233,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
       6. System tworzy konto użytkownika. \
       7. System loguje artystę i przekierowuje do panelu administracyjnego.
     ],
-    [*Wyjątki i scenariusze alternatywne*], [*Nieprawidłowy link:* System wyświetla komunikat o nieznalezieniu strony. \
-     *Wykorzystany link:* System przekierowuje użytkownika do panelu administracyjnego, jeżeli jest on zalogowany. W przeciwnym razie przekierowuje użytkownika do ekranu logowania. \
-    *Błąd walidacji:* System wyświetla odpowiedni komunikat.],
+    [*Wyjątki i scenariusze alternatywne*], [*2a. Nieprawidłowy link:* System wyświetla komunikat o nieznalezieniu strony. \
+     *2b. Wykorzystany link:* System przekierowuje użytkownika do panelu administracyjnego, jeżeli jest on zalogowany. W przeciwnym razie przekierowuje użytkownika do ekranu logowania. \
+    *5a. Błąd walidacji:* System wyświetla odpowiedni komunikat.],
     [*Warunki końcowe*], [Konto artysty zostało utworzone, ponowna rejestracja jest niemożliwa. Artysta jest zalogowany w panelu administracyjnym.],
     [*Komentarze*], [Zapomniane hasło można zresetować osobnym skryptem.],
   ),
@@ -292,9 +292,10 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     2. Artysta wypełnia pola i klika „Zapisz”.  \
     3. System waliduje dane, przesyła obraz, zapisuje dane w bazie i wraca do listy prac.],
     [*Wyjątki i scenariusze alternatywne*], [
-    *Anulowanie:* System wraca do listy prac i ostrzega o utracie niezapisanych zmian.  \
-    *Błąd walidacji:* System informuje o zbyt dużym lub nieobsługiwanym pliku albo pustym polu. \
-    *Opuszczenie formularza:* System ostrzega o utracie niezapisanych zmian.],
+    *2a. Anulowanie:* System wraca do listy prac i ostrzega o utracie niezapisanych zmian.  \
+    *2b. Opuszczenie formularza:* System ostrzega o utracie niezapisanych zmian. \
+    *3a. Błąd walidacji:* System informuje o zbyt dużym lub nieobsługiwanym pliku albo pustym polu.
+    ],
     [*Warunki końcowe*], [Praca zostaje dodana lub zaktualizowana.],
     [*Komentarze*], [Formularz jest używany zarówno do dodawania, jak i edytowania pracy.],
   ),
@@ -313,7 +314,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     2. Artysta klika „Usuń” i potwierdza decyzję.  \
     3. System usuwa pracę, zdjęcia i metadane z bazy danych.  \
     4. System wyświetla komunikat i wraca do listy prac.],
-    [*Wyjątki i scenariusze alternatywne*], [Artysta anuluje usunięcie lub zamyka okno. Praca pozostaje bez zmian.],
+    [*Wyjątki i scenariusze alternatywne*], [*2a. Anulowanie usunięcia:* Artysta anuluje usunięcie lub zamyka okno. Praca pozostaje bez zmian.],
     [*Warunki końcowe*], [Praca jest trwale usunięta, a zajmowane miejsce na serwerze zostaje zwolnione.],
     [*Komentarze*], [---],
   ),
@@ -329,9 +330,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie”.  \
-    1. Wypełnia formularz „Dodaj nową kategorię” podając nazwy w obydwóch językach.  \
-    2. System waliduje unikalność nazwy, dodaje kategorię i wyświetla ją na liście.],
-    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    2. Artysta wypełnia formularz „Dodaj nową kategorię” podając nazwy w obydwóch językach.  \
+    3. System waliduje unikalność nazwy, dodaje kategorię i wyświetla ją na liście.],
+    [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowa kategoria jest dostępna przy dodawaniu i edytowaniu prac oraz widoczna dla odbiorców.],
     [*Komentarze*], [Każda kategoria powinna mieć unikalną nazwę.],
   ),
@@ -347,10 +348,10 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Edytowanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jedna kategoria.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera kategorię.  \
-    1. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz kategorię".  \
-    2. System waliduje dane, aktualizuje kategorię i wraca do listy.],
-    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.  \
-    *Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie.],
+    2. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz kategorię".  \
+    3. System waliduje dane, aktualizuje kategorię i wraca do listy.],
+    [*Wyjątki i scenariusze alternatywne*], [
+    *2b. Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie. \ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Zmiany kategorii są zapisane, a prace mają zaktualizowane informacje.],
     [*Komentarze*], [Nie można usunąć kategorii zawierającej prace bez ich uprzedniego przeniesienia.],
   ),
@@ -366,9 +367,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
-    1. Wypełnia formularz „Dodaj nowy tag” podając nazwy w obydwóch językach.  \
-    2. System waliduje unikalność nazwy, dodaje tag i wyświetla ją na liście.],
-    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    2. Artysta wypełnia formularz „Dodaj nowy tag” podając nazwy w obydwóch językach.  \
+    3. System waliduje unikalność nazwy, dodaje tag i wyświetla ją na liście.],
+    [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowy tag jest dostępny przy dodawaniu i edytowaniu prac oraz widoczny dla odbiorców.],
     [*Komentarze*], [Każdy tag powinien mieć unikalną nazwę.],
   ),
@@ -384,9 +385,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Edytowanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jeden tag.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera tag.  \
-    1. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz Tag ".  \
-    2. System waliduje dane, aktualizuje tag i wraca do listy.],
-    [*Wyjątki i scenariusze alternatywne*], [*Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    2. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz Tag ".  \
+    3. System waliduje dane, aktualizuje tag i wraca do listy.],
+    [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Zmiany tagu są zapisane, a prace mają zaktualizowane informacje.],
     [*Komentarze*], [---],
   ),
@@ -402,11 +403,11 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie i edytowanie informacji o sobie]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Profil”.  \
-    1. System wyświetla pola: zdjęcie profilowe, imię i nazwisko, biografia, e-mail, linki do mediów społecznościowych oraz tekst sekcji kontaktowej.  \
-    2. Artysta aktualizuje dane i klika „Zapisz zmiany”.  \
-    3. System waliduje dane, aktualizuje profil i wyświetla komunikat potwierdzający.],
-    [*Wyjątki i scenariusze alternatywne*], [*Błąd zdjęcia:* System informuje o zbyt dużym lub niedozwolonym pliku.  \
-    *Anulowanie:* System ostrzega o utracie niezapisanych zmian.],
+    2. System wyświetla pola: zdjęcie profilowe, imię i nazwisko, biografia, e-mail, linki do mediów społecznościowych oraz tekst sekcji kontaktowej.  \
+    3. Artysta aktualizuje dane i klika „Zapisz zmiany”.  \
+    4. System waliduje dane, aktualizuje profil i wyświetla komunikat potwierdzający.],
+    [*Wyjątki i scenariusze alternatywne*], [*3a. Anulowanie:* System ostrzega o utracie niezapisanych zmian. \ *4a. Błąd zdjęcia:* System informuje o zbyt dużym lub niedozwolonym pliku.
+    ],
     [*Warunki końcowe*], [Informacje artysty są zaktualizowane i widoczne dla odbiorców.],
     [*Komentarze*], [---],
   ),
@@ -421,10 +422,29 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Personalizacja strony]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [],
-    [*Wyjątki i scenariusze alternatywne*], [],
-    [*Warunki końcowe*], [],
-    [*Komentarze*], [],
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Ukad i Personalizacja”.  \
+    2. System wyświetla dwie sekcje edycji: "Kafelki Bento Box - strona główna" oraz "Czcionki i kolorystyka", wczytując aktualne ustawienia.  \
+    3. Artysta w sekcji układu BentoBox wybiera widok ("Desktop" lub "Mobile") oraz modyfikuje siatkę: \
+      - dodaje nowe kafelki w jednym z dostępnych rozmiarów (`1:1`, `2:1`, `1:2`, `2:2`), wybierając widoczną pracę oraz jej zdjęcie, \
+      - zmienia położenie kafelków metodą przeciągnij i upuść (na wolne pole lub zamieniając je miejscami z innymi kafelkami), \
+      - zmienia rozmiar kafelka, przypisaną pracę/zdjęcie lub usuwa kafelek z listy. \
+    4. Artysta zatwierdza zmiany w układzie przyciskiem zapisu. \
+    5. W sekcji „Czcionki i kolorystyka” artysta wybiera gotowy zestaw domyślny (preset) albo ręcznie ustawia czcionki (podstawową, pomocniczą i tekstu) oraz kolory (tekstu, tła i akcentu), obserwując podgląd na żywo. \
+    6. Artysta zatwierdza zmiany motywu przyciskiem zapisu. \
+    7. System waliduje przesłane dane, zapisuje konfigurację i odświeża widok publiczny portfolio.
+    ],
+    [*Wyjątki i scenariusze alternatywne*], [
+    *3a. Brak widocznych prac ze zdjęciami:* system informuje w oknie wyboru, że brak dostępnych prac, i nie pozwala dodać kafelka. \
+    *3b. Brak miejsca w siatce lub niepoprawny układ:* system uniemożliwia dodanie kafelka przekraczającego limit siatki bądź zwraca komunikat błędu walidacji przy próbie zapisu. \
+    *4a / 6a. Cofnięcie zmian:* artysta wybiera opcję cofnięcia w danej sekcji, a system przywraca ostatnio zapisany stan. \
+    *5a. Niepoprawne dane motywu:* przy błędnym formacie koloru (HEX) lub nieobsługiwanej czcionce system wyświetla błąd walidacji przy odpowiednim polu i nie zapisuje zmian. \
+    *7a. Próba opuszczenia strony z niezapisanymi zmianami:* system wyświetla okno potwierdzenia z ostrzeżeniem o utracie niezapisanych modyfikacji.
+    ],
+    [*Warunki końcowe*], [
+    Nowy układ kafelków BentoBox oraz wybrany motyw (czcionki i kolorystyka) zostają zapisane i są natychmiast widoczne na stronie publicznej portfolio.
+    ],
+    [*Komentarze*], [
+    Sekcje „Kafelki BentoBox - strona główna” oraz „Czcionki i kolorystyka” są zapisywane i cofane niezależnie. Widoki `Desktop` i `Mobile` współdzielą ten sam zestaw kafelków, różniąc się jedynie ich rozmieszczeniem i proporcjami.
+    ],
   ),
 ) <tab:pu14>
-
