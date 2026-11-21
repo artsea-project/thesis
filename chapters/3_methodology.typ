@@ -10,7 +10,7 @@ Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy
 
 === Artysta
 
-Podstawową charakterystkę persony artysty przedstawiono w @tab:persona-artist, natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w @tab:persona-artist-details.
+Podstawową charakterystykę persony artysty przedstawiono w tabeli profilowej (@tab:persona-artist), natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w tabeli szczegółowego profilu (@tab:persona-artist-details).
 
 #figure(
   caption: [Profil persony - Artysta],
@@ -53,14 +53,14 @@ Podstawową charakterystkę persony artysty przedstawiono w @tab:persona-artist,
     table.hline(stroke: 1pt),
     table.cell(rowspan: 3)[*Kontekst użycia systemu*],
     [Używa systemu głównie na komputerze stacjonarnym (desktop) do zarządzania plikami i wgrywania zdjęć, ale czasami również na urządzeniu mobilnym do przeglądania i edycji treści],
-    [Oczekuje prostego interfejsu opartego na mechanizmie „przeciągnij i upuść” (ang. _drag-and-drop_)],
+    [Oczekuje prostego interfejsu opartego na mechanizmie "przeciągnij i upuść" (ang. _drag-and-drop_)],
     [Wykonanie podstawowej czynności, jak dodanie pracy do galerii, nie może jej zająć więcej niż 3 minuty],
   ),
 ) <tab:persona-artist-details>
 
 === Odbiorca
 
-Podstawową charakterystykę perosny odbiorcy przedstawiono w @tab:persona-viewer, natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w @tab:persona-viewer-details.
+Podstawową charakterystykę persony odbiorcy przedstawiono w tabeli profilowej (@tab:persona-viewer), natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w tabeli szczegółowego profilu (@tab:persona-viewer-details).
 
 #figure(
   caption: [Profil persony - Odbiorca],
@@ -116,7 +116,7 @@ Wymagania funkcjonalne zdefiniowano z perspektywy dwóch kluczowych aktorów: ar
 
 Artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu _drag-and-drop_. 
 
-Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą za pośrednictwem zintegrowanego formularza.
+Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą.
 
 === Wymagania jakościowe
 Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahashowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
@@ -178,7 +178,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
         artysta uzupełnił w profilu adres e-mail do kontaktu lub linki
         społecznościowe.],
         [*Podstawowy scenariusz interakcji*], [
-        1. Odbiorca wybiera w nawigacji opcję „KONTAKT”. \
+        1. Odbiorca wybiera w nawigacji opcję "KONTAKT". \
         2. System wyświetla treść zachęcającą do kontaktu, adres e-mail w formie odnośnika `mailto:` oraz listę zewnętrznych linków społecznościowych artysty. \
         3. Odbiorca klika adres e-mail lub wybrany odnośnik społecznościowy. \
         4. Przeglądarka otwiera domyślnego klienta poczty e-mail z wypełnionym adresem odbiorcy (dla linku `mailto:`) albo otwiera profil artysty w nowej karcie przeglądarki.],
@@ -255,8 +255,8 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Dodawanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace”.  \
-    2. System wyświetla listę prac z przyciskiem „Dodaj pracę”.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace".  \
+    2. System wyświetla listę prac z przyciskiem "Dodaj pracę".  \
     3. Artysta klika przycisk.  \
     4. System otwiera formularz wypełniania detali pracy (PU7, @tab:pu7).],
     [*Wyjątki i scenariusze alternatywne*], [---],
@@ -274,9 +274,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Edytowanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany i posiada co najmniej jedną pracę w portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace”.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace".  \
     2. System wyświetla listę prac.  \
-    3. Artysta wybiera pracę i klika „Edytuj”.  \
+    3. Artysta wybiera pracę i klika "Edytuj".  \
     4. System otwiera formularz edycji detali pracy (PU7, @tab:pu7).],
     [*Wyjątki i scenariusze alternatywne*], [---],
     [*Warunki końcowe*], [Artysta przechodzi do formularza PU7 (@tab:pu7).],
@@ -294,7 +294,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Wypełnianie detali pracy]),
     [*Warunki wstępne*], [Artysta przechodzi z PU5 (@tab:pu5) lub PU6 (@tab:pu6). System wyświetla formularz dodawania albo edycji pracy.],
     [*Podstawowy scenariusz interakcji*], [1. System wyświetla wymagane pola: tytuł i kategorię, oraz opcjonalne: media, opis, wymiary, rok wykonania, technika.  \
-    2. Artysta wypełnia pola i klika „Zapisz”.  \
+    2. Artysta wypełnia pola i klika "Zapisz".  \
     3. System waliduje dane, przesyła obraz, zapisuje dane w bazie i wraca do listy prac.],
     [*Wyjątki i scenariusze alternatywne*], [
     *2a. Anulowanie:* System wraca do listy prac i ostrzega o utracie niezapisanych zmian.  \
@@ -315,8 +315,8 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Usuwanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany, a praca istnieje w galerii.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Prace” i wybiera pracę.  \
-    2. Artysta klika „Usuń” i potwierdza decyzję.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace" i wybiera pracę.  \
+    2. Artysta klika "Usuń" i potwierdza decyzję.  \
     3. System usuwa pracę, zdjęcia i metadane z bazy danych.  \
     4. System wyświetla komunikat i wraca do listy prac.],
     [*Wyjątki i scenariusze alternatywne*], [*2a. Anulowanie usunięcia:* Artysta anuluje usunięcie lub zamyka okno. Praca pozostaje bez zmian.],
@@ -334,8 +334,8 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Dodawanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie”.  \
-    2. Artysta wypełnia formularz „Dodaj nową kategorię” podając nazwy w obydwóch językach.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
+    2. Artysta wypełnia formularz "Dodaj nową kategorię" podając nazwy w obydwóch językach.  \
     3. System waliduje unikalność nazwy, dodaje kategorię i wyświetla ją na liście.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowa kategoria jest dostępna przy dodawaniu i edytowaniu prac oraz widoczna dla odbiorców.],
@@ -352,8 +352,8 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Edytowanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jedna kategoria.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera kategorię.  \
-    2. Artysta klika „Edytuj”, zmienia dane i wybiera "Zapisz kategorię".  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie" i wybiera kategorię.  \
+    2. Artysta klika "Edytuj", zmienia dane i wybiera "Zapisz kategorię".  \
     3. System waliduje dane, aktualizuje kategorię i wraca do listy.],
     [*Wyjątki i scenariusze alternatywne*], [
     *2b. Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie. \ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
@@ -372,7 +372,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
-    2. Artysta wypełnia formularz „Dodaj nowy tag” podając nazwy w obydwóch językach.  \
+    2. Artysta wypełnia formularz "Dodaj nowy tag" podając nazwy w obydwóch językach.  \
     3. System waliduje unikalność nazwy, dodaje tag i wyświetla ją na liście.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowy tag jest dostępny przy dodawaniu i edytowaniu prac oraz widoczny dla odbiorców.],
@@ -389,8 +389,8 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Edytowanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jeden tag.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera tag.  \
-    2. Artysta klika „Edytuj”, zmienia dane i wybiera "Zapisz Tag".  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie" i wybiera tag.  \
+    2. Artysta klika "Edytuj", zmienia dane i wybiera "Zapisz Tag".  \
     3. System waliduje dane, aktualizuje tag i wraca do listy.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Zmiany tagu są zapisane, a prace mają zaktualizowane informacje.],
@@ -407,9 +407,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Dodawanie i edytowanie informacji o sobie]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Profil”.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Profil".  \
     2. System wyświetla pola: zdjęcie profilowe, imię i nazwisko, biografia, e-mail, linki do mediów społecznościowych oraz tekst sekcji kontaktowej.  \
-    3. Artysta aktualizuje dane i klika „Zapisz zmiany”.  \
+    3. Artysta aktualizuje dane i klika "Zapisz zmiany".  \
     4. System waliduje dane, aktualizuje profil i wyświetla komunikat potwierdzający.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Anulowanie:* System ostrzega o utracie niezapisanych zmian. \ *4a. Błąd zdjęcia:* System informuje o zbyt dużym lub niedozwolonym pliku.
     ],
@@ -427,14 +427,14 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Personalizacja strony]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Układ i Personalizacja”.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Układ i Personalizacja".  \
     2. System wyświetla dwie sekcje edycji: "Kafelki Bento Box - strona główna" oraz "Czcionki i kolorystyka", wczytując aktualne ustawienia.  \
     3. Artysta w sekcji układu Bento Box wybiera widok ("Desktop" lub "Mobile") oraz modyfikuje siatkę: \
       - dodaje nowe kafelki w jednym z dostępnych rozmiarów (`1:1`, `2:1`, `1:2`, `2:2`), wybierając widoczną pracę oraz jej zdjęcie, \
       - zmienia położenie kafelków metodą przeciągnij i upuść (na wolne pole lub zamieniając je miejscami z innymi kafelkami), \
       - zmienia rozmiar kafelka, przypisaną pracę/zdjęcie lub usuwa kafelek z listy. \
     4. Artysta zatwierdza zmiany w układzie przyciskiem zapisu. \
-    5. W sekcji „Czcionki i kolorystyka” artysta wybiera gotowy zestaw domyślny (preset) albo ręcznie ustawia czcionki (podstawową, pomocniczą i tekstu) oraz kolory (tekstu, tła i akcentu), obserwując podgląd na żywo. \
+    5. W sekcji "Czcionki i kolorystyka" artysta wybiera gotowy zestaw domyślny (preset) albo ręcznie ustawia czcionki (podstawową, pomocniczą i tekstu) oraz kolory (tekstu, tła i akcentu), obserwując podgląd na żywo. \
     6. Artysta zatwierdza zmiany motywu przyciskiem zapisu. \
     7. System waliduje przesłane dane, zapisuje konfigurację i odświeża widok publiczny portfolio.
     ],
@@ -449,7 +449,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     Nowy układ kafelków Bento Box oraz wybrany motyw (czcionki i kolorystyka) zostają zapisane i są natychmiast widoczne na stronie publicznej portfolio.
     ],
     [*Komentarze*], [
-    Sekcje „Kafelki Bento Box - strona główna” oraz „Czcionki i kolorystyka” są zapisywane i cofane niezależnie. Widoki `Desktop` i `Mobile` współdzielą ten sam zestaw kafelków, różniąc się jedynie ich rozmieszczeniem i proporcjami.
+    Sekcje "Kafelki Bento Box - strona główna" oraz "Czcionki i kolorystyka" są zapisywane i cofane niezależnie. Widoki `Desktop` i `Mobile` współdzielą ten sam zestaw kafelków, różniąc się jedynie ich rozmieszczeniem i proporcjami.
     ],
   ),
 ) <tab:pu14>
