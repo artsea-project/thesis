@@ -233,6 +233,7 @@
   show figure.where(kind: image): set block(above: 16pt, below: 14.5pt)
   show figure.where(kind: image): set figure(supplement: [Rys.])
   show figure.where(kind: table): set figure(supplement: [Tabela.])
+  show figure.where(kind: table): set block(breakable: true)
   show figure.where(kind: raw): set figure(supplement: [Listing])
   show figure.where(kind: raw): set block(breakable: true)
   show figure.where(kind: raw): set grid(row-gutter: 0pt)
