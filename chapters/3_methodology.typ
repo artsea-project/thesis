@@ -2,7 +2,7 @@
 
 == Identyfikacja użytkowników 
 
-Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy użytkowników. Zrozumienie ich cech, potrzeb, problemów oraz kontekstu użycia stanowiło fundament do zaprojektowania interfejsu i zdefiniowania kluczowych funkcji aplikacji. Stworzono profile reprezentatywnych użytkoników (tzw. persony), którzy reprezentują dwóch głównych aktorów systemu: artystę (twórcę portfolio) oraz odbiorcę (użytkownika końcowego).
+Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy użytkowników. Zrozumienie ich cech, potrzeb, problemów oraz kontekstu użycia stanowiło fundament do zaprojektowania interfejsu i zdefiniowania kluczowych funkcji aplikacji. Stworzono profile reprezentatywnych użytkowników (tzw. persony), którzy reprezentują dwóch głównych aktorów systemu: artystę (twórcę portfolio) oraz odbiorcę (użytkownika końcowego).
 
 - *Artysta (Twórca)* - główny użytkownik systemu. Grupa ta charakteryzuje się wysoką wrażliwością estetyczną, lecz na ogół nie posiada specjalistycznych umiejętności technicznych i programistycznych. Głównym celem tego aktora jest szybkie stworzenie scentralizowanego, uporządkowanego portfolio. Artysta oczekuje wysoce intuicyjnego interfejsu. Aktor ten korzysta z panelu zarządzania głównie na komputerze stacjonarnym w celu wgrywania plików, jednak wymaga również możliwości zarządzania treścią z poziomu urządzeń mobilnych.
 
@@ -107,7 +107,7 @@ Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy
 
 Fundamentem zaprojektowanej aplikacji była precyzyjna identyfikacja potrzeb jej użytkowników docelowych: twórców oraz ich odbiorców. Poniżej przedstawiono kompleksowy zbiór zdefiniowanych wymagań funkcjonalnych, jakościowych (niefunkcjonalnych) oraz opracowane scenariusze interakcji z systemem.
 
-=== Wymagania funcjonalne
+=== Wymagania funkcjonalne
 Wymagania funkcjonalne zdefiniowano z perspektywy dwóch kluczowych aktorów: artysty (twórcy portfolio) oraz odbiorcy. 
 
 Artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu _drag-and-drop_. 
@@ -115,7 +115,7 @@ Artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe za
 Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą za pośrednictwem zintegrowanego formularza.
 
 === Wymagania jakościowe
-Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahasowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
+Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahashowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
 
 === Scenariusze interakcji z systemem
 
@@ -174,7 +174,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
         społecznościowe.],
         [*Podstawowy scenariusz interakcji*], [
         1. Odbiorca wybiera w nawigacji opcję „KONTAKT”. \
-        2. System wyświetla treść zachęcającą do kontaktu, adres e-mail wformie odnośnika `mailto:` oraz listę zewnętrznych linków społecznościowych artysty. \
+        2. System wyświetla treść zachęcającą do kontaktu, adres e-mail w formie odnośnika `mailto:` oraz listę zewnętrznych linków społecznościowych artysty. \
         3. Odbiorca klika adres e-mail lub wybrany odnośnik społecznościowy. \
         4. Przeglądarka otwiera domyślnego klienta poczty e-mail z wypełnionym adresem odbiorcy (dla linku `mailto:`) albo otwiera profil artysty w nowej karcie przeglądarki.],
         [*Wyjątki i scenariusze alternatywne*], [*2a. Brak adresu e-mail w
@@ -211,7 +211,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
 
 ==== Przypadki użycia z perspektywy artysty
 
-Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć process zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu.
+Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu.
 
 ==== PU4 - Rejestracja konta
 
@@ -348,7 +348,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Edytowanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jedna kategoria.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera kategorię.  \
-    2. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz kategorię".  \
+    2. Artysta klika „Edytuj”, zmienia dane i wybiera "Zapisz kategorię".  \
     3. System waliduje dane, aktualizuje kategorię i wraca do listy.],
     [*Wyjątki i scenariusze alternatywne*], [
     *2b. Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie. \ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
@@ -385,7 +385,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Edytowanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jeden tag.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Kategorie” i wybiera tag.  \
-    2. Artysta klika „Edytuj”, zmienia dane i wybiera „Zapisz Tag ".  \
+    2. Artysta klika „Edytuj”, zmienia dane i wybiera "Zapisz Tag".  \
     3. System waliduje dane, aktualizuje tag i wraca do listy.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Zmiany tagu są zapisane, a prace mają zaktualizowane informacje.],
@@ -422,9 +422,9 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
     table.header([*Nazwa*], [Personalizacja strony]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Ukad i Personalizacja”.  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji „Układ i Personalizacja”.  \
     2. System wyświetla dwie sekcje edycji: "Kafelki Bento Box - strona główna" oraz "Czcionki i kolorystyka", wczytując aktualne ustawienia.  \
-    3. Artysta w sekcji układu BentoBox wybiera widok ("Desktop" lub "Mobile") oraz modyfikuje siatkę: \
+    3. Artysta w sekcji układu Bento Box wybiera widok ("Desktop" lub "Mobile") oraz modyfikuje siatkę: \
       - dodaje nowe kafelki w jednym z dostępnych rozmiarów (`1:1`, `2:1`, `1:2`, `2:2`), wybierając widoczną pracę oraz jej zdjęcie, \
       - zmienia położenie kafelków metodą przeciągnij i upuść (na wolne pole lub zamieniając je miejscami z innymi kafelkami), \
       - zmienia rozmiar kafelka, przypisaną pracę/zdjęcie lub usuwa kafelek z listy. \
@@ -441,10 +441,10 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     *7a. Próba opuszczenia strony z niezapisanymi zmianami:* system wyświetla okno potwierdzenia z ostrzeżeniem o utracie niezapisanych modyfikacji.
     ],
     [*Warunki końcowe*], [
-    Nowy układ kafelków BentoBox oraz wybrany motyw (czcionki i kolorystyka) zostają zapisane i są natychmiast widoczne na stronie publicznej portfolio.
+    Nowy układ kafelków Bento Box oraz wybrany motyw (czcionki i kolorystyka) zostają zapisane i są natychmiast widoczne na stronie publicznej portfolio.
     ],
     [*Komentarze*], [
-    Sekcje „Kafelki BentoBox - strona główna” oraz „Czcionki i kolorystyka” są zapisywane i cofane niezależnie. Widoki `Desktop` i `Mobile` współdzielą ten sam zestaw kafelków, różniąc się jedynie ich rozmieszczeniem i proporcjami.
+    Sekcje „Kafelki Bento Box - strona główna” oraz „Czcionki i kolorystyka” są zapisywane i cofane niezależnie. Widoki `Desktop` i `Mobile` współdzielą ten sam zestaw kafelków, różniąc się jedynie ich rozmieszczeniem i proporcjami.
     ],
   ),
 ) <tab:pu14>
