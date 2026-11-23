@@ -25,3 +25,18 @@ Jesteś młodym artystą, który za tydzień aplikuje na wystawę i potrzebuje s
 
 Gdy uznasz, że Twoje portfolio jest gotowe do wysłania kuratorowi, poinformuj moderatora o zakończeniu zadania.
 
+== Instrukcja obsługi systemu
+
+#for page-number in range(1, 51) {
+  image(
+    "ArtSea_Portfolio_Instrukcja_Obslugi.pdf",
+    page: page-number,
+    width: 100%,
+    height: 30%,
+    fit: "contain",
+  )
+
+  if calc.rem(page-number, 3) == 0 {
+    pagebreak()
+  }
+}
