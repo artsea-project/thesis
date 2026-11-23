@@ -25,7 +25,7 @@ Jesteś młodym artystą, który za tydzień aplikuje na wystawę i potrzebuje s
 
 Gdy uznasz, że Twoje portfolio jest gotowe do wysłania kuratorowi, poinformuj moderatora o zakończeniu zadania.
 
-== Instrukcja obsługi systemu
+== Instrukcja obsługi systemu <appendix:b>
 
 #for page-number in range(1, 51) {
   image(
