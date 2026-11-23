@@ -26,4 +26,26 @@ Scenariusz testowy zaprojektowano aby pokrywał pełen cykl tworzenia portfolio.
   ),
 ) <tab:test-scenario>
 
-==
+Pełną treść instrukcji sesji oraz scenariusza przekazanego uczestnikom badania zamieszczono w załączniku @appendix:a. W załączniku @appendix:b umieszczono również dostarczoną użytkownikom instrukcję obsługi systemu.
+
+== Przebieg i wyniki badania
+
+Badanie użyteczności przeprowadzono w grupie liczącej [n] uczestników, odpowiadających profilowi docelowego użytkownika - osób o profilu kreatywnym, nieposiadających zaawansowanej wiedzy technicznej. Sesje odbywały się indywidualnie, trwając średnio [x] minut. 
+
+W trakcie realizacji badania rejestrowano czas wykonywania poszczególnych kroków, liczbę błędów oraz komentarze werbalizowane w ramach protokołu głośnego myślenia. Zestawienie obserwacji przedstawiono w poniższej tabeli.
+
+#figure(
+  caption: [Zestawienie wyników ewaluacji dla poszczególnych kroków scenariusza],
+  kind: table,
+  table(
+    columns: (1fr, 1fr, 1fr, 2fr),
+    table.header([*Krok*], [*Średni czas*], [*Średnia liczba błędów*], [*Werbalizowane obserwacje*]),
+  [1],[],[],[],
+  [2],[],[],[],
+  [3],[],[],[],
+  [4],[],[],[],
+  [5],[],[],[],
+  )
+)<tab:test-results>
+
+== Analiza obserwacji 
