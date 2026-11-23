@@ -1,6 +1,6 @@
 = Wymagania i specyfikacja systemu (Marta Kociszewska)  <chapter-methodology>
 
-== Identyfikacja użytkowników 
+== Identyfikacja użytkowników <sec:user-identification>
 
 Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy użytkowników. Zrozumienie ich cech, potrzeb, problemów oraz kontekstu użycia stanowiło fundament do zaprojektowania interfejsu i zdefiniowania kluczowych funkcji aplikacji. Stworzono profile reprezentatywnych użytkowników (tzw. persony), którzy reprezentują dwóch głównych aktorów systemu: artystę (twórcę portfolio) oraz odbiorcę (użytkownika końcowego).
 
@@ -8,7 +8,7 @@ Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy
 
 - *Odbiorca (Użytkownik końcowy)* - osoba odwiedzająca wygenerowane portfolio, reprezentująca potencjalnych klientów lub miłośników sztuki. Jej główną potrzebą jest płynne i wygodne przeglądanie galerii, ułatwione dzięki mechanizmom filtrowania prac oraz zoptymalizowanemu czasowi ładowania grafik. Ze względu na fakt, iż użytkownik ten konsumuje treści niemal wyłącznie za pomocą urządzeń mobilnych (smartfony, tablety), absolutnym priorytetem jest przejrzystość interfejsu oraz jego pełne dostosowanie do małych ekranów. Ponadto, Odbiorca oczekuje szybkiego i bezpośredniego sposobu na nawiązanie kontaktu z artystą (np. poprzez czytelne sekcje z informacjami o twórcy i linkami społecznościowymi).
 
-=== Artysta
+=== Artysta <sec:artist-persona>
 
 Podstawową charakterystykę persony artysty przedstawiono w tabeli profilowej (@tab:persona-artist), natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w tabeli szczegółowego profilu (@tab:persona-artist-details).
 
@@ -58,7 +58,7 @@ Podstawową charakterystykę persony artysty przedstawiono w tabeli profilowej (
   ),
 ) <tab:persona-artist-details>
 
-=== Odbiorca
+=== Odbiorca <sec:viewer-persona>
 
 Podstawową charakterystykę persony odbiorcy przedstawiono w tabeli profilowej (@tab:persona-viewer), natomiast szczegółowy opis jego potrzeb, problemów i kontekstu użycia systemu w tabeli szczegółowego profilu (@tab:persona-viewer-details).
 
@@ -107,21 +107,21 @@ Podstawową charakterystykę persony odbiorcy przedstawiono w tabeli profilowej 
   ),
 ) <tab:persona-viewer-details>
 
-== Analiza wymagań
+== Analiza wymagań <sec:requirements-analysis>
 
 Fundamentem zaprojektowanej aplikacji była precyzyjna identyfikacja potrzeb jej użytkowników docelowych: twórców oraz ich odbiorców. Poniżej przedstawiono kompleksowy zbiór zdefiniowanych wymagań funkcjonalnych, jakościowych (niefunkcjonalnych) oraz opracowane scenariusze interakcji z systemem.
 
-=== Wymagania funkcjonalne
-Wymagania funkcjonalne zdefiniowano z perspektywy dwóch kluczowych aktorów: artysty (twórcy portfolio) oraz odbiorcy. 
+=== Wymagania funkcjonalne <sec:functional-requirements>
+Wymagania funkcjonalne zdefiniowano z perspektywy dwóch kluczowych aktorów: artysty (twórcy portfolio) oraz odbiorcy. Szczegółową specyfikację funkcjonalną systemu ujęto w postaci modelu przypadków użycia (ang. _Use Case Model_), który pozwala określić interakcje użytkowników z systemem, warunki wstępne i końcowe oraz wyjątki i scenariusze alternatywne. Pełny wykaz zidentyfikowanych przypadków użycia (PU1-PU14, tabele: @tab:pu1 - @tab:pu14) wraz z diagramami UML (@fig:use-case-viewer oraz @fig:use-case-artist) przedstawiono w podrozdziale @sec:use-cases.
 
-Artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu _drag-and-drop_. 
+W ujęciu ogólnym, artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu _drag-and-drop_. 
 
 Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą.
 
-=== Wymagania jakościowe
+=== Wymagania jakościowe <sec:quality-requirements>
 Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahashowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
 
-=== Scenariusze interakcji z systemem
+=== Scenariusze interakcji z systemem <sec:use-cases>
 
 W celu precyzyjnego określenia funkcjonalności systemu oraz sposobu, w jaki użytkownicy będą z niego korzystać, opracowano model przypadków użycia (ang. _Use Case Model_). Model ten stanowi fundament specyfikacji wymagań i pozwala na graficzne oraz opisowe przedstawienie interakcji pomiędzy aktorami a systemem. Poniższe diagramy prezentują ogólny zarys tych interakcji z perspektywy odbiorcy (@fig:use-case-viewer) oraz artysty (@fig:use-case-artist), uwzględniając również relacje zawierania (`<<include>>`) oraz rozszerzania (`<<extend>>`) dla bardziej złożonych operacji związanych z zarządzaniem pracami.
 
