@@ -20,9 +20,9 @@
   bibliography-style: read("_iso690-numeric.csl", encoding: none),
   // Po dodaniu pierwszego źródła do `_bibliography.bib` zastąp `none`:
   bibliography-source: read("_bibliography.bib", encoding: none),
-  // appendices: [
-  //   #include "appendices/A_appendix.typ"
-  // ],
+  appendices: [
+    #include "appendices/A_appendix.typ"
+  ],
 )
 
 #include "chapters/1_introduction.typ"
