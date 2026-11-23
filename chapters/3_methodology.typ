@@ -119,7 +119,25 @@ W ujęciu ogólnym, artysta posiada autoryzowany dostęp do systemu, co umożliw
 Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą.
 
 === Wymagania jakościowe <sec:quality-requirements>
-Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahashowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
+// Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahashowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
+
+Wymagania jakościowe (niefunkcjonalne) precyzują mierzalne kryteria techniczne oraz ograniczenia projektowe dotyczące bezpieczeństwa, wydajności, niezawodności, przenośności oraz użyteczności systemu.
+
++ Bezpieczeństwo:
+  + Kontrola dostępu i autoryzacja: Dostęp do wszystkich chronionych podstron panelu oraz powiązanych akcji (zarządzanie pracami, kategoriami, profilem, wyglądem) wymaga aktywnej sesji weryfikowanej po stronie serwera.
+  + Bezpieczeństwo transmisji i sesji: Komunikacja musi być chroniona protokołem HTTPS.
+  + Ochrona danych uwierzytelniających: Hasło administratora musi być kryptograficznie haszowane przed zapisem do bazy danych. Sesja logowania jest utrzymywana po stronie serwera z ograniczonym czasem ważności - 7 dni.
+  + Walidacja danych wejściowych: Wszystkie dane wprowadzone przez użytkowników podlegają walidacji po stronie serwera przed zapisem. System akceptuje jedynie zdefiniowane formaty plików (PNG, JPG, GIF, MP4).
++ Wydajność:
+  + Optymalizacja zasobów graficznych: Ciężkie komponenty (np. pełnoekranowy podgląd galerii) są ładowane dynamicznie, dopiero w momencie użycia.
+  + Czas odpowiedzi interfejsu: Niezależne komponenty strony ładują się strumieniowo, bez blokowania całego widoku. Niezależne zapytania do bazy danych wykonywane są równolegle.
++ Niezawodność:
+  + Obsługa plików graficznych: Przesyłane pliki podlgają ograniczeniom wielkości: do 2 MB na pojedynczy plik oraz do 20 MB w ramach jednej operacji zapisu. Zasoby multimedialne są przechowywane w bazie danych wraz z sumą kontrolną zawartości, powiązane kaskadowo z pracami. Gwarantuje to spójność danych i automatyczne usuwanie nieżywanych zasobów wraz z usunięciem pracy.
++ Użyteczność:
+  + Wielojęzyczność: Aplikacja wspiera język polski i angielski w warstwie treści portfolio.
+  + Ochrona przed utratą danych: Panel administracyjny ostrzega użytkownika przed opuszczeniem niezapisanego formularza.
++ Przenośność:
+  + Niezależność od urządzenia: Interfejs jest w pełni responsywny, dostosowuje układ i nawigację do ekranów różnego rozmiaru.
 
 === Scenariusze interakcji z systemem <sec:use-cases>
 
