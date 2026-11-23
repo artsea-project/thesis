@@ -18,7 +18,6 @@
   short-titles: (),
   code-theme: read("_code.tmTheme", encoding: none),
   bibliography-style: read("_iso690-numeric.csl", encoding: none),
-  // Po dodaniu pierwszego źródła do `_bibliography.bib` zastąp `none`:
   bibliography-source: read("_bibliography.bib", encoding: none),
   // appendices: [
   //   #include "appendices/A_appendix.typ"
@@ -27,6 +26,7 @@
 
 #include "chapters/1_introduction.typ"
 #include "chapters/2_organization.typ"
-#include "chapters/3_methodology.typ"
-#include "chapters/4_results.typ"
-#include "chapters/5_summary.typ"
+#include "chapters/3_existing_solutions.typ"
+#include "chapters/4_methodology.typ"
+#include "chapters/5_results.typ"
+#include "chapters/6_summary.typ"
