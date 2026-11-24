@@ -1,12 +1,12 @@
 = Koncepcja i projekt rozwiązania <chapter-concept-and-solution-design>
 
-== Projekt interfejsu i makiety
+== Projekt interfejsu i makiety <sec-interfejs>
 
 Podstawowym założeniem projektu jest możliwość dostosowania wyglądu strony publicznej przez artystę. W związku z tym przedmiotem projektowania nie była jedna, konkretna szata graficzna, tylko system zasad, który przy dowolnych ustawieniach wybranych przez artystę pozwala uzyskać spójną stronę. W ramach tego systemu wyróżnione są dwie warstwy: stała, obejmująca strukturę stron, hierarchię treści oraz budowę komponentów, a także zmienna, obejmująca kroje pisma, kolorystykę i wybrane cechy wyglądu. Przedstawione w niniejszym podrozdziale makiety prezentują zatem jedną z możliwych konfiguracji.
 
 Personalizacji nie podlega panel artysty. Otrzymał on stały wygląd, więc zmiany na stronie publicznej nie utrudniają artyście korzystania z samego panelu.
 
-=== Warstwa stała
+=== Warstwa stała <sec-warstwa-stala>
 
 Niezmienna pozostaje struktura wszystkich podstron części publicznej, złożona z nagłówka, obszaru treści oraz stopki. Stałe położenie nawigacji i danych kontaktowych sprawia, że odwiedzający stronę zawsze wie, gdzie szukać najważniejszych informacji. Układ jest przy tym zgodny z konwencjami znanymi z innych witryn: menu znajduje się u góry strony, a dane kontaktowe w stopce.
 
@@ -20,7 +20,7 @@ Opisane zasady obejmują również powtarzalne elementy strony, takie jak kafelk
 
 === Warstwa zmienna <sec-warstwa-zmienna>
 
-Zakres zmian dostępnych dla artysty został celowo ograniczony do kilku parametrów, które w największym stopniu wpływają na charakter strony, ale nie naruszają jej układu. Obejmują one typografię, kolorystykę, gotowe motywy oraz dodatkowe opcje dotyczące wyglądu elementów strony. Wszystkie te zmiany artysta wprowadza w jednym miejscu – na stronie „Układ i personalizacja” w panelu artysty, którego projekt został przedstawiony w dalszej części rozdziału. Zapisane ustawienia od razu pojawiają się na stronie publicznej, więc artysta może łatwo sprawdzić efekt wprowadzonych zmian. Na tym samym ekranie jest również układ kafelków strony głównej, jednak ze względu na jego złożoność został on omówiony osobno, w podrozdziale poświęconym edytorowi układu Bento Box.
+Zakres zmian dostępnych dla artysty został celowo ograniczony do kilku parametrów, które w największym stopniu wpływają na charakter strony, ale nie naruszają jej układu. Obejmują one typografię, kolorystykę, gotowe motywy oraz dodatkowe opcje dotyczące wyglądu elementów strony. Wszystkie te zmiany artysta wprowadza w jednym miejscu – na stronie „Układ i personalizacja” w panelu artysty, którego projekt przedstawiono w podrozdziale @sec-makiety-panelu. Zapisane ustawienia od razu pojawiają się na stronie publicznej, więc artysta może łatwo sprawdzić efekt wprowadzonych zmian. Na tym samym ekranie jest również układ kafelków strony głównej, jednak ze względu na jego złożoność został on omówiony osobno, w podrozdziale @sec-bento.
 
 Kroje pisma artysta wybiera z zamkniętej listy, a nie spośród wszystkich fontów dostępnych w internecie. Pozwala to wcześniej sprawdzić, czy każdy z nich poprawnie wyświetla polskie znaki diakrytyczne, a także przygotować pliki fontów po stronie serwera aplikacji. Pliki te ograniczone są do znaków alfabetu łacińskiego wraz z rozszerzeniem obejmującym polskie litery oraz do kilku wybranych grubości, dzięki czemu ich rozmiar pozostaje niewielki niezależnie od wyboru artysty. Wybór obejmuje trzy role: krój podstawowy, stosowany w nagłówkach i logo, krój pomocniczy, przeznaczony dla elementów nawigacji, tekstu pomocniczego i wyróżnień, oraz krój dodatkowy, używany w tekście głównym.
 
@@ -28,7 +28,7 @@ Artysta nie ustala koloru każdego elementu strony osobno – wybiera jedynie tr
 
 W panelu dostępne są również trzy gotowe motywy: „Domyślny”, „Ciemny” oraz „Jasny”. Każdy z nich to zestaw trzech kolorów bazowych oraz krojów pisma. Po wybraniu motywu pola kolorów i krojów w panelu wypełniają się automatycznie, a artysta może je następnie zmienić według własnego uznania. Motyw jest więc punktem wyjścia: artysta szybko uzyskuje spójny wygląd strony bez samodzielnego dobierania każdego parametru, a jeśli zechce, może na jego podstawie stworzyć własny zestaw ustawień. Motyw domyślny za to ma celowo stonowaną, neutralną kolorystykę, aby nie konkurowała ona z kolorami prezentowanych prac.
 
-=== Makiety części publicznej
+=== Makiety części publicznej <sec-makiety-publiczne>
 
 Część publiczna składa się z czterech rodzajów podstron: strony głównej, portfolio, strony pojedynczej pracy oraz strony „O mnie”. Ich makiety przygotowano w programie Figma dla szerokości ekranu 1440 px, czyli w wersji na komputery.
 
@@ -41,7 +41,7 @@ Strona główna jest wizytówką artysty i pierwszą stroną, którą widzi odwi
   caption: [Makieta strony głównej],
 ) <fig-home>
 
-Prace ułożone są w siatce typu Bento, złożonej z kafelków o różnych rozmiarach. W odróżnieniu od siatki równych kafelków pozwala ona wyeksponować najważniejsze prace oraz dopasować kształt do proporcji dzieła, np. umieścić pionowy obraz w wysokim kafelku. Każdy kafelek wypełniony jest zdjęciem pracy, na którym znajdują się jej tytuł, rok wykonania i tagi, a kliknięcie dowolnego miejsca kafelka prowadzi do strony pracy. Aby praca była dobrze widoczna, wyświetlane są na kafelku najwyżej trzy tagi. Tekst na zdjęciu jest zawsze biały i umieszczony na ciemnym gradiencie u dołu kafelka, więc pozostaje czytelny niezależnie od zdjęcia i od kolorów wybranych przez artystę. Układ kafelków artysta ustala osobno dla komputerów i telefonów, a sposób jego tworzenia opisano w podrozdziale poświęconym edytorowi układu Bento Box.
+Prace ułożone są w siatce typu Bento, złożonej z kafelków o różnych rozmiarach. W odróżnieniu od siatki równych kafelków pozwala ona wyeksponować najważniejsze prace oraz dopasować kształt do proporcji dzieła, np. umieścić pionowy obraz w wysokim kafelku. Każdy kafelek wypełniony jest zdjęciem pracy, na którym znajdują się jej tytuł, rok wykonania i tagi, a kliknięcie dowolnego miejsca kafelka prowadzi do strony pracy. Aby praca była dobrze widoczna, wyświetlane są na kafelku najwyżej trzy tagi. Tekst na zdjęciu jest zawsze biały i umieszczony na ciemnym gradiencie u dołu kafelka, więc pozostaje czytelny niezależnie od zdjęcia i od kolorów wybranych przez artystę. Układ kafelków artysta ustala osobno dla komputerów i telefonów, a sposób jego tworzenia opisano w podrozdziale @sec-bento.
 
 ==== Portfolio
 
@@ -86,7 +86,7 @@ Niżej znajduje się dłuższy opis podzielony na dwie kolumny. W lewej wyświet
 
 Stronę zamyka sekcja „Skontaktuj się ze mną.”, do której prowadzi pozycja „Kontakt” w menu. Zawiera ona krótki tekst zachęcający do kontaktu, adres e-mail artysty oraz odnośniki do jego profili w mediach społecznościowych. Kliknięcie adresu e-mail otwiera program pocztowy, a profile otwierają się w nowej karcie przeglądarki, więc strona artysty pozostaje otwarta i odwiedzający może łatwo do niej wrócić. Jeśli artysta nie dodał żadnych linków do mediów społecznościowych, ta część sekcji nie jest wyświetlana.
 
-=== Makiety panelu artysty
+=== Makiety panelu artysty <sec-makiety-panelu>
 
 Panel jest częścią aplikacji dostępną po zalogowaniu, w której artysta zarządza treścią swojej strony: pracami, kategoriami, tagami, profilem i ustawieniami wyglądu. W odróżnieniu od części publicznej, która służy prezentacji prac odwiedzającym, panel jest narzędziem pracy. Artysta korzysta z niego za każdym razem, gdy chce dodać nową pracę, poprawić jej opis lub zmienić wygląd strony, dlatego najważniejsze było to, żeby bez szukania trafiał do potrzebnej funkcji. Z tego powodu ekrany zbudowano według podobnego schematu, np. na górze ekranów prac i kategorii znajduje się tytuł z krótkim objaśnieniem, a obok niego przycisk dodawania nowego elementu. Po wprowadzeniu zmian artysta może od razu sprawdzić ich efekt, otwierając stronę publiczną za pomocą odnośnika „Podgląd portfolio” w menu.
 
@@ -105,7 +105,7 @@ Przegląd jest pierwszym ekranem, który artysta widzi po wejściu do panelu. Ni
 
 Karty pokazują, ile artysta dodał prac, kategorii i tagów. W przypadku prac liczone są wszystkie, łącznie z ukrytymi, dlatego liczba na karcie może być większa niż liczba prac widocznych w portfolio. Jeśli artysta ukrył któreś z nich, pod liczbą pojawia się dopisek, np. „2 ukryte”. Każda karta jest jednocześnie odnośnikiem. Karta prac otwiera listę prac, a kliknięcie karty kategorii lub tagów prowadzi do ekranu „Kategorie”, na którym artysta zarządza jednymi i drugimi.
 
-W lewej kolumnie, pod nagłówkiem „Prace wyróżnione na stronie głównej”, wyświetlana jest pomniejszona siatka Bento ze strony głównej. Przełącznik „Desktop” i „Mobile” nad podglądem pozwala zobaczyć układ w wersji na komputery albo na telefony, przy czym ta druga wyświetlana jest w ramce telefonu. Artysta nie musi więc otwierać strony publicznej, żeby przypomnieć sobie, które prace są na niej wyeksponowane i jak zostały ułożone. Na miniaturze nie ma tytułów ani tagów, bo przy tej wielkości kafelków i tak byłyby nieczytelne. Kliknięcie podglądu przenosi artystę do ekranu „Układ i personalizacja”, na którym może zmienić układ kafelków w oglądanej właśnie wersji. Sam edytor opisano w podrozdziale poświęconym edytorowi układu Bento Box. Jeśli w danej wersji nie ma jeszcze żadnych prac, zamiast siatki pojawia się komunikat „Na stronie głównej nie ma jeszcze prac.” i przycisk „Ułóż stronę główną”.
+W lewej kolumnie, pod nagłówkiem „Prace wyróżnione na stronie głównej”, wyświetlana jest pomniejszona siatka Bento ze strony głównej. Przełącznik „Desktop” i „Mobile” nad podglądem pozwala zobaczyć układ w wersji na komputery albo na telefony, przy czym ta druga wyświetlana jest w ramce telefonu. Artysta nie musi więc otwierać strony publicznej, żeby przypomnieć sobie, które prace są na niej wyeksponowane i jak zostały ułożone. Na miniaturze nie ma tytułów ani tagów, bo przy tej wielkości kafelków i tak byłyby nieczytelne. Kliknięcie podglądu przenosi artystę do ekranu „Układ i personalizacja”, na którym może zmienić układ kafelków w oglądanej właśnie wersji. Sam edytor opisano w podrozdziale @sec-bento. Jeśli w danej wersji nie ma jeszcze żadnych prac, zamiast siatki pojawia się komunikat „Na stronie głównej nie ma jeszcze prac.” i przycisk „Ułóż stronę główną”.
 
 Prawa kolumna, „Linki społecznościowe”, pokazuje, ile linków artysta dodał w profilu, a pod tą liczbą same linki. Każdy z nich zajmuje dwie linie: wyżej znajduje się nazwa nadana przez artystę, np. „Instagram”, a niżej skrócony adres, np. `instagram.com/elara.voss`. Nazwa jest tym samym tekstem, który odwiedzający zobaczy na stronie „O mnie”, więc artysta od razu wie, jak link zostanie podpisany. Adres bez przedrostka `https://` pozwala z kolei szybko sprawdzić, czy link prowadzi do właściwego profilu. Kliknięcie adresu otwiera ten profil w nowej karcie, a kliknięcie w inne miejsce karty prowadzi do sekcji „Profil”, w której linki się dodaje i edytuje. Jeśli artysta nie dodał jeszcze żadnego linku, w karcie widoczny jest komunikat „Nie dodano jeszcze linków.” i przycisk „Dodaj linki w profilu”.
 
