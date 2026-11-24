@@ -148,7 +148,7 @@ Wyszukiwanie obejmuje tytuły prac oraz nazwy kategorii w wersji polskiej i angi
 
 ==== Dodawanie i edycja pracy
 
-Dodawanie nowej pracy i edycja istniejącej odbywają się w tym samym formularzu. Różnią się jedynie tytułem ekranu, „Dodaj pracę” lub „Edytuj pracę”, oraz tym, że przy edycji pola są już wypełnione zapisanymi danymi. Pola ułożone są od najważniejszych: najpierw tytuł, rok wykonania i wymiary, potem opis, kategoria i tagi, a na końcu zdjęcia (@fig-dodawanie-pracy).
+Dodawanie nowej pracy i edycja istniejącej odbywają się w tym samym formularzu. Różnią się jedynie tytułem ekranu, „Dodaj pracę” lub „Edytuj pracę”, oraz tym, że przy edycji pola są już wypełnione zapisanymi danymi. Pola ułożone są w kolejności: tytuł, rok wykonania i wymiary, potem opis, kategoria i tagi, a na końcu zdjęcia (@fig-dodawanie-pracy).
 
 #figure(
   image("../img/dodawanie_pracy.png", width: 100%),
