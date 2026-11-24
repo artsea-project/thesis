@@ -1,4 +1,4 @@
-= Koncepcja i projekt rozwiązania <chapter-concept-and-solution-design>
+= Koncepcja i projekt rozwiązania (Lidia Zawrzykraj) <chapter-concept-and-solution-design>
 
 == Projekt interfejsu i makiety <sec-interfejs>
 
