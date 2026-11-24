@@ -27,3 +27,7 @@ CD
 UX
 MVP
 Scrum
+UBS
+iteracyjno
+refaktoryzacja
+samodokumentujący

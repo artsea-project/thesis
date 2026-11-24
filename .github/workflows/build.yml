@@ -33,11 +33,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Instalacja hunspella i słowników
+      - name: Instalacja hunspella
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends hunspell hunspell-pl hunspell-en-gb
+          sudo apt-get install -y --no-install-recommends hunspell
 
-      # Dopisz --strict, aby literówki blokowały merge.
       - name: Sprawdzenie pisowni
-        run: bash .github/scripts/spellcheck.sh
+        run: bash .github/scripts/spellcheck.sh --strict

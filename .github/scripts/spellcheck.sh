@@ -11,7 +11,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/../.."
 
-DICTS="pl_PL,en_GB"
+DICTS="$PWD/.github/dictionaries/pl_PL,$PWD/.github/dictionaries/en_GB"
 PERSONAL=".github/dictionary.txt"
 STRICT=0
 [ "${1:-}" = "--strict" ] && STRICT=1
@@ -57,7 +57,8 @@ for f in "${FILES[@]}"; do
   echo "$f:" >>"$REPORT"
   while IFS= read -r word; do
     TOTAL=$((TOTAL + 1))
-    LINES="$(grep -n -w -F "$word" "$f" | cut -d: -f1 | paste -sd, -)"
+    # Hunspell może zgłosić fragment słowa (np. CX z CX23), bez dopasowania -w.
+    LINES="$(grep -n -w -F "$word" "$f" | cut -d: -f1 | paste -sd, -)" || true
     echo "  wiersz ${LINES:-?}: $word" >>"$REPORT"
   done <<<"$BAD"
   echo >>"$REPORT"
