@@ -1,27 +1,5 @@
 = Koncepcja i projekt rozwiązania <chapter-concept-and-solution-design>
 
-// TODO: Przedstaw koncepcję rozwiązania oraz jego projekt.
-
-== Wymagania funkcjonalne i przypadki użycia
-
-// TODO: Wypisz wymagania funkcjonalne i opisz przypadki użycia.
-
-== Wymagania niefunkcjonalne
-
-// TODO: Opisz wymagania niefunkcjonalne.
-
-== Uzasadnienie wyboru stosu technologicznego
-
-// TODO: Uzasadnij wybór technologii.
-
-== Architektura systemu
-
-// TODO: Opisz architekturę systemu.
-
-== Projekt bazy danych
-
-// TODO: Przedstaw projekt bazy danych.
-
 == Projekt interfejsu i makiety
 
 Podstawowym założeniem projektu jest możliwość dostosowania wyglądu strony publicznej przez artystę. W związku z tym przedmiotem projektowania nie była jedna, konkretna szata graficzna, tylko system zasad, który przy dowolnych ustawieniach wybranych przez artystę pozwala uzyskać spójną stronę. W ramach tego systemu wyróżnione są dwie warstwy: stała, obejmująca strukturę stron, hierarchię treści oraz budowę komponentów, a także zmienna, obejmująca kroje pisma, kolorystykę i wybrane cechy wyglądu. Przedstawione w niniejszym podrozdziale makiety prezentują zatem jedną z możliwych konfiguracji.
