@@ -30,7 +30,7 @@ Pełną treść instrukcji sesji oraz scenariusza przekazanego uczestnikom badan
 
 == Przebieg i wyniki badania
 
-Badanie użyteczności przeprowadzono w grupie liczącej [n] uczestników, odpowiadających profilowi docelowego użytkownika - osób o profilu kreatywnym, nieposiadających zaawansowanej wiedzy technicznej. Sesje odbywały się indywidualnie, trwając średnio [x] minut. 
+Badanie użyteczności przeprowadzono w grupie liczącej [n] uczestników, odpowiadających profilowi docelowego użytkownika - osób zajmujących się twórczością artystyczną, nieposiadających zaawansowanej wiedzy technicznej. Sesje odbywały się indywidualnie i trwały średnio [x] minut. 
 
 W trakcie realizacji badania rejestrowano czas wykonywania poszczególnych kroków, liczbę błędów oraz komentarze werbalizowane w ramach protokołu głośnego myślenia. Zestawienie obserwacji przedstawiono w poniższej tabeli.
 
