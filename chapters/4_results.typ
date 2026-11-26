@@ -8,7 +8,7 @@ W ramach badania uczestnicy zostali poproszeni o samodzielne wykonanie zestawu z
 
 Przed przystąpieniem do testu każdy użytkownik otrzymał dostęp do środowiska testowego aplikacji oraz przygotowaną instrukcję obsługi systemu. Miało to na celu odwzorowanie rzeczywistego procesu wdrożenia nowego twórcy oraz weryfikację, czy dostarczona instrukcja spełnia swoją funkcję i wspiera samodzielną konfigurację.
 
-Scenariusz testowy zaprojektowano aby pokrywał pełen cykl tworzenia portfolio. Zestawienie zadań wraz z powiązaniem do przypadków użycia zdefiniowanych w rozdziale @sec:use-cases przedstawiono w poniższej tabeli.
+Scenariusz testowy zaprojektowano tak, aby obejmował pełny cykl tworzenia portfolio. Zadania wraz z odpowiadającymi im przypadkami użycia zdefiniowanymi w podrozdziale @sec:use-cases przedstawiono w poniższej tabeli.
 
 #figure(
   caption: [Scenariusz testowy ewaluacji systemu],
