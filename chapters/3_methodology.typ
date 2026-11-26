@@ -18,8 +18,6 @@ Podstawową charakterystykę persony artysty przedstawiono w tabeli profilowej (
   table(
     columns: (auto, auto, 1fr),
     align: left,
-    stroke: .5pt,
-    inset: 6pt,
     table.header([], [Cecha], [Opis]),
     table.cell(rowspan: 4)[*Profil*],
     [Imię],
@@ -39,8 +37,6 @@ Podstawową charakterystykę persony artysty przedstawiono w tabeli profilowej (
   table(
     columns: (auto, 1fr),
     align: left,
-    stroke: .5pt,
-    inset: 6pt,
     table.header([Cecha], [Opis]),
     table.cell(rowspan: 3)[*Potrzeby i cele*],
     [Chce rozpocząć swoją karierę, stworzyć wizytówkę dla swoich prac],
@@ -68,8 +64,6 @@ Podstawową charakterystykę persony odbiorcy przedstawiono w tabeli profilowej 
   table(
     columns: (auto, auto, 1fr),
     align: left,
-    stroke: .5pt,
-    inset: 6pt,
     table.header([], [Cecha], [Opis]),
     table.cell(rowspan: 4)[*Profil*],
     [Imię],
@@ -89,8 +83,6 @@ Podstawową charakterystykę persony odbiorcy przedstawiono w tabeli profilowej 
   table(
     columns: (auto, 1fr),
     align: left,
-    stroke: .5pt,
-    inset: 6pt,
     table.header([Cecha], [Opis]),
     table.cell(rowspan: 3)[*Potrzeby i cele*],
     [Chce płynnie i wygodnie przeglądać galerie prac na telefonie],
@@ -165,8 +157,6 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
   kind: table,
   table(
     columns: (1fr, 3fr),
-    stroke: .5pt,
-    inset: 6pt,
     table.header([*Nazwa*], [Przeglądanie galerii zdjęć]),
     [*Warunki wstępne*], [Artysta udostępnił publicznie swoje portfolio w systemie ArtSea.],
     [*Podstawowy scenariusz interakcji*], [1. Odbiorca wchodzi na podstronę galerii artysty. \
@@ -189,8 +179,6 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
       kind: table,
       table(
         columns: (1fr, 3fr),
-        stroke: .5pt,
-        inset: 6pt,
         table.header([*Nazwa*], [Kontakt z artystą]),
         [*Warunki wstępne*], [Odbiorca znajduje się w portfolio artysty, a
         artysta uzupełnił w profilu adres e-mail do kontaktu lub linki
@@ -218,8 +206,6 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
   kind: table,
   table(
     columns: (1fr, 3fr),
-    stroke: .5pt,
-    inset: 6pt,
     table.header([*Nazwa*], [Wybór języka]),
     [*Warunki wstępne*], [Odbiorca znajduje się w portfolio. System obsługuje język polski i angielski, a domyślnie używa języka przeglądarki.],
     [*Podstawowy scenariusz interakcji*], [1. Odbiorca lokalizuje i klika przycisk wyboru języka. \
@@ -242,7 +228,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU4 - Rejestracja konta],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Rejestracja konta]),
     [*Warunki wstępne*],
     [Konto artysty nie istnieje w systemie. W trakcie konfiguracji został wygenerowany jednorazowy link rejestracyjny.],
@@ -270,7 +256,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU5 - Dodawanie pracy],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Dodawanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace".  \
@@ -289,7 +275,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU6 - Edytowanie pracy],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Edytowanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany i posiada co najmniej jedną pracę w portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace".  \
@@ -308,7 +294,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU7 - Wypełnianie detali pracy],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Wypełnianie detali pracy]),
     [*Warunki wstępne*], [Artysta przechodzi z PU5 (@tab:pu5) lub PU6 (@tab:pu6). System wyświetla formularz dodawania albo edycji pracy.],
     [*Podstawowy scenariusz interakcji*], [1. System wyświetla wymagane pola: tytuł i kategorię, oraz opcjonalne: media, opis, wymiary, rok wykonania, technika.  \
@@ -330,7 +316,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU8 - Usuwanie pracy],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Usuwanie pracy]),
     [*Warunki wstępne*], [Artysta jest zalogowany, a praca istnieje w galerii.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace" i wybiera pracę.  \
@@ -349,7 +335,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU9 - Dodawanie kategorii prac],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Dodawanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
@@ -367,7 +353,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU10 - Edytowanie kategorii prac],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Edytowanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jedna kategoria.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie" i wybiera kategorię.  \
@@ -386,7 +372,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU11 - Dodawanie tagów],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Dodawanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
@@ -404,7 +390,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU12 - Edytowanie tagów],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Edytowanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany i istnieje co najmniej jeden tag.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie" i wybiera tag.  \
@@ -422,7 +408,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU13 - Dodawanie i edytowanie informacji o sobie],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Dodawanie i edytowanie informacji o sobie]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Profil".  \
@@ -442,7 +428,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   caption: [Przypadek użycia PU14 - Personalizacja strony],
   kind: table,
   table(
-    columns: (1fr, 3fr), stroke: .5pt, inset: 6pt,
+    columns: (1fr, 3fr),
     table.header([*Nazwa*], [Personalizacja strony]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Układ i Personalizacja".  \
