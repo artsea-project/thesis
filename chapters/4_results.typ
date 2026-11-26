@@ -26,7 +26,7 @@ Scenariusz testowy zaprojektowano tak, aby obejmował pełny cykl tworzenia port
   ),
 ) <tab:test-scenario>
 
-Pełną treść instrukcji sesji oraz scenariusza przekazanego uczestnikom badania zamieszczono w załączniku @appendix:a. W załączniku @appendix:b umieszczono również dostarczoną użytkownikom instrukcję obsługi systemu.
+Pełną treść instrukcji sesji oraz scenariusza przekazanego uczestnikom badania zamieszczono w załączniku @appendix:a. W załączniku @appendix:b umieszczono dostarczoną uczestnikom instrukcję obsługi systemu.
 
 == Przebieg i wyniki badania
 
