@@ -6,7 +6,7 @@ W celu weryfikacji zaimplementowanego systemu pod kątem spełnienia wymagań ni
 
 W ramach badania uczestnicy zostali poproszeni o samodzielne wykonanie zestawu zadań, przy jednoczesnym werbalizowaniu swoich spostrzeżeń, oczekiwań oraz napotkanych trudności. Moderator badania nie ingerował w przebieg zadania, ograniczając się do rejestrowania czasu realizacji, liczby błędów, zawahań oraz komentarzy badanych.
 
-Przed przystąpieniem do testu, każdy użytkownik otrzymał dostęp do środowiska testowego aplikacji oraz przygotowaną instrukcję obsługi systemu. Miało to na celu odwzorować rzeczywisty proces wdrożenia nowego twórcy oraz weryfikację, czy dostarczona instrukcja spełnia swoją funkcję i wspiera samodzielną konfigurację.
+Przed przystąpieniem do testu każdy użytkownik otrzymał dostęp do środowiska testowego aplikacji oraz przygotowaną instrukcję obsługi systemu. Miało to na celu odwzorowanie rzeczywistego procesu wdrożenia nowego twórcy oraz weryfikację, czy dostarczona instrukcja spełnia swoją funkcję i wspiera samodzielną konfigurację.
 
 Scenariusz testowy zaprojektowano aby pokrywał pełen cykl tworzenia portfolio. Zestawienie zadań wraz z powiązaniem do przypadków użycia zdefiniowanych w rozdziale @sec:use-cases przedstawiono w poniższej tabeli.
 
