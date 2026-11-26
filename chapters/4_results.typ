@@ -18,10 +18,10 @@ Scenariusz testowy zaprojektowano tak, aby obejmował pełny cykl tworzenia port
     stroke: .5pt, inset: 6pt,
     table.header([*Krok*], [*Treść zadania*], [*Powiązany przypadek użycia*], [*Kryterium sukcesu*]),
     [1], [Zarejestruj się w systemie], [PU4 @tab:pu4], [Poprawna rejestracja konta i udane logowanie],
-    [2], [Uzupełnij profil artysty (zdjęcia, dane podstawowe, biografia, linki społecznościowe)], [PU13 @tab:pu13], [Poprawne wgranie zdjęcia, uzupełnienie co najmniej dwóch sekcji biografii oraz dodanie min. jednego linku społecznościowego],
-    [3], [Dodaj co najmniej trzy prace, załączając do nich pliki multimedialne oraz opisy], [PU5 @tab:pu5, PU7 @tab:pu7, PU9 @tab:pu9, PU11 @tab:pu11], [Utworzenie i zapisanie min. 3 prac z tytułem, przypisaną kategorią i tagami oraz plikami, poprawne wybranie okładki. Weryfikacja założenia z profilu persony (Kontekst użycia systemu, @tab:persona-artist-details) - czas dodania pojedynczej pracy poniżej 3 minut],
+    [2], [Uzupełnij profil artysty (zdjęcie, dane podstawowe, biografia, linki społecznościowe)], [PU13 @tab:pu13], [Poprawne wgranie zdjęcia, uzupełnienie co najmniej dwóch sekcji biografii oraz dodanie min. jednego linku społecznościowego],
+    [3], [Dodaj co najmniej trzy prace, załączając do nich pliki multimedialne oraz opisy], [PU5 @tab:pu5, PU7 @tab:pu7, PU9 @tab:pu9, PU11 @tab:pu11], [Utworzenie i zapisanie co najmniej 3 prac z tytułem, przypisaną kategorią i tagami oraz plikami, poprawne wybranie okładki. Weryfikacja założenia z profilu persony (Kontekst użycia systemu, @tab:persona-artist-details) - czas dodania pojedynczej pracy poniżej 3 minut],
     [4], [Zmodyfikuj wygląd portfolio, używając dostępnych opcji personalizacji], [PU14 @tab:pu14], [Modyfikacja układu siatki Bento Box oraz zmiana kolorystyki i czcionek (ręcznie lub poprzez gotowy motyw)],
-    [5], [Zapisz zmiany i sprawdź wygląd portfolio], [PU1 @tab:pu1, PU2 @tab:pu2, PU3 @tab:pu3], [Zapisanie konfiguracji, przejście do podglądu strony publicznej oraz weryfikacja poprawności]
+    [5], [Zapisz zmiany i sprawdź wygląd portfolio], [PU1 @tab:pu1, PU2 @tab:pu2, PU3 @tab:pu3], [Zapisanie konfiguracji oraz sprawdzenie czy wprowadzone zmiany są widoczne na stronie publicznej]
 
   ),
 ) <tab:test-scenario>
