@@ -15,7 +15,6 @@ Scenariusz testowy zaprojektowano tak, aby obejmował pełny cykl tworzenia port
   kind: table,
   table(
     columns: (1fr, 2fr, 1fr, 2fr),
-    stroke: .5pt, inset: 6pt,
     table.header([*Krok*], [*Treść zadania*], [*Powiązany przypadek użycia*], [*Kryterium sukcesu*]),
     [1], [Zarejestruj się w systemie], [PU4 @tab:pu4], [Poprawna rejestracja konta i udane logowanie],
     [2], [Uzupełnij profil artysty (zdjęcie, dane podstawowe, biografia, linki społecznościowe)], [PU13 @tab:pu13], [Poprawne wgranie zdjęcia, uzupełnienie co najmniej dwóch sekcji biografii oraz dodanie min. jednego linku społecznościowego],
