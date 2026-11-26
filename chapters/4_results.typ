@@ -4,7 +4,7 @@
 
 W celu weryfikacji zaimplementowanego systemu pod kątem spełnienia wymagań funkcjonalnych i niefunkcjonalnych przeprowadzono badanie z udziałem przedstawicieli grupy docelowej. Zdecydowano się na wykorzystanie metody testowania opartego na scenariuszach (ang. _Scenario-Based Testing_) @scenario-testing, połączonej z metodą głośnego myślenia (ang. _Think-Aloud Protocol_) @user-centered-interface. Połączenie obu technik pozwoliło na weryfikację poprawności realizacji założeń projektowych oraz ocenę rozwiązania z perspektywy osób odpowiadających profilowi zdefiniowanemu w podrozdziale @sec:user-identification.
 
-W ramach badania uczestnicy zostali poproszeni o samodzielne wykonanie zestawu zadań, przy jednoczesnym werbalizowaniu swoich spostrzeżeń, oczekiwań oraz napotkanych trudności. Moderator badania nie ingerował w przebieg zadania, ograniczając się do rejestrowania czasu realizacji, liczby błędów, zawahań oraz komentarzy badanych.
+W ramach badania uczestnicy zostali poproszeni o samodzielne wykonanie zestawu zadań, przy jednoczesnym werbalizowaniu swoich spostrzeżeń, oczekiwań oraz napotkanych trudności. Moderator badania nie ingerował w przebieg zadań, ograniczając się do rejestrowania czasu realizacji, liczby błędów, zawahań oraz komentarzy badanych.
 
 Przed przystąpieniem do testu każdy użytkownik otrzymał dostęp do środowiska testowego aplikacji oraz przygotowaną instrukcję obsługi systemu. Miało to na celu odwzorowanie rzeczywistego procesu wdrożenia nowego twórcy oraz weryfikację, czy dostarczona instrukcja spełnia swoją funkcję i wspiera samodzielną konfigurację.
 
