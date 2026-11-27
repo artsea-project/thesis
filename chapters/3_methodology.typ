@@ -2,11 +2,11 @@
 
 == Identyfikacja użytkowników <sec:user-identification>
 
-Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy użytkowników. Zrozumienie ich cech, potrzeb, problemów oraz kontekstu użycia stanowiło fundament do zaprojektowania interfejsu i zdefiniowania kluczowych funkcji aplikacji. Stworzono profile reprezentatywnych użytkowników (tzw. persony), którzy reprezentują dwóch głównych aktorów systemu: artystę (twórcę portfolio) oraz odbiorcę (użytkownika końcowego).
+Proces inżynierii wymagań rozpoczął się od przeanalizowania docelowej grupy użytkowników. Zrozumienie ich cech, potrzeb, problemów oraz kontekstu użycia stanowiło fundament do zaprojektowania interfejsu i zdefiniowania kluczowych funkcji aplikacji. Stworzono profile reprezentatywnych użytkowników (tzw. persony) dla dwóch głównych aktorów systemu: artysty (twórcy portfolio) oraz odbiorcy (użytkownika końcowego).
 
 - *Artysta (Twórca)* - główny użytkownik systemu. Grupa ta charakteryzuje się wysoką wrażliwością estetyczną, lecz na ogół nie posiada specjalistycznych umiejętności technicznych i programistycznych. Głównym celem tego aktora jest szybkie stworzenie scentralizowanego, uporządkowanego portfolio. Artysta oczekuje wysoce intuicyjnego interfejsu. Aktor ten korzysta z panelu zarządzania głównie na komputerze stacjonarnym w celu wgrywania plików, jednak wymaga również możliwości zarządzania treścią z poziomu urządzeń mobilnych.
 
-- *Odbiorca (Użytkownik końcowy)* - osoba odwiedzająca wygenerowane portfolio, reprezentująca potencjalnych klientów lub miłośników sztuki. Jej główną potrzebą jest płynne i wygodne przeglądanie galerii, ułatwione dzięki mechanizmom filtrowania prac oraz zoptymalizowanemu czasowi ładowania grafik. Ze względu na fakt, iż użytkownik ten konsumuje treści niemal wyłącznie za pomocą urządzeń mobilnych (smartfony, tablety), absolutnym priorytetem jest przejrzystość interfejsu oraz jego pełne dostosowanie do małych ekranów. Ponadto, Odbiorca oczekuje szybkiego i bezpośredniego sposobu na nawiązanie kontaktu z artystą (np. poprzez czytelne sekcje z informacjami o twórcy i linkami społecznościowymi).
+- *Odbiorca (Użytkownik końcowy)* - osoba odwiedzająca wygenerowane portfolio, reprezentująca potencjalnych klientów lub miłośników sztuki. Jej główną potrzebą jest płynne i wygodne przeglądanie galerii, ułatwione dzięki mechanizmom filtrowania prac oraz zoptymalizowanemu czasowi ładowania grafik. Ze względu na fakt, iż użytkownik ten przegląda treści niemal wyłącznie za pomocą urządzeń mobilnych (smartfony, tablety), absolutnym priorytetem jest przejrzystość interfejsu oraz jego pełne dostosowanie do małych ekranów. Ponadto, odbiorca oczekuje szybkiego i bezpośredniego sposobu na nawiązanie kontaktu z artystą (np. poprzez czytelne sekcje z informacjami o twórcy i linkami społecznościowymi).
 
 === Artysta <sec:artist-persona>
 
@@ -104,27 +104,26 @@ Podstawową charakterystykę persony odbiorcy przedstawiono w tabeli profilowej 
 Fundamentem zaprojektowanej aplikacji była precyzyjna identyfikacja potrzeb jej użytkowników docelowych: twórców oraz ich odbiorców. Poniżej przedstawiono kompleksowy zbiór zdefiniowanych wymagań funkcjonalnych, jakościowych (niefunkcjonalnych) oraz opracowane scenariusze interakcji z systemem.
 
 === Wymagania funkcjonalne <sec:functional-requirements>
-Wymagania funkcjonalne zdefiniowano z perspektywy dwóch kluczowych aktorów: artysty (twórcy portfolio) oraz odbiorcy. Szczegółową specyfikację funkcjonalną systemu ujęto w postaci modelu przypadków użycia (ang. _Use Case Model_), który pozwala określić interakcje użytkowników z systemem, warunki wstępne i końcowe oraz wyjątki i scenariusze alternatywne. Pełny wykaz zidentyfikowanych przypadków użycia (PU1-PU14, tabele: @tab:pu1 - @tab:pu14) wraz z diagramami UML (@fig:use-case-viewer oraz @fig:use-case-artist) przedstawiono w podrozdziale @sec:use-cases.
+Wymagania funkcjonalne zdefiniowano z perspektywy dwóch kluczowych aktorów: artysty (twórcy portfolio) oraz odbiorcy. Szczegółową specyfikację funkcjonalną systemu ujęto w postaci modelu przypadków użycia (ang. _Use Case Model_), który pozwala określić interakcje użytkowników z systemem, warunki wstępne i końcowe oraz wyjątki i scenariusze alternatywne. Pełny wykaz zidentyfikowanych przypadków użycia (PU1-PU14) wraz z diagramami UML (@fig:use-case-viewer oraz @fig:use-case-artist) przedstawiono w podrozdziale @sec:use-cases.
 
-W ujęciu ogólnym, artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu _drag-and-drop_. 
+W ujęciu ogólnym artysta posiada autoryzowany dostęp do systemu, co umożliwia mu kompleksowe zarządzanie treścią: dodawanie, edycję i usuwanie prac graficznych oraz kategorii, a także aktualizację profilu biograficznego. Jedną z najważniejszych funkcji z perspektywy twórcy jest możliwość wizualnej personalizacji portfolio za pomocą interaktywnego edytora opartego na modułowym układzie "Bento Box". Moduł ten pozwala na elastyczne skalowanie oraz pozycjonowanie kafelków z wykorzystaniem intuicyjnego mechanizmu _drag-and-drop_. 
 
 Z kolei odbiorca zyskuje możliwość przeglądania galerii, zmiany preferowanego języka interfejsu, a także nawiązywania bezpośredniej komunikacji z artystą.
 
 === Wymagania jakościowe <sec:quality-requirements>
-// Wymagania jakościowe (niefunkcjonalne) precyzują kryteria brzegowe dotyczące wydajności, bezpieczeństwa oraz przenośności. Dane autoryzacyjne użytkowników muszą być zahashowane przy użyciu nowoczesnych algorytmów kryptograficznych przed ich trwałym zapisem w bazie danych. Dodatkowym wymogiem niezawodnościowym jest obsługa wielu formatów plików graficznych oraz zabezpieczenie danych formularzowych przed ich utratą w przypadku nagłego przerwania sesji. Ważnym ograniczeniem projektowym jest uniwersalność i przenośność rozwiązania. System musi zapewnić pełną kompatybilność oraz responsywność w najpopularniejszych przeglądarkach internetowych (m.in. Google Chrome, Safari, Mozilla Firefox), jak również na urządzeniach mobilnych z systemami operacyjnymi Android i iOS. Z perspektywy _User Experience_, zebrane wytyczne analityczne wskazują, że aplikacja powinna charakteryzować się profesjonalnym, przejrzystym i zorganizowanym interfejsem, unikając wrażenia nadmiernego skomplikowania, aby stanowić narzędzie przystępne i przyjazne w odbiorze dla osób nietechnicznych.
-
 Wymagania jakościowe (niefunkcjonalne) precyzują mierzalne kryteria techniczne oraz ograniczenia projektowe dotyczące bezpieczeństwa, wydajności, niezawodności, przenośności oraz użyteczności systemu.
 
 + Bezpieczeństwo:
   + Kontrola dostępu i autoryzacja: Dostęp do wszystkich chronionych podstron panelu oraz powiązanych akcji (zarządzanie pracami, kategoriami, profilem, wyglądem) wymaga aktywnej sesji weryfikowanej po stronie serwera.
-  + Bezpieczeństwo transmisji i sesji: Komunikacja musi być chroniona protokołem HTTPS.
-  + Ochrona danych uwierzytelniających: Hasło administratora musi być kryptograficznie haszowane przed zapisem do bazy danych. Sesja logowania jest utrzymywana po stronie serwera z ograniczonym czasem ważności - 7 dni.
+  + Bezpieczeństwo transmisji i sesji: W środowisku produkcyjnym aplikacja wymaga publicznego adresu z protokołem HTTPS i odrzuca konfigurację z adresem HTTP, a ciasteczka sesji są przesyłane wyłącznie przez połączenie szyfrowane. Certyfikat TLS zapewnia platforma hostingowa lub serwer pośredniczący. Sesja logowania jest utrzymywana po stronie serwera i wygasa po 7 dniach.
+  + Ochrona danych uwierzytelniających: Hasło administratora musi być kryptograficznie haszowane przed zapisem do bazy danych.
   + Walidacja danych wejściowych: Wszystkie dane wprowadzone przez użytkowników podlegają walidacji po stronie serwera przed zapisem. System akceptuje jedynie zdefiniowane formaty plików (PNG, JPG, GIF, MP4).
 + Wydajność:
-  + Optymalizacja zasobów graficznych: Ciężkie komponenty (np. pełnoekranowy podgląd galerii) są ładowane dynamicznie, dopiero w momencie użycia.
-  + Czas odpowiedzi interfejsu: Niezależne komponenty strony ładują się strumieniowo, bez blokowania całego widoku. Niezależne zapytania do bazy danych wykonywane są równolegle.
+  + Optymalizacja zasobów graficznych: Zdjęcia prac są automatycznie zmniejszane do rozmiaru, w jakim wyświetla je dane urządzenie, konwertowane do formatu WebP i wczytywane dopiero wtedy, gdy zbliżają się do widocznego obszaru strony.
+  + Ładowanie komponentów na żądanie: Pełnoekranowy podgląd zdjęć w galerii pracy jest pobierany dopiero w momencie jego otwarcia.
+  + Czas odpowiedzi interfejsu: Poszczególne części strony ładują się strumieniowo, bez blokowania całego widoku. Niezależne zapytania do bazy danych wykonywane są równolegle.
 + Niezawodność:
-  + Obsługa plików graficznych: Przesyłane pliki podlgają ograniczeniom wielkości: do 2 MB na pojedynczy plik oraz do 20 MB w ramach jednej operacji zapisu. Zasoby multimedialne są przechowywane w bazie danych wraz z sumą kontrolną zawartości, powiązane kaskadowo z pracami. Gwarantuje to spójność danych i automatyczne usuwanie nieżywanych zasobów wraz z usunięciem pracy.
+  + Obsługa plików graficznych: Przesyłane pliki podlegają ograniczeniom wielkości: do 2 MB na pojedynczy plik oraz do 20 MB w ramach jednej operacji zapisu. Zasoby multimedialne są przechowywane w bazie danych wraz z sumą kontrolną zawartości, powiązane kaskadowo z pracami. Gwarantuje to spójność danych i automatyczne usuwanie nieużywanych zasobów wraz z usunięciem pracy.
 + Użyteczność:
   + Wielojęzyczność: Aplikacja wspiera język polski i angielski w warstwie treści portfolio.
   + Ochrona przed utratą danych: Panel administracyjny ostrzega użytkownika przed opuszczeniem niezapisanego formularza.
@@ -137,18 +136,17 @@ W celu precyzyjnego określenia funkcjonalności systemu oraz sposobu, w jaki u�
 
 #figure(
   image("../img/use-case-viewer.png", width: 50%),
-  caption: [Scenariusz interakcji z systemem z perspektywy odbiorcy.],
+  caption: [Diagram przypadków użycia z perspektywy odbiorcy],
 )<fig:use-case-viewer>
 
 #figure(
   image("../img/use-case-artist.png", width: 60%),
-  caption: [Scenariusz interakcji z systemem z perspektywy artysty (twórcy portfolio).],
+  caption: [Diagram przypadków użycia z perspektywy artysty (twórcy portfolio)],
 )<fig:use-case-artist>
-
 
 ==== Przypadki użycia z perspektywy odbiorcy
 
-Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfolio. Z perspektywy systemu, Odbiorca jest użytkownikiem niezalogowanym (gościem), co ogranicza jego uprawnienia wyłącznie do odczytu danych oraz korzystania z publicznych modułów komunikacyjnych. Szczegółowe przypadki użycia obejmujące przeglądanie galerii zdjęć, kontakt z artystą oraz zmianę preferowanego języka interfejsu zestawiono w tabelach: @tab:pu1, @tab:pu2 oraz @tab:pu3.
+Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfolio. Z perspektywy systemu odbiorca jest użytkownikiem niezalogowanym (gościem), co ogranicza jego uprawnienia wyłącznie do odczytu danych oraz korzystania z publicznych modułów komunikacyjnych. Szczegółowe przypadki użycia obejmujące przeglądanie galerii zdjęć, kontakt z artystą oraz zmianę preferowanego języka interfejsu zestawiono w tabelach: @tab:pu1, @tab:pu2 oraz @tab:pu3.
 
 ==== PU1 - Przeglądanie galerii zdjęć
 
@@ -162,8 +160,8 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
     [*Podstawowy scenariusz interakcji*], [1. Odbiorca wchodzi na podstronę galerii artysty. \
     2. System ładuje układ strony i wyświetla miniatury prac. \
     3. Odbiorca wybiera interesującą go miniaturę. \
-    4. System wyświetla powiększone zdjęcie w wysokiej rozdzielczości wraz z tytułem, opisem i użytymi technikami. \
-    5. Odbiorca zamyka podgląd powiększonego zdjęcia. \
+    4. System wyświetla podstronę zawierającą dane wybranej pracy, takie jak tytuł, opis, użyte techniki oraz powiększone zdjęcie. \
+    5. Odbiorca zamyka podstronę pracy. \
     6. System powraca do widoku galerii, zachowując pozycję przewijania.],
     [*Wyjątki i scenariusze alternatywne*], [*2a. Filtrowanie po kategorii:* Odbiorca wybiera kategorię prac, a system odświeża siatkę, pokazując wyłącznie miniatury z wybranej kategorii. \
     *2b. Brak prac:* Jeśli portfolio jest puste, system wyświetla odpowiedni komunikat.],
@@ -207,12 +205,12 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
   table(
     columns: (1fr, 3fr),
     table.header([*Nazwa*], [Wybór języka]),
-    [*Warunki wstępne*], [Odbiorca znajduje się w portfolio. System obsługuje język polski i angielski, a domyślnie używa języka przeglądarki.],
+    [*Warunki wstępne*], [Odbiorca znajduje się w portfolio. Językiem domyślnym jest polski; angielski zostaje włączony wyłącznie wtedy, gdy przeglądarka jest ustawiona na język angielski.],
     [*Podstawowy scenariusz interakcji*], [1. Odbiorca lokalizuje i klika przycisk wyboru języka. \
     2. System wyświetla listę dostępnych języków. \
     3. Odbiorca wybiera język. \
     4. System przeładowuje stronę w wybranym języku.],
-    [*Wyjątki i scenariusze alternatywne*], [*4a. Brak tłumaczenia treści autorskich:* Interfejs zmienia się na wybrany język, ale zamiast opisu zdjęć i biogramu zostaje wyświetlony komunikat o braku tłumaczenia.],
+    [*Wyjątki i scenariusze alternatywne*], [*4a. Brak tłumaczenia treści autorskich:* Interfejs zmienia się na wybrany język, ale zamiast opisu pracy i biografii zostaje wyświetlony komunikat o braku tłumaczenia.],
     [*Warunki końcowe*], [Interfejs prezentowany jest w wybranym języku.],
     [*Komentarze*], [---],
   ),
@@ -220,7 +218,7 @@ Odbiorca reprezentuje użytkownika końcowego, który odwiedza stworzone portfol
 
 ==== Przypadki użycia z perspektywy artysty
 
-Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu. Szczegółowe przypadki użycia obejmujące rejestrację konta, dodawanie, edytowanie i usuwanie prac, a także zarządzanie kategoriami i tagami zestawiono w tabelach: @tab:pu4 - @tab:pu14.
+Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu na założenie, że docelowy twórca nie musi posiadać wiedzy technicznej, przypadki użycia w tej grupie zostały zaprojektowane tak, aby maksymalnie uprościć proces zarządzania treścią. Aktor ten posiada pełne uprawnienia do modyfikacji struktury swojej strony, w tym zarządzania pracami, kategoriami, informacjami biograficznymi oraz wizualną konfiguracją układu. Szczegółowe przypadki użycia obejmujące rejestrację konta, zarządzanie pracami, kategoriami i tagami, edycję profilu oraz personalizację wyglądu strony zestawiono w tabelach @tab:pu4 - @tab:pu14.
 
 ==== PU4 - Rejestracja konta
 
@@ -231,7 +229,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr),
     table.header([*Nazwa*], [Rejestracja konta]),
     [*Warunki wstępne*],
-    [Konto artysty nie istnieje w systemie. W trakcie konfiguracji został wygenerowany jednorazowy link rejestracyjny.],
+    [Konto artysty nie istnieje w systemie. Podczas wdrożenia systemu został wygenerowany jednorazowy link rejestracyjny.],
     [*Podstawowy scenariusz interakcji*],
     [
       1. Artysta otwiera otrzymany link rejestracyjny. \
@@ -242,7 +240,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
       6. System tworzy konto użytkownika. \
       7. System loguje artystę i przekierowuje do panelu administracyjnego.
     ],
-    [*Wyjątki i scenariusze alternatywne*], [*2a. Nieprawidłowy link:* System wyświetla komunikat o nieznalezieniu strony. \
+    [*Wyjątki i scenariusze alternatywne*], [*2a. Nieprawidłowy link:* System wyświetla komunikat, że strona nie istnieje. \
      *2b. Wykorzystany link:* System przekierowuje użytkownika do panelu administracyjnego, jeżeli jest on zalogowany. W przeciwnym razie przekierowuje użytkownika do ekranu logowania. \
     *5a. Błąd walidacji:* System wyświetla odpowiedni komunikat.],
     [*Warunki końcowe*], [Konto artysty zostało utworzone, ponowna rejestracja jest niemożliwa. Artysta jest zalogowany w panelu administracyjnym.],
@@ -262,7 +260,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace".  \
     2. System wyświetla listę prac z przyciskiem "Dodaj pracę".  \
     3. Artysta klika przycisk.  \
-    4. System otwiera formularz wypełniania detali pracy (PU7, @tab:pu7).],
+    4. System otwiera formularz wypełniania szczegółów pracy (PU7, @tab:pu7).],
     [*Wyjątki i scenariusze alternatywne*], [---],
     [*Warunki końcowe*], [Artysta przechodzi do formularza PU7 (@tab:pu7).],
     [*Komentarze*], [---],
@@ -281,27 +279,27 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Prace".  \
     2. System wyświetla listę prac.  \
     3. Artysta wybiera pracę i klika "Edytuj".  \
-    4. System otwiera formularz edycji detali pracy (PU7, @tab:pu7).],
+    4. System otwiera formularz edycji szczegółów pracy (PU7, @tab:pu7).],
     [*Wyjątki i scenariusze alternatywne*], [---],
     [*Warunki końcowe*], [Artysta przechodzi do formularza PU7 (@tab:pu7).],
     [*Komentarze*], [---],
   ),
 ) <tab:pu6>
 
-==== PU7 - Wypełnianie detali pracy
+==== PU7 - Wypełnianie szczegółów pracy
 
 #figure(
-  caption: [Przypadek użycia PU7 - Wypełnianie detali pracy],
+  caption: [Przypadek użycia PU7 - Wypełnianie szczegółów pracy],
   kind: table,
   table(
     columns: (1fr, 3fr),
-    table.header([*Nazwa*], [Wypełnianie detali pracy]),
+    table.header([*Nazwa*], [Wypełnianie szczegółów pracy]),
     [*Warunki wstępne*], [Artysta przechodzi z PU5 (@tab:pu5) lub PU6 (@tab:pu6). System wyświetla formularz dodawania albo edycji pracy.],
-    [*Podstawowy scenariusz interakcji*], [1. System wyświetla wymagane pola: tytuł i kategorię, oraz opcjonalne: media, opis, wymiary, rok wykonania, technika.  \
+    [*Podstawowy scenariusz interakcji*], [1. System wyświetla wymagane pola: tytuł i kategorię, oraz opcjonalne: media, opis, tagi, wymiary, rok wykonania, technikę.  \
     2. Artysta wypełnia pola i klika "Zapisz".  \
     3. System waliduje dane, przesyła obraz, zapisuje dane w bazie i wraca do listy prac.],
     [*Wyjątki i scenariusze alternatywne*], [
-    *2a. Anulowanie:* System wraca do listy prac i ostrzega o utracie niezapisanych zmian.  \
+    *2a. Anulowanie:* System ostrzega o utracie niezapisanych zmian i wraca do listy prac.  \
     *2b. Opuszczenie formularza:* System ostrzega o utracie niezapisanych zmian. \
     *3a. Błąd walidacji:* System informuje o zbyt dużym lub nieobsługiwanym pliku albo pustym polu.
     ],
@@ -339,7 +337,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie kategorii prac]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
-    2. Artysta wypełnia formularz "Dodaj nową kategorię" podając nazwy w obu językach.  \
+    2. Artysta wypełnia formularz "Dodaj nową kategorię", podając nazwy w obu językach.  \
     3. System waliduje unikalność nazwy, dodaje kategorię i wyświetla ją na liście.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowa kategoria jest dostępna przy dodawaniu i edytowaniu prac oraz widoczna dla odbiorców.],
@@ -347,7 +345,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
   ),
 ) <tab:pu9>
 
-==== PU10 - Edytowanie kategorii prac
+==== PU10 - Edytowanie i usuwanie kategorii prac
 
 #figure(
   caption: [Przypadek użycia PU10 - Edytowanie kategorii prac],
@@ -360,7 +358,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     2. Artysta klika "Edytuj", zmienia dane i wybiera "Zapisz kategorię".  \
     3. System waliduje dane, aktualizuje kategorię i wraca do listy.],
     [*Wyjątki i scenariusze alternatywne*], [
-    *2a. Usuwanie kategorii:* Jeśli kategoria zawiera prace, system wyświetla komunikat o błędzie. \ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    *2a. Usuwanie kategorii:* Artysta klika „Usuń” i potwierdza decyzję. System usuwa kategorię z listy. \ *2b. Kategoria zawiera prace:* System wyświetla komunikat „Nie można usunąć kategorii, do której są przypisane prace.” i nie usuwa kategorii.\ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Zmiany kategorii są zapisane, a prace mają zaktualizowane informacje.],
     [*Komentarze*], [Nie można usunąć kategorii zawierającej prace bez ich uprzedniego przeniesienia.],
   ),
@@ -376,15 +374,15 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie tagów]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie".  \
-    2. Artysta wypełnia formularz "Dodaj nowy tag" podając nazwy w obu językach.  \
-    3. System waliduje unikalność nazwy, dodaje tag i wyświetla ją na liście.],
+    2. Artysta wypełnia formularz "Dodaj nowy tag", podając nazwy w obu językach.  \
+    3. System waliduje unikalność nazwy, dodaje tag i wyświetla go na liście.],
     [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Nowy tag jest dostępny przy dodawaniu i edytowaniu prac oraz widoczny dla odbiorców.],
     [*Komentarze*], [Każdy tag powinien mieć unikalną nazwę.],
   ),
 ) <tab:pu11>
 
-==== PU12 - Edytowanie tagów
+==== PU12 - Edytowanie i usuwanie tagów
 
 #figure(
   caption: [Przypadek użycia PU12 - Edytowanie tagów],
@@ -396,7 +394,7 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Kategorie" i wybiera tag.  \
     2. Artysta klika "Edytuj", zmienia dane i wybiera "Zapisz Tag".  \
     3. System waliduje dane, aktualizuje tag i wraca do listy.],
-    [*Wyjątki i scenariusze alternatywne*], [*3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
+    [*Wyjątki i scenariusze alternatywne*], [*2a. Usunięcie tagu:* Artysta klika „Usuń” i potwierdza decyzję. System usuwa tag z listy oraz z prac, do których był przypisany. \ *3a. Duplikat:* System wyświetla błąd i umożliwia zmianę nazwy.],
     [*Warunki końcowe*], [Zmiany tagu są zapisane, a prace mają zaktualizowane informacje.],
     [*Komentarze*], [---],
   ),
@@ -412,10 +410,12 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     table.header([*Nazwa*], [Dodawanie i edytowanie informacji o sobie]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
     [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Profil".  \
-    2. System wyświetla pola: zdjęcie profilowe, imię i nazwisko, biografia, e-mail, linki do mediów społecznościowych oraz tekst sekcji kontaktowej.  \
-    3. Artysta aktualizuje dane i klika "Zapisz zmiany".  \
-    4. System waliduje dane, aktualizuje profil i wyświetla komunikat potwierdzający.],
-    [*Wyjątki i scenariusze alternatywne*], [*3a. Anulowanie:* System ostrzega o utracie niezapisanych zmian. \ *4a. Błąd zdjęcia:* System informuje o zbyt dużym lub niedozwolonym pliku.
+    2. System wyświetla pola: zdjęcie profilowe, imię lub pseudonim artystyczny, biografia, e-mail, linki do mediów społecznościowych oraz tekst sekcji kontaktowej.  \
+    3. Artysta aktualizuje dane główne profilu i klika "Zapisz zmiany".  \
+    4. System waliduje dane główne, aktualizuje profil i wyświetla komunikat potwierdzający.  \
+    5. Artysta osobno dodaje link do mediów społecznościowych. \
+    6. System waliduje wprowadzone linki, aktualizuje profil i wyświetla komunikat potwierdzający. ],
+    [*Wyjątki i scenariusze alternatywne*], [*3a/5a. Cofnięcie zmian:* Artysta klika przycisk „Cofnij zmiany”, a system przywraca zapisany stan danych profilu. \ *3b/5b. Opuszczenie strony:* Przed opuszczeniem strony z niezapisanymi zmianami system ostrzega o ich utracie. \ *4a. Błąd zdjęcia:* System informuje o zbyt dużym lub niedozwolonym pliku.
     ],
     [*Warunki końcowe*], [Informacje artysty są zaktualizowane i widoczne dla odbiorców.],
     [*Komentarze*], [---],
@@ -431,29 +431,29 @@ Artysta pełni w systemie rolę administratora własnego portfolio. Ze względu 
     columns: (1fr, 3fr),
     table.header([*Nazwa*], [Personalizacja strony]),
     [*Warunki wstępne*], [Artysta jest zalogowany w panelu edycji portfolio.],
-    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Układ i Personalizacja".  \
+    [*Podstawowy scenariusz interakcji*], [1. Artysta przechodzi do sekcji "Układ i personalizacja".  \
     2. System wyświetla dwie sekcje edycji: "Kafelki Bento Box - strona główna" oraz "Czcionki i kolorystyka", wczytując aktualne ustawienia.  \
     3. Artysta w sekcji układu Bento Box wybiera widok ("Desktop" lub "Mobile") oraz modyfikuje siatkę: \
       - dodaje nowe kafelki w jednym z dostępnych rozmiarów (`1:1`, `2:1`, `1:2`, `2:2`), wybierając widoczną pracę oraz jej zdjęcie, \
       - zmienia położenie kafelków metodą przeciągnij i upuść (na wolne pole lub zamieniając je miejscami z innymi kafelkami), \
-      - zmienia rozmiar kafelka, przypisaną pracę/zdjęcie lub usuwa kafelek z listy. \
+      - zmienia rozmiar kafelka, przypisaną pracę/zdjęcie lub usuwa kafelek z siatki. \
     4. Artysta zatwierdza zmiany w układzie przyciskiem zapisu. \
-    5. W sekcji "Czcionki i kolorystyka" artysta wybiera gotowy zestaw domyślny (preset) albo ręcznie ustawia czcionki (podstawową, pomocniczą i tekstu) oraz kolory (tekstu, tła i akcentu), obserwując podgląd na żywo. \
+    5. W sekcji "Czcionki i kolorystyka" artysta wybiera gotowy motyw albo ręcznie ustawia czcionki (podstawową, pomocniczą i tekstu) oraz kolory (tekstu, tła i akcentu), obserwując podgląd na żywo. \
     6. Artysta zatwierdza zmiany motywu przyciskiem zapisu. \
     7. System waliduje przesłane dane, zapisuje konfigurację i odświeża widok publiczny portfolio.
     ],
     [*Wyjątki i scenariusze alternatywne*], [
-    *3a. Brak widocznych prac ze zdjęciami:* system informuje w oknie wyboru, że brak dostępnych prac, i nie pozwala dodać kafelka. \
-    *3b. Brak miejsca w siatce lub niepoprawny układ:* system uniemożliwia dodanie kafelka przekraczającego limit siatki bądź zwraca komunikat błędu walidacji przy próbie zapisu. \
+    *3a. Brak widocznych prac ze zdjęciami:* System informuje w oknie wyboru, że brak dostępnych prac, i nie pozwala dodać kafelka. \
+    *3b. Brak miejsca w siatce lub niepoprawny układ:* System uniemożliwia dodanie kafelka przekraczającego limit siatki bądź zwraca komunikat błędu walidacji przy próbie zapisu. \
     *4a / 6a. Cofnięcie zmian:* artysta wybiera opcję cofnięcia w danej sekcji, a system przywraca ostatnio zapisany stan. \
     *5a. Niepoprawne dane motywu:* przy błędnym formacie koloru (HEX) lub nieobsługiwanej czcionce system wyświetla błąd walidacji przy odpowiednim polu i nie zapisuje zmian. \
-    *7a. Próba opuszczenia strony z niezapisanymi zmianami:* system wyświetla okno potwierdzenia z ostrzeżeniem o utracie niezapisanych modyfikacji.
+    *7a. Próba opuszczenia strony z niezapisanymi zmianami:* System wyświetla okno potwierdzenia z ostrzeżeniem o utracie niezapisanych modyfikacji.
     ],
     [*Warunki końcowe*], [
     Nowy układ kafelków Bento Box oraz wybrany motyw (czcionki i kolorystyka) zostają zapisane i są natychmiast widoczne na stronie publicznej portfolio.
     ],
     [*Komentarze*], [
-    Sekcje "Kafelki Bento Box - strona główna" oraz "Czcionki i kolorystyka" są zapisywane i cofane niezależnie. Widoki `Desktop` i `Mobile` współdzielą ten sam zestaw kafelków, różniąc się jedynie ich rozmieszczeniem i proporcjami.
+    Sekcje "Kafelki Bento Box - strona główna" oraz "Czcionki i kolorystyka" są zapisywane i cofane niezależnie. Widoki "Desktop" i "Mobile" współdzielą ten sam zestaw kafelków, różniąc się jedynie ich rozmieszczeniem i proporcjami.
     ],
   ),
 ) <tab:pu14>
