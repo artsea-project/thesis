@@ -27,3 +27,8 @@ CD
 UX
 MVP
 Scrum
+Obslugi
+PU
+MP
+fr
+pt
